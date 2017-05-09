@@ -16,6 +16,7 @@
 ##テーブル
 
 ###users
+
 |column|type|option|
 |:--:|:--:|:--:|
 |name|string|null: false|
@@ -23,6 +24,7 @@
 |password|string|null: false|
 
 ###companies
+
 |column|type|option|
 |:--:|:--:|:--:|
 |name|string|null: false, index: true|
@@ -34,6 +36,7 @@
 |Industry|text||
 
 ###offers
+
 |column|type|option|
 |:--:|:--:|:--:|
 |company_id|references :company, foreign_key: true||
@@ -44,12 +47,14 @@
 |how|text||
 
 ###applies (中間テーブル)
+
 |column|type|option|
 |:--:|:--:|:--:|
 |user_id|references :user, foreign_key: true||
 |company_id|references :company, foreign_key: true||
 
 ###company_members
+
 |column|type|option|
 |:--:|:--:|:--:|
 |company_id|references :company, foreign_key: true||
@@ -59,24 +64,28 @@
 |career|text||
 
 ###job_types
+
 |column|type|option|
 |:--:|:--:|:--:|
 |offer_id|references :offer, foreign_key: true||
 |type|string|null: false|
 
 ###job_categories
+
 |column|type|option|
 |:--:|:--:|:--:|
 |offer_id|references :offer, foreign_key: true||
 |category|string|null: false|
 
 ###regions
+
 |column|type|option|
 |:--:|:--:|:--:|
 |offer_id|references :offer, foreign_key: true||
 |region|string|null: false|
 
 ###characteristics
+
 |column|type|option|
 |:--:|:--:|:--:|
 |offer_id|references :offer, foreign_key: true||
