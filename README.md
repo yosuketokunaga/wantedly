@@ -1,24 +1,128 @@
-# README
+#  README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#Wantedlyデータベース設計
+==========================
+* ユーザー管理
+* 企業管理
+* 求人詳細管理
+* 応募管理 (中間テーブル(ユーザー&企業))
+* 企業メンバー管理
+* 雇用形態管理
+* 職種管理
+* 地域管理
+* 特徴管理
 
-Things you may want to cover:
 
-* Ruby version
+##テーブル
 
-* System dependencies
+###users
 
-* Configuration
+|column|type|option|
+|:--:|:--:|:--:|
+|name|string|null: false|
+|e-mail|string|null: false, unique: true|
+|password|string|null: false|
 
-* Database creation
+###companies
 
-* Database initialization
+|column|type|option|
+|:--:|:--:|:--:|
+|name|string|null: false, index: true|
+|e-mail|string|null: false, unique: true|
+|address|text|null: false|
+|founder_name|text||
+|est_date|date||
+|sum_member|integer||
+|Industry|text||
 
-* How to run the test suite
+###offers
 
-* Services (job queues, cache servers, search engines, etc.)
+|column|type|option|
+|:--:|:--:|:--:|
+|company_id|references :company, foreign_key: true||
+|title|string|null: false|
+|image|string||
+|what|text||
+|why|text||
+|how|text||
 
-* Deployment instructions
+###applies (中間テーブル)
 
-* ...
+|column|type|option|
+|:--:|:--:|:--:|
+|user_id|references :user, foreign_key: true||
+|company_id|references :company, foreign_key: true||
+
+###company_members
+
+|column|type|option|
+|:--:|:--:|:--:|
+|company_id|references :company, foreign_key: true||
+|name|string|null: false, unique: true|
+|image|string||
+|position|string||
+|career|text||
+
+###job_types
+
+|column|type|option|
+|:--:|:--:|:--:|
+|offer_id|references :offer, foreign_key: true||
+|type|string|null: false|
+
+###job_categories
+
+|column|type|option|
+|:--:|:--:|:--:|
+|offer_id|references :offer, foreign_key: true||
+|category|string|null: false|
+
+###regions
+
+|column|type|option|
+|:--:|:--:|:--:|
+|offer_id|references :offer, foreign_key: true||
+|region|string|null: false|
+
+###characteristics
+
+|column|type|option|
+|:--:|:--:|:--:|
+|offer_id|references :offer, foreign_key: true||
+|characteristic|string||
+
+##アソシエーション
+
+###users  
+has_many :applies    
+
+###companies  
+has_many :applies  
+has_many :offers  
+has_many :campany_members    
+
+###applies  
+belongs_to :user  
+belongs_to :company    
+
+###offers  
+belongs_to: company  
+has_many :job_types  
+has_many :job_categories  
+has_many :regions
+has_many :characteristics
+
+###company_members  
+belongs_to :company    
+
+###job_types  
+belongs_to :offer    
+
+###job_categories  
+belongs_to :offer    
+
+###regions  
+bolengs_to :offer
+
+###characteristics  
+bolengs_to :offer
