@@ -19,3 +19,150 @@
   INFO ---------------------------------------------------------------------------
  DEBUG [c9142ae5] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as ec2-user@54.64.106.216
  DEBUG [c9142ae5] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-05-10 15:54:33 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [fb2921e1] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as ec2-user@54.64.106.216
+ DEBUG [fb2921e1] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [fb2921e1] Finished in 1.796 seconds with exit status 0 (successful).
+  INFO [1ff70e5a] Running /usr/bin/env mkdir -p /tmp as ec2-user@54.64.106.216
+ DEBUG [1ff70e5a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /tmp )
+  INFO [1ff70e5a] Finished in 0.559 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-wantedly-production-tokunagayousuke.sh 0.0%
+  INFO Uploading /tmp/git-ssh-wantedly-production-tokunagayousuke.sh 100.0%
+  INFO [02fe47fb] Running /usr/bin/env chmod 700 /tmp/git-ssh-wantedly-production-tokunagayousuke.sh as ec2-user@54.64.106.216
+ DEBUG [02fe47fb] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env chmod 700 /tmp/git-ssh-wantedly-production-tokunagayousuke.sh )
+  INFO [02fe47fb] Finished in 0.282 seconds with exit status 0 (successful).
+  INFO [d80bca88] Running /usr/bin/env git ls-remote git@github.com/yosuketokunaga/wantedly.git HEAD as ec2-user@54.64.106.216
+ DEBUG [d80bca88] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-wantedly-production-tokunagayousuke.sh" ; /usr/bin/env git ls-remote git@github.com/yosuketokunaga/wantedly.git HEAD )
+ DEBUG [d80bca88] 	fatal: 'git@github.com/yosuketokunaga/wantedly.git' does not appear to be a git repository
+ DEBUG [d80bca88] 	fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-05-10 17:49:47 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [1d9bfc84] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as ec2-user@54.64.106.216
+ DEBUG [1d9bfc84] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [1d9bfc84] Finished in 0.526 seconds with exit status 0 (successful).
+  INFO [a2a0af37] Running /usr/bin/env mkdir -p /tmp as ec2-user@54.64.106.216
+ DEBUG [a2a0af37] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /tmp )
+  INFO [a2a0af37] Finished in 0.075 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-wantedly-production-tokunagayousuke.sh 0.0%
+  INFO Uploading /tmp/git-ssh-wantedly-production-tokunagayousuke.sh 100.0%
+  INFO [d395067d] Running /usr/bin/env chmod 700 /tmp/git-ssh-wantedly-production-tokunagayousuke.sh as ec2-user@54.64.106.216
+ DEBUG [d395067d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env chmod 700 /tmp/git-ssh-wantedly-production-tokunagayousuke.sh )
+  INFO [d395067d] Finished in 0.063 seconds with exit status 0 (successful).
+  INFO [2d9fbb20] Running /usr/bin/env git ls-remote git@github.com/yosuketokunaga/wantedly.git HEAD as ec2-user@54.64.106.216
+ DEBUG [2d9fbb20] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-wantedly-production-tokunagayousuke.sh" ; /usr/bin/env git ls-remote git@github.com/yosuketokunaga/wantedly.git HEAD )
+ DEBUG [2d9fbb20] 	fatal: 'git@github.com/yosuketokunaga/wantedly.git' does not appear to be a git repository
+ DEBUG [2d9fbb20] 	fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-05-10 17:55:53 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [11d9c809] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as ec2-user@54.64.106.216
+ DEBUG [11d9c809] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [11d9c809] Finished in 0.478 seconds with exit status 0 (successful).
+  INFO [3df70ef0] Running /usr/bin/env mkdir -p /tmp as ec2-user@54.64.106.216
+ DEBUG [3df70ef0] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /tmp )
+  INFO [3df70ef0] Finished in 0.073 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-wantedly-production-tokunagayousuke.sh 0.0%
+  INFO Uploading /tmp/git-ssh-wantedly-production-tokunagayousuke.sh 100.0%
+  INFO [ea73f963] Running /usr/bin/env chmod 700 /tmp/git-ssh-wantedly-production-tokunagayousuke.sh as ec2-user@54.64.106.216
+ DEBUG [ea73f963] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env chmod 700 /tmp/git-ssh-wantedly-production-tokunagayousuke.sh )
+  INFO [ea73f963] Finished in 0.102 seconds with exit status 0 (successful).
+  INFO [94b240c7] Running /usr/bin/env git ls-remote git@github.com/yosuketokunaga/wantedly.git HEAD as ec2-user@54.64.106.216
+ DEBUG [94b240c7] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-wantedly-production-tokunagayousuke.sh" ; /usr/bin/env git ls-remote git@github.com/yosuketokunaga/wantedly.git HEAD )
+ DEBUG [94b240c7] 	fatal: 'git@github.com/yosuketokunaga/wantedly.git' does not appear to be a git repository
+ DEBUG [94b240c7] 	fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-05-10 17:56:09 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [1b8838fb] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as ec2-user@54.64.106.216
+ DEBUG [1b8838fb] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [1b8838fb] Finished in 0.551 seconds with exit status 0 (successful).
+  INFO [03f55d5e] Running /usr/bin/env mkdir -p /tmp as ec2-user@54.64.106.216
+ DEBUG [03f55d5e] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /tmp )
+  INFO [03f55d5e] Finished in 0.078 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-wantedly-production-tokunagayousuke.sh 0.0%
+  INFO Uploading /tmp/git-ssh-wantedly-production-tokunagayousuke.sh 100.0%
+  INFO [0fb13faf] Running /usr/bin/env chmod 700 /tmp/git-ssh-wantedly-production-tokunagayousuke.sh as ec2-user@54.64.106.216
+ DEBUG [0fb13faf] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env chmod 700 /tmp/git-ssh-wantedly-production-tokunagayousuke.sh )
+  INFO [0fb13faf] Finished in 0.068 seconds with exit status 0 (successful).
+  INFO [b5ef53ed] Running /usr/bin/env git ls-remote git@github.com/yosuketokunaga/wantedly.git HEAD as ec2-user@54.64.106.216
+ DEBUG [b5ef53ed] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-wantedly-production-tokunagayousuke.sh" ; /usr/bin/env git ls-remote git@github.com/yosuketokunaga/wantedly.git HEAD )
+ DEBUG [b5ef53ed] 	fatal: 'git@github.com/yosuketokunaga/wantedly.git' does not appear to be a git repository
+ DEBUG [b5ef53ed] 	fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-05-10 19:03:19 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [fdfa05df] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as ec2-user@54.64.106.216
+ DEBUG [fdfa05df] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [fdfa05df] Finished in 0.440 seconds with exit status 0 (successful).
+  INFO [ca426dfb] Running /usr/bin/env mkdir -p /tmp as ec2-user@54.64.106.216
+ DEBUG [ca426dfb] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /tmp )
+  INFO [ca426dfb] Finished in 0.059 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-wantedly-production-tokunagayousuke.sh 0.0%
+  INFO Uploading /tmp/git-ssh-wantedly-production-tokunagayousuke.sh 100.0%
+  INFO [d4c7116d] Running /usr/bin/env chmod 700 /tmp/git-ssh-wantedly-production-tokunagayousuke.sh as ec2-user@54.64.106.216
+ DEBUG [d4c7116d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env chmod 700 /tmp/git-ssh-wantedly-production-tokunagayousuke.sh )
+  INFO [d4c7116d] Finished in 0.065 seconds with exit status 0 (successful).
+  INFO [e4b7ecf3] Running /usr/bin/env git ls-remote git@github.com/yosuketokunaga/wantedly.git HEAD as ec2-user@54.64.106.216
+ DEBUG [e4b7ecf3] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-wantedly-production-tokunagayousuke.sh" ; /usr/bin/env git ls-remote git@github.com/yosuketokunaga/wantedly.git HEAD )
+ DEBUG [e4b7ecf3] 	fatal: 'git@github.com/yosuketokunaga/wantedly.git' does not appear to be a git repository
+ DEBUG [e4b7ecf3] 	fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-05-10 19:48:41 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [43e188b1] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as ec2-user@54.64.106.216
+ DEBUG [43e188b1] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [43e188b1] Finished in 0.584 seconds with exit status 0 (successful).
+  INFO [5fe5c6e5] Running /usr/bin/env mkdir -p /tmp as ec2-user@54.64.106.216
+ DEBUG [5fe5c6e5] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /tmp )
+  INFO [5fe5c6e5] Finished in 0.059 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-wantedly-production-tokunagayousuke.sh 0.0%
+  INFO Uploading /tmp/git-ssh-wantedly-production-tokunagayousuke.sh 100.0%
+  INFO [b97deb9c] Running /usr/bin/env chmod 700 /tmp/git-ssh-wantedly-production-tokunagayousuke.sh as ec2-user@54.64.106.216
+ DEBUG [b97deb9c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env chmod 700 /tmp/git-ssh-wantedly-production-tokunagayousuke.sh )
+  INFO [b97deb9c] Finished in 0.064 seconds with exit status 0 (successful).
+  INFO [3283879c] Running /usr/bin/env git ls-remote git@github.com/yosuketokunaga/wantedly.git HEAD as ec2-user@54.64.106.216
+ DEBUG [3283879c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-wantedly-production-tokunagayousuke.sh" ; /usr/bin/env git ls-remote git@github.com/yosuketokunaga/wantedly.git HEAD )
+ DEBUG [3283879c] 	fatal: 'git@github.com/yosuketokunaga/wantedly.git' does not appear to be a git repository
+ DEBUG [3283879c] 	fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-05-10 20:03:24 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [3fdf31da] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as ec2-user@54.64.106.216
+ DEBUG [3fdf31da] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [3fdf31da] Finished in 0.436 seconds with exit status 0 (successful).
+  INFO [20917c3c] Running /usr/bin/env mkdir -p /tmp as ec2-user@54.64.106.216
+ DEBUG [20917c3c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /tmp )
+  INFO [20917c3c] Finished in 0.069 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-wantedly-production-tokunagayousuke.sh 0.0%
+  INFO Uploading /tmp/git-ssh-wantedly-production-tokunagayousuke.sh 100.0%
+  INFO [4e781934] Running /usr/bin/env chmod 700 /tmp/git-ssh-wantedly-production-tokunagayousuke.sh as ec2-user@54.64.106.216
+ DEBUG [4e781934] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env chmod 700 /tmp/git-ssh-wantedly-production-tokunagayousuke.sh )
+  INFO [4e781934] Finished in 0.059 seconds with exit status 0 (successful).
+  INFO [09789705] Running /usr/bin/env git ls-remote git@github.com/yosuketokunaga/wantedly.git HEAD as ec2-user@54.64.106.216
+ DEBUG [09789705] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-wantedly-production-tokunagayousuke.sh" ; /usr/bin/env git ls-remote git@github.com/yosuketokunaga/wantedly.git HEAD )
+ DEBUG [09789705] 	fatal: 'git@github.com/yosuketokunaga/wantedly.git' does not appear to be a git repository
+ DEBUG [09789705] 	fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
