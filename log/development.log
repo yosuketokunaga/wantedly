@@ -2209,3 +2209,12 @@ Processing by CompaniesController#index as HTML
 Completed 200 OK in 261ms (Views: 231.3ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/companies" for ::1 at 2017-05-11 18:27:54 +0900
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (7.3ms)
+  Rendered shared/_footer.html.haml (13.4ms)
+  Rendered companies/index.html.haml within layouts/application (43.4ms)
+Completed 200 OK in 137ms (Views: 80.8ms | ActiveRecord: 0.0ms)
+
+
