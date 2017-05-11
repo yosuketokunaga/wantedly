@@ -1,3 +1,4 @@
+require 'capistrano/bundler'
 require "capistrano/setup"
 require "capistrano/deploy"
 
