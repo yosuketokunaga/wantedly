@@ -68,3 +68,6 @@ gem 'devise'
 # Hamlの導入
 gem 'haml-rails'
 gem 'erb2haml'
+# font-awesomeの導入
+gem 'font-awesome-sass'
+gem 'font-awesome-rails'
