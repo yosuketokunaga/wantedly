@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+require 'capistrano/bundler'
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
@@ -38,9 +38,9 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
-  gem 'capistrano'
+  gem 'capistrano', '~> 3.1'
   gem 'capistrano-rbenv'
-  gem 'capistrano-bundler'
+  gem 'capistrano-bundler', '~> 1.1.2'
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
 end
@@ -56,7 +56,6 @@ end
 
 group :production do
   gem 'unicorn'
-  gem 'nokogiri' '1.7.1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
