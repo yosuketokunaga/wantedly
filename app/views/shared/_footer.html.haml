@@ -1,0 +1,68 @@
+.footer
+  .footer-main
+    %ul
+      %li.about
+        %p.footer-menu-head About
+        %ul.footer-menu-column-single
+          %li
+            %p 運営会社
+          %li
+            %p 利用規約
+          %li
+            %p ヘルプ
+          %li
+            %p プライバシー
+          %li
+            %p 採用担当者
+      %li.products
+        %p.footer-menu-head Products
+        %ul.footer-menu-column-single.products-menu.right-line
+          %li
+            %span Wantedly
+            %span.strong Visit
+            %p.layer はたらくを面白く
+          %li
+            %span Wantedly
+            %span.strong People
+            %p.layer かしこく、名刺管理
+          %li
+            %span Wantedly
+            %span.strong Chat
+            %p.layer チャットで仕事を加速する
+      %li.products.padding-top
+        %ul.footer-menu-column-single.products-menu
+          %li
+            %span Wantedly
+            %span.strong Feed
+            %p.layer ココロオドルナレッジ
+          %li
+            %span Wantedly
+            %span.strong Tools
+            %p.layer 運命のツールが見つかる
+          %li
+            %span.strong Case
+            %span by Wantedly
+            %p.layer アート・作品でつながる
+        %li.lang
+          %p.footer-menu-head Languages
+          %ul.footer-menu-column-single
+            %li
+              %p 日本語
+            %li
+              %p English
+        %li.footer-feedback-form
+          %textarea{rows: "4", cols: "30", placeholder: "Wantedlyに意見を送る"}
+          %input.btn{type: "submit", value: "送信"}
+  .footer-bottom
+    #footer-logo
+      %img{src: "https://de7iszmjjjuya.cloudfront.net/assets/footer-logo-6e6126b999df30df70b8c8d51f75d2ac.png"}
+    %ul.sns
+      %li.facebook
+        = link_to "https://www.facebook.com/wantedly/" do
+          %i.fa.fa-facebook
+      %li.twitter
+        = link_to "https://twitter.com/wantedly" do
+          %i.fa.fa-twitter
+      %li.youtube
+        = link_to "https://www.youtube.com/channel/UCXM8y4bAQXdlKvBoPPnTjrg" do
+          %i.fa.fa-youtube-play

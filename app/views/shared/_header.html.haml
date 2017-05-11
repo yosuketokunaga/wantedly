@@ -1,0 +1,27 @@
+.header
+  %p.header-logo
+    = link_to image_tag("https://de7iszmjjjuya.cloudfront.net/assets/wantedly-logo-5906d9a368d0bcdd2919553127357d4d.svg"), companies_path
+  .global-menu
+    %ul.user-menus
+      %li.user-menu
+        %p 募集をみる
+      %li.user-menu
+        %p フィードをみる
+      %li.user-menu
+        %p プロフィール
+      %li.user-menu
+        %p ツール
+    = form_for @company do |f|
+      .search-form__field
+        = f.text_field :name, placeholder: "人や会社、募集を検索"
+        %button.search-form__btn
+          %i.fa.fa-search
+    .user-profile-photo
+      %img{src: "https://scontent.xx.fbcdn.net/v/t1.0-1/p200x200/1467282_992401370800509_5021393178576468324_n.jpg?oh=25a90852e3b693bf26a6ca429ef2844d&oe=597CF053"}
+    %ul.notifications
+      %li.notification
+        %i.fa.fa-globe
+      %li.notification
+        %i.fa.fa-user
+      %li.notification
+        %i.fa.fa-comments
