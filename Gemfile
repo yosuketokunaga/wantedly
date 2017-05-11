@@ -56,6 +56,7 @@ end
 
 group :production do
   gem 'unicorn'
+  gem 'nokogiri' '1.7.1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
