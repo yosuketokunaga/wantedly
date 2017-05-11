@@ -1846,3 +1846,11 @@ Processing by CompaniesController#index as HTML
 Completed 200 OK in 379ms (Views: 360.8ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2017-05-11 16:42:57 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (5.8ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.haml within layouts/application
+  Rendered companies/index.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 337ms (Views: 322.4ms | ActiveRecord: 0.0ms)
+
+
