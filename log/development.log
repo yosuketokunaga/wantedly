@@ -1854,3 +1854,349 @@ Processing by CompaniesController#index as HTML
 Completed 200 OK in 337ms (Views: 322.4ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2017-05-11 17:32:52 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (7.1ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.haml within layouts/application
+  Rendered companies/index.html.haml within layouts/application (40.8ms)
+Completed 500 Internal Server Error in 385ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Undefined variable: "$mainLightBlueColor".):
+    4:     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    5:     %title Wantedly
+    6:     = csrf_meta_tags
+    7:     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    8:     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    9:   %body
+   10:     = yield
+  
+app/assets/stylesheets/_company.scss:23
+app/assets/stylesheets/application.scss:3
+app/views/layouts/application.html.haml:7:in `_app_views_layouts_application_html_haml__3327234920439630452_70129317384560'
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.7ms)
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (157.6ms)
+Started GET "/" for ::1 at 2017-05-11 17:34:18 +0900
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.haml within layouts/application
+  Rendered companies/index.html.haml within layouts/application (17.7ms)
+Completed 200 OK in 474ms (Views: 471.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-11 17:40:11 +0900
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.haml within layouts/application
+  Rendered companies/index.html.haml within layouts/application (20.6ms)
+Completed 200 OK in 70ms (Views: 63.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-11 17:40:27 +0900
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.haml within layouts/application
+  Rendered companies/index.html.haml within layouts/application (11.2ms)
+Completed 200 OK in 49ms (Views: 45.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-11 17:49:30 +0900
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (26.2ms)
+  Rendered companies/index.html.haml within layouts/application (66.2ms)
+Completed 500 Internal Server Error in 93ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    11:         %p プロフィール
+    12:       %li.user-menu
+    13:         %p ツール
+    14:     = form_for @company do |f|
+    15:       .search-form__field
+    16:         = f.text_field :name, placeholder: "会社名を入力してください"
+    17:         %button.search-form__btn
+  
+app/views/shared/_header.html.haml:14:in `_app_views_shared__header_html_haml___1413315065246064534_70129321428240'
+app/views/companies/index.html.haml:2:in `_app_views_companies_index_html_haml___774535438221785317_70129323119180'
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.5ms)
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.1ms)
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (135.5ms)
+Started GET "/" for ::1 at 2017-05-11 17:50:17 +0900
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (11.0ms)
+  Rendered companies/index.html.haml within layouts/application (30.1ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1+)):
+    11:         %p プロフィール
+    12:       %li.user-menu
+    13:         %p ツール
+    14:     = form_for do |f|
+    15:       .search-form__field
+    16:         = f.text_field :name, placeholder: "会社名を入力してください"
+    17:         %button.search-form__btn
+  
+app/views/shared/_header.html.haml:14:in `_app_views_shared__header_html_haml___1413315065246064534_70129346198000'
+app/views/companies/index.html.haml:2:in `_app_views_companies_index_html_haml___774535438221785317_70129339243620'
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.7ms)
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (126.9ms)
+Started GET "/" for ::1 at 2017-05-11 17:50:37 +0900
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (3.9ms)
+  Rendered companies/index.html.haml within layouts/application (21.6ms)
+Completed 200 OK in 68ms (Views: 65.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-11 17:51:06 +0900
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (356.1ms)
+  Rendered companies/index.html.haml within layouts/application (369.8ms)
+Completed 500 Internal Server Error in 384ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `company' for #<#<Class:0x007f9082a53420>:0x007f90849b3a18>):
+    11:         %p プロフィール
+    12:       %li.user-menu
+    13:         %p ツール
+    14:     = form_for company do |f|
+    15:       .search-form__field
+    16:         = f.text_field :name, placeholder: "会社名を入力してください"
+    17:         %button.search-form__btn
+  
+app/views/shared/_header.html.haml:14:in `_app_views_shared__header_html_haml___1413315065246064534_70129337949000'
+app/views/companies/index.html.haml:2:in `_app_views_companies_index_html_haml___774535438221785317_70129346298360'
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.9ms)
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (138.5ms)
+Started GET "/" for ::1 at 2017-05-11 17:51:16 +0900
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (9.4ms)
+  Rendered companies/index.html.haml within layouts/application (30.8ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/tokunagayousuke/projects/wantedly/app/views/shared/_header.html.haml:21: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/shared/_header.html.haml:21: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/companies/index.html.haml:2:in `_app_views_companies_index_html_haml___774535438221785317_70129290593660'
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.4ms)
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (127.0ms)
+Started GET "/" for ::1 at 2017-05-11 17:56:06 +0900
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (7.1ms)
+  Rendered companies/index.html.haml within layouts/application (22.6ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    11:         %p プロフィール
+    12:       %li.user-menu
+    13:         %p ツール
+    14:     = form_for @company do |f|
+    15:       .search-form__field
+    16:         = f.text_field :name, placeholder: "会社名を入力してください"
+    17:         %button.search-form__btn
+  
+app/views/shared/_header.html.haml:14:in `_app_views_shared__header_html_haml___1413315065246064534_70129348021640'
+app/views/companies/index.html.haml:2:in `_app_views_companies_index_html_haml___774535438221785317_70129300491260'
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.1ms)
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (130.2ms)
+Started GET "/" for ::1 at 2017-05-11 17:57:26 +0900
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (468.5ms)
+  Rendered companies/index.html.haml within layouts/application (491.1ms)
+Completed 500 Internal Server Error in 505ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `company' for #<#<Class:0x007f9082a53420>:0x007f9085ba9a10>):
+    11:         %p プロフィール
+    12:       %li.user-menu
+    13:         %p ツール
+    14:     = form_for company do |f|
+    15:       .search-form__field
+    16:         = f.text_field :name, placeholder: "会社名を入力してください"
+    17:         %button.search-form__btn
+  
+app/views/shared/_header.html.haml:14:in `_app_views_shared__header_html_haml___1413315065246064534_70129339302080'
+app/views/companies/index.html.haml:2:in `_app_views_companies_index_html_haml___774535438221785317_70129347809740'
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.4ms)
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (147.4ms)
+Started GET "/" for ::1 at 2017-05-11 17:57:59 +0900
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (6.7ms)
+  Rendered companies/index.html.haml within layouts/application (24.2ms)
+Completed 200 OK in 71ms (Views: 67.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-11 17:59:47 +0900
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (22.5ms)
+  Rendered companies/index.html.haml within layouts/application (90.2ms)
+Completed 500 Internal Server Error in 289ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Undefined variable: "$mainLightBlueColor".):
+    4:     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    5:     %title Wantedly
+    6:     = csrf_meta_tags
+    7:     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'true'
+    8:     = javascript_include_tag 'application', 'data-turbolinks-track': 'true'
+    9:   %body
+   10:     = yield
+  
+app/assets/stylesheets/_header.scss:23
+app/assets/stylesheets/application.scss:3
+app/views/layouts/application.html.haml:7:in `_app_views_layouts_application_html_haml__3327234920439630452_70129320086160'
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (12.0ms)
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (150.9ms)
+Started GET "/" for ::1 at 2017-05-11 18:00:08 +0900
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (3.9ms)
+  Rendered companies/index.html.haml within layouts/application (19.3ms)
+Completed 200 OK in 267ms (Views: 264.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/companies" for ::1 at 2017-05-11 18:00:16 +0900
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (7.8ms)
+  Rendered companies/index.html.haml within layouts/application (37.4ms)
+Completed 200 OK in 88ms (Views: 85.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/companies" for ::1 at 2017-05-11 18:15:28 +0900
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (5.7ms)
+  Rendered companies/index.html.haml within layouts/application (31.4ms)
+Completed 200 OK in 252ms (Views: 174.6ms | ActiveRecord: 16.5ms)
+
+
+Started GET "/companies" for ::1 at 2017-05-11 18:15:50 +0900
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (6.8ms)
+  Rendered shared/_footer.html.haml (13.8ms)
+  Rendered companies/index.html.haml within layouts/application (47.7ms)
+Completed 200 OK in 97ms (Views: 92.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/companies" for ::1 at 2017-05-11 18:16:34 +0900
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (7.0ms)
+  Rendered shared/_footer.html.haml (23.7ms)
+  Rendered companies/index.html.haml within layouts/application (58.2ms)
+Completed 200 OK in 229ms (Views: 226.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/companies" for ::1 at 2017-05-11 18:16:50 +0900
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (4.6ms)
+  Rendered shared/_footer.html.haml (11.3ms)
+  Rendered companies/index.html.haml within layouts/application (32.7ms)
+Completed 200 OK in 66ms (Views: 63.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/companies" for ::1 at 2017-05-11 18:18:05 +0900
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (24.0ms)
+  Rendered shared/_footer.html.haml (9.1ms)
+  Rendered companies/index.html.haml within layouts/application (48.7ms)
+Completed 200 OK in 93ms (Views: 89.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/companies" for ::1 at 2017-05-11 18:18:11 +0900
+Processing by Companies::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"z3SRlSFLWbZ/eto4TO0pLqTfVGdl6pqBCTW8FA4EMilLJ7U2LheA0mGeCthPCg5QDd15R7T7mUvfaFBzRwLHaA==", "company"=>{"name"=>"高菜"}}
+Unpermitted parameter: name
+  [1m[35m (11.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.4ms)[0m  [1m[31mROLLBACK[0m
+  Rendering companies/registrations/new.html.haml within layouts/application
+  Rendered companies/shared/_links.html.haml (2.8ms)
+  Rendered companies/registrations/new.html.haml within layouts/application (25.1ms)
+Completed 200 OK in 158ms (Views: 69.2ms | ActiveRecord: 18.1ms)
+
+
+Started GET "/companies" for ::1 at 2017-05-11 18:18:21 +0900
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (6.0ms)
+  Rendered shared/_footer.html.haml (12.2ms)
+  Rendered companies/index.html.haml within layouts/application (33.1ms)
+Completed 200 OK in 69ms (Views: 66.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/companies" for ::1 at 2017-05-11 18:19:08 +0900
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (6.3ms)
+  Rendered shared/_footer.html.haml (11.2ms)
+  Rendered companies/index.html.haml within layouts/application (41.7ms)
+Completed 200 OK in 79ms (Views: 76.4ms | ActiveRecord: 0.0ms)
+
+
