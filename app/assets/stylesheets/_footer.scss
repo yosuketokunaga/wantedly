@@ -1,0 +1,132 @@
+.footer {
+  @include clearfix();
+  font-size: 14px;
+  background: white;
+  padding: 64px 0 65px;
+  color: #45494B;
+  border-top: 1px solid #e3e3e3;
+  .footer-main {
+    width: 980px;
+    margin: 0 auto;
+    .about {
+      float: left;
+      margin-right: 70px;
+      width: 84px;
+      .footer-menu-head {
+        color: #24282A;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 16px;
+      }
+      .footer-menu-column-single {
+        li {
+          margin-bottom: 12px;
+        }
+      }
+    }
+    .products {
+      float: left;
+      margin-right: 25px;
+      width: 161px;
+      .footer-menu-head {
+        color: #24282A;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 16px;
+      }
+      .products-menu {
+        padding-right: 17px;
+        li {
+          margin-bottom: 17px;
+        }
+        .strong {
+          font-weight: bold;
+        }
+        p {
+          height: 11px;
+          font-size: 11px;
+          color: #9DA0A4;
+          margin-top: 5px;
+        }
+      }
+      .right-line {
+        border-right: solid 1px #EBEDEF;
+      }
+    }
+    .padding-top {
+      padding-top: 38px;
+    }
+    .lang {
+      float: left;
+      width: 99px;
+      margin-right: 45px;
+      .footer-menu-head {
+        color: #24282A;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 16px;
+      }
+      .footer-menu-column-single {
+        li {
+          margin-bottom: 12px;
+        }
+      }
+    }
+    .footer-feedback-form {
+      float: right;
+      width: 300px;
+      margin-right: 0;
+      .form {
+        height: 122px;
+        margin: 0px;
+        padding: 0px;
+        background: none repeat scroll 0 0;
+        border-radius: 5px;
+      }
+      textarea {
+        padding: 10px 20px 10px 20px;
+        resize: none;
+        height: 100px;
+        margin: 0;
+      }
+      .btn {
+        display: block;
+        height: 40px;
+        line-height: 40px;
+        width: 300px;
+        padding: 0;
+        margin-top: 11px;
+        font-weight: 300;
+        border-radius: 2px;
+        box-shadow: none;
+      }
+    }
+  }
+  .footer-bottom {
+    position: relative;
+    right: 520px;
+    top: 50px;
+    height: 22px;
+    #footer-logo {
+      img {
+        width: 172px;
+        margin-top: -13px;
+      }
+    }
+    .sns {
+      position: relative;
+      left: 980px;
+      bottom: 30px;
+      font-weight: 300;
+      li {
+        float: left;
+        margin-right: 10px;
+        i {
+          font-size: 17px;
+          text-decoration: none;
+          color: #45494B;
+        }
+      }
+    }
+  }
+}
