@@ -65,3 +65,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # ログイン機能
 gem 'devise'
+# Hamlの導入
+gem 'haml-rails'
+gem 'erb2haml'
