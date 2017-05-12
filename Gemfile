@@ -36,14 +36,14 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-# ログイン機能
-gem 'devise'
-# Hamlの導入
-gem 'haml-rails'
-gem 'erb2haml'
-# font-awesomeの導入
-gem 'font-awesome-sass'
-gem 'font-awesome-rails'
+# # ログイン機能
+# gem 'devise'
+# # Hamlの導入
+# gem 'haml-rails'
+# gem 'erb2haml'
+# # font-awesomeの導入
+# gem 'font-awesome-sass'
+# gem 'font-awesome-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -71,12 +71,3 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
-# ログイン機能
-gem 'devise'
-# Hamlの導入
-# gem 'haml-rails'
-# gem 'erb2haml'
-# # font-awesomeの導入
-# gem 'font-awesome-sass'
-# gem 'font-awesome-rails'
