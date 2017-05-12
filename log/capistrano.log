@@ -6967,3 +6967,492 @@ You have added to the Gemfile:
   INFO [80a30080] Running /usr/bin/env echo "Branch master (at 5656f83f6ae433dfba8b36b5f211cb85bb7c9386) deployed as release 20170512024328 by tokunagayousuke" >> /var/www/wantedly/revisions.log as ec2-user@54.64.106.216
  DEBUG [80a30080] Command: cd /var/www/wantedly/releases && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env echo "Branch master (at 5656f83f6ae433dfba8b36b5f211cb85bb7c9386) deployed as release 20170512024328 by tokunagayousuke" >> /var/www/wantedly/revisions.log )
   INFO [80a30080] Finished in 0.061 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-05-12 11:49:31 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [ba3189f7] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as ec2-user@54.64.106.216
+ DEBUG [ba3189f7] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [ba3189f7] Finished in 0.445 seconds with exit status 0 (successful).
+  INFO [7cdf29a3] Running /usr/bin/env mkdir -p /tmp as ec2-user@54.64.106.216
+ DEBUG [7cdf29a3] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /tmp )
+  INFO [7cdf29a3] Finished in 0.062 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-wantedly-production-tokunagayousuke.sh 0.0%
+  INFO Uploading /tmp/git-ssh-wantedly-production-tokunagayousuke.sh 100.0%
+  INFO [4e5d28ba] Running /usr/bin/env chmod 700 /tmp/git-ssh-wantedly-production-tokunagayousuke.sh as ec2-user@54.64.106.216
+ DEBUG [4e5d28ba] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env chmod 700 /tmp/git-ssh-wantedly-production-tokunagayousuke.sh )
+  INFO [4e5d28ba] Finished in 0.062 seconds with exit status 0 (successful).
+  INFO [32eec2c4] Running /usr/bin/env git ls-remote git@github.com:yosuketokunaga/wantedly.git HEAD as ec2-user@54.64.106.216
+ DEBUG [32eec2c4] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-wantedly-production-tokunagayousuke.sh" ; /usr/bin/env git ls-remote git@github.com:yosuketokunaga/wantedly.git HEAD )
+ DEBUG [32eec2c4] 	972c785c28966e0d6bf781c010be874257cb1e8e	HEAD
+  INFO [32eec2c4] Finished in 1.593 seconds with exit status 0 (successful).
+  INFO [ecdd86e3] Running /usr/bin/env mkdir -p /var/www/wantedly/shared /var/www/wantedly/releases as ec2-user@54.64.106.216
+ DEBUG [ecdd86e3] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/wantedly/shared /var/www/wantedly/releases )
+  INFO [ecdd86e3] Finished in 0.065 seconds with exit status 0 (successful).
+  INFO [ba5a7774] Running /usr/bin/env mkdir -p /var/www/wantedly/shared/log /var/www/wantedly/shared/tmp/pids /var/www/wantedly/shared/tmp/cache /var/www/wantedly/shared/tmp/sockets /var/www/wantedly/shared/vendor/bundle /var/www/wantedly/shared/public/system /var/www/wantedly/shared/public/uploads /var/www/wantedly/shared/public/assets as ec2-user@54.64.106.216
+ DEBUG [ba5a7774] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/wantedly/shared/log /var/www/wantedly/shared/tmp/pids /var/www/wantedly/shared/tmp/cache /var/www/wantedly/shared/tmp/sockets /var/www/wantedly/shared/vendor/bundle /var/www/wantedly/shared/public/system /var/www/wantedly/shared/public/uploads /var/www/wantedly/shared/public/assets )
+  INFO [ba5a7774] Finished in 0.064 seconds with exit status 0 (successful).
+ DEBUG [763c69df] Running [ -f /var/www/wantedly/current/REVISION ] as ec2-user@54.64.106.216
+ DEBUG [763c69df] Command: [ -f /var/www/wantedly/current/REVISION ]
+ DEBUG [763c69df] Finished in 0.058 seconds with exit status 0 (successful).
+ DEBUG [9211ec99] Running /usr/bin/env cat /var/www/wantedly/current/REVISION 2>/dev/null as ec2-user@54.64.106.216
+ DEBUG [9211ec99] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env cat /var/www/wantedly/current/REVISION 2>/dev/null )
+ DEBUG [9211ec99] 	5656f83f6ae433dfba8b36b5f211cb85bb7c9386
+ DEBUG [9211ec99] Finished in 0.062 seconds with exit status 0 (successful).
+ DEBUG [0edb1508] Running [ -f /var/www/wantedly/repo/HEAD ] as ec2-user@54.64.106.216
+ DEBUG [0edb1508] Command: [ -f /var/www/wantedly/repo/HEAD ]
+ DEBUG [0edb1508] Finished in 0.064 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/wantedly/repo
+ DEBUG [4de0263f] Running if test ! -d /var/www/wantedly/repo; then echo "Directory does not exist '/var/www/wantedly/repo'" 1>&2; false; fi as ec2-user@54.64.106.216
+ DEBUG [4de0263f] Command: if test ! -d /var/www/wantedly/repo; then echo "Directory does not exist '/var/www/wantedly/repo'" 1>&2; false; fi
+ DEBUG [4de0263f] Finished in 0.067 seconds with exit status 0 (successful).
+  INFO [dc822de3] Running /usr/bin/env git remote set-url origin git@github.com:yosuketokunaga/wantedly.git as ec2-user@54.64.106.216
+ DEBUG [dc822de3] Command: cd /var/www/wantedly/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-wantedly-production-tokunagayousuke.sh" ; /usr/bin/env git remote set-url origin git@github.com:yosuketokunaga/wantedly.git )
+  INFO [dc822de3] Finished in 0.059 seconds with exit status 0 (successful).
+  INFO [0f4b6b36] Running /usr/bin/env git remote update --prune as ec2-user@54.64.106.216
+ DEBUG [0f4b6b36] Command: cd /var/www/wantedly/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-wantedly-production-tokunagayousuke.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [0f4b6b36] 	Fetching origin
+ DEBUG [0f4b6b36] 	From github.com:yosuketokunaga/wantedly
+   5656f83..972c785  master     -> master
+  INFO [0f4b6b36] Finished in 1.913 seconds with exit status 0 (successful).
+ DEBUG [1beb4401] Running if test ! -d /var/www/wantedly/repo; then echo "Directory does not exist '/var/www/wantedly/repo'" 1>&2; false; fi as ec2-user@54.64.106.216
+ DEBUG [1beb4401] Command: if test ! -d /var/www/wantedly/repo; then echo "Directory does not exist '/var/www/wantedly/repo'" 1>&2; false; fi
+ DEBUG [1beb4401] Finished in 0.059 seconds with exit status 0 (successful).
+  INFO [35844fbe] Running /usr/bin/env mkdir -p /var/www/wantedly/releases/20170512024933 as ec2-user@54.64.106.216
+ DEBUG [35844fbe] Command: cd /var/www/wantedly/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-wantedly-production-tokunagayousuke.sh" ; /usr/bin/env mkdir -p /var/www/wantedly/releases/20170512024933 )
+  INFO [35844fbe] Finished in 0.066 seconds with exit status 0 (successful).
+  INFO [409c2251] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/wantedly/releases/20170512024933 as ec2-user@54.64.106.216
+ DEBUG [409c2251] Command: cd /var/www/wantedly/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-wantedly-production-tokunagayousuke.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/wantedly/releases/20170512024933 )
+  INFO [409c2251] Finished in 0.080 seconds with exit status 0 (successful).
+ DEBUG [7c7f318d] Running if test ! -d /var/www/wantedly/repo; then echo "Directory does not exist '/var/www/wantedly/repo'" 1>&2; false; fi as ec2-user@54.64.106.216
+ DEBUG [7c7f318d] Command: if test ! -d /var/www/wantedly/repo; then echo "Directory does not exist '/var/www/wantedly/repo'" 1>&2; false; fi
+ DEBUG [7c7f318d] Finished in 0.064 seconds with exit status 0 (successful).
+ DEBUG [4cebe70d] Running /usr/bin/env git rev-list --max-count=1 master as ec2-user@54.64.106.216
+ DEBUG [4cebe70d] Command: cd /var/www/wantedly/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-wantedly-production-tokunagayousuke.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [4cebe70d] 	972c785c28966e0d6bf781c010be874257cb1e8e
+ DEBUG [4cebe70d] Finished in 0.062 seconds with exit status 0 (successful).
+ DEBUG [ccddde1d] Running if test ! -d /var/www/wantedly/releases/20170512024933; then echo "Directory does not exist '/var/www/wantedly/releases/20170512024933'" 1>&2; false; fi as ec2-user@54.64.106.216
+ DEBUG [ccddde1d] Command: if test ! -d /var/www/wantedly/releases/20170512024933; then echo "Directory does not exist '/var/www/wantedly/releases/20170512024933'" 1>&2; false; fi
+ DEBUG [ccddde1d] Finished in 0.064 seconds with exit status 0 (successful).
+  INFO [7f011941] Running /usr/bin/env echo "972c785c28966e0d6bf781c010be874257cb1e8e" >> REVISION as ec2-user@54.64.106.216
+ DEBUG [7f011941] Command: cd /var/www/wantedly/releases/20170512024933 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env echo "972c785c28966e0d6bf781c010be874257cb1e8e" >> REVISION )
+  INFO [7f011941] Finished in 0.061 seconds with exit status 0 (successful).
+  INFO [ac8dae41] Running /usr/bin/env mkdir -p /var/www/wantedly/releases/20170512024933 /var/www/wantedly/releases/20170512024933/tmp /var/www/wantedly/releases/20170512024933/vendor /var/www/wantedly/releases/20170512024933/public as ec2-user@54.64.106.216
+ DEBUG [ac8dae41] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/wantedly/releases/20170512024933 /var/www/wantedly/releases/20170512024933/tmp /var/www/wantedly/releases/20170512024933/vendor /var/www/wantedly/releases/20170512024933/public )
+  INFO [ac8dae41] Finished in 0.063 seconds with exit status 0 (successful).
+ DEBUG [e4d88766] Running [ -L /var/www/wantedly/releases/20170512024933/log ] as ec2-user@54.64.106.216
+ DEBUG [e4d88766] Command: [ -L /var/www/wantedly/releases/20170512024933/log ]
+ DEBUG [e4d88766] Finished in 0.057 seconds with exit status 1 (failed).
+ DEBUG [a17d83f6] Running [ -d /var/www/wantedly/releases/20170512024933/log ] as ec2-user@54.64.106.216
+ DEBUG [a17d83f6] Command: [ -d /var/www/wantedly/releases/20170512024933/log ]
+ DEBUG [a17d83f6] Finished in 0.056 seconds with exit status 0 (successful).
+  INFO [313136fe] Running /usr/bin/env rm -rf /var/www/wantedly/releases/20170512024933/log as ec2-user@54.64.106.216
+ DEBUG [313136fe] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /var/www/wantedly/releases/20170512024933/log )
+  INFO [313136fe] Finished in 0.061 seconds with exit status 0 (successful).
+  INFO [7a1408ed] Running /usr/bin/env ln -s /var/www/wantedly/shared/log /var/www/wantedly/releases/20170512024933/log as ec2-user@54.64.106.216
+ DEBUG [7a1408ed] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/wantedly/shared/log /var/www/wantedly/releases/20170512024933/log )
+  INFO [7a1408ed] Finished in 0.059 seconds with exit status 0 (successful).
+ DEBUG [f99dcf75] Running [ -L /var/www/wantedly/releases/20170512024933/tmp/pids ] as ec2-user@54.64.106.216
+ DEBUG [f99dcf75] Command: [ -L /var/www/wantedly/releases/20170512024933/tmp/pids ]
+ DEBUG [f99dcf75] Finished in 0.057 seconds with exit status 1 (failed).
+ DEBUG [21f29dbc] Running [ -d /var/www/wantedly/releases/20170512024933/tmp/pids ] as ec2-user@54.64.106.216
+ DEBUG [21f29dbc] Command: [ -d /var/www/wantedly/releases/20170512024933/tmp/pids ]
+ DEBUG [21f29dbc] Finished in 0.061 seconds with exit status 1 (failed).
+  INFO [f4b8783d] Running /usr/bin/env ln -s /var/www/wantedly/shared/tmp/pids /var/www/wantedly/releases/20170512024933/tmp/pids as ec2-user@54.64.106.216
+ DEBUG [f4b8783d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/wantedly/shared/tmp/pids /var/www/wantedly/releases/20170512024933/tmp/pids )
+  INFO [f4b8783d] Finished in 0.061 seconds with exit status 0 (successful).
+ DEBUG [2c0df4a0] Running [ -L /var/www/wantedly/releases/20170512024933/tmp/cache ] as ec2-user@54.64.106.216
+ DEBUG [2c0df4a0] Command: [ -L /var/www/wantedly/releases/20170512024933/tmp/cache ]
+ DEBUG [2c0df4a0] Finished in 0.056 seconds with exit status 1 (failed).
+ DEBUG [d498127b] Running [ -d /var/www/wantedly/releases/20170512024933/tmp/cache ] as ec2-user@54.64.106.216
+ DEBUG [d498127b] Command: [ -d /var/www/wantedly/releases/20170512024933/tmp/cache ]
+ DEBUG [d498127b] Finished in 0.057 seconds with exit status 0 (successful).
+  INFO [fdeddc5e] Running /usr/bin/env rm -rf /var/www/wantedly/releases/20170512024933/tmp/cache as ec2-user@54.64.106.216
+ DEBUG [fdeddc5e] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /var/www/wantedly/releases/20170512024933/tmp/cache )
+  INFO [fdeddc5e] Finished in 0.063 seconds with exit status 0 (successful).
+  INFO [1df904c9] Running /usr/bin/env ln -s /var/www/wantedly/shared/tmp/cache /var/www/wantedly/releases/20170512024933/tmp/cache as ec2-user@54.64.106.216
+ DEBUG [1df904c9] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/wantedly/shared/tmp/cache /var/www/wantedly/releases/20170512024933/tmp/cache )
+  INFO [1df904c9] Finished in 0.060 seconds with exit status 0 (successful).
+ DEBUG [ff01dfe0] Running [ -L /var/www/wantedly/releases/20170512024933/tmp/sockets ] as ec2-user@54.64.106.216
+ DEBUG [ff01dfe0] Command: [ -L /var/www/wantedly/releases/20170512024933/tmp/sockets ]
+ DEBUG [ff01dfe0] Finished in 0.058 seconds with exit status 1 (failed).
+ DEBUG [0e8709fe] Running [ -d /var/www/wantedly/releases/20170512024933/tmp/sockets ] as ec2-user@54.64.106.216
+ DEBUG [0e8709fe] Command: [ -d /var/www/wantedly/releases/20170512024933/tmp/sockets ]
+ DEBUG [0e8709fe] Finished in 0.062 seconds with exit status 1 (failed).
+  INFO [30618378] Running /usr/bin/env ln -s /var/www/wantedly/shared/tmp/sockets /var/www/wantedly/releases/20170512024933/tmp/sockets as ec2-user@54.64.106.216
+ DEBUG [30618378] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/wantedly/shared/tmp/sockets /var/www/wantedly/releases/20170512024933/tmp/sockets )
+  INFO [30618378] Finished in 0.059 seconds with exit status 0 (successful).
+ DEBUG [53d92f10] Running [ -L /var/www/wantedly/releases/20170512024933/vendor/bundle ] as ec2-user@54.64.106.216
+ DEBUG [53d92f10] Command: [ -L /var/www/wantedly/releases/20170512024933/vendor/bundle ]
+ DEBUG [53d92f10] Finished in 0.057 seconds with exit status 1 (failed).
+ DEBUG [aae1fb23] Running [ -d /var/www/wantedly/releases/20170512024933/vendor/bundle ] as ec2-user@54.64.106.216
+ DEBUG [aae1fb23] Command: [ -d /var/www/wantedly/releases/20170512024933/vendor/bundle ]
+ DEBUG [aae1fb23] Finished in 0.058 seconds with exit status 1 (failed).
+  INFO [a357d67f] Running /usr/bin/env ln -s /var/www/wantedly/shared/vendor/bundle /var/www/wantedly/releases/20170512024933/vendor/bundle as ec2-user@54.64.106.216
+ DEBUG [a357d67f] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/wantedly/shared/vendor/bundle /var/www/wantedly/releases/20170512024933/vendor/bundle )
+  INFO [a357d67f] Finished in 0.057 seconds with exit status 0 (successful).
+ DEBUG [0045ba03] Running [ -L /var/www/wantedly/releases/20170512024933/public/system ] as ec2-user@54.64.106.216
+ DEBUG [0045ba03] Command: [ -L /var/www/wantedly/releases/20170512024933/public/system ]
+ DEBUG [0045ba03] Finished in 0.059 seconds with exit status 1 (failed).
+ DEBUG [7abb0c73] Running [ -d /var/www/wantedly/releases/20170512024933/public/system ] as ec2-user@54.64.106.216
+ DEBUG [7abb0c73] Command: [ -d /var/www/wantedly/releases/20170512024933/public/system ]
+ DEBUG [7abb0c73] Finished in 0.063 seconds with exit status 1 (failed).
+  INFO [28a3db9f] Running /usr/bin/env ln -s /var/www/wantedly/shared/public/system /var/www/wantedly/releases/20170512024933/public/system as ec2-user@54.64.106.216
+ DEBUG [28a3db9f] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/wantedly/shared/public/system /var/www/wantedly/releases/20170512024933/public/system )
+  INFO [28a3db9f] Finished in 0.062 seconds with exit status 0 (successful).
+ DEBUG [7a18d5b6] Running [ -L /var/www/wantedly/releases/20170512024933/public/uploads ] as ec2-user@54.64.106.216
+ DEBUG [7a18d5b6] Command: [ -L /var/www/wantedly/releases/20170512024933/public/uploads ]
+ DEBUG [7a18d5b6] Finished in 0.056 seconds with exit status 1 (failed).
+ DEBUG [a2c0a337] Running [ -d /var/www/wantedly/releases/20170512024933/public/uploads ] as ec2-user@54.64.106.216
+ DEBUG [a2c0a337] Command: [ -d /var/www/wantedly/releases/20170512024933/public/uploads ]
+ DEBUG [a2c0a337] Finished in 0.066 seconds with exit status 1 (failed).
+  INFO [a689cbbb] Running /usr/bin/env ln -s /var/www/wantedly/shared/public/uploads /var/www/wantedly/releases/20170512024933/public/uploads as ec2-user@54.64.106.216
+ DEBUG [a689cbbb] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/wantedly/shared/public/uploads /var/www/wantedly/releases/20170512024933/public/uploads )
+  INFO [a689cbbb] Finished in 0.062 seconds with exit status 0 (successful).
+ DEBUG [3ea8c0b8] Running [ -L /var/www/wantedly/releases/20170512024933/public/assets ] as ec2-user@54.64.106.216
+ DEBUG [3ea8c0b8] Command: [ -L /var/www/wantedly/releases/20170512024933/public/assets ]
+ DEBUG [3ea8c0b8] Finished in 0.060 seconds with exit status 1 (failed).
+ DEBUG [d1b9e06a] Running [ -d /var/www/wantedly/releases/20170512024933/public/assets ] as ec2-user@54.64.106.216
+ DEBUG [d1b9e06a] Command: [ -d /var/www/wantedly/releases/20170512024933/public/assets ]
+ DEBUG [d1b9e06a] Finished in 0.060 seconds with exit status 1 (failed).
+  INFO [f8c90293] Running /usr/bin/env ln -s /var/www/wantedly/shared/public/assets /var/www/wantedly/releases/20170512024933/public/assets as ec2-user@54.64.106.216
+ DEBUG [f8c90293] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/wantedly/shared/public/assets /var/www/wantedly/releases/20170512024933/public/assets )
+  INFO [f8c90293] Finished in 0.059 seconds with exit status 0 (successful).
+ DEBUG [b76f847e] Running if test ! -d /var/www/wantedly/releases/20170512024933; then echo "Directory does not exist '/var/www/wantedly/releases/20170512024933'" 1>&2; false; fi as ec2-user@54.64.106.216
+ DEBUG [b76f847e] Command: if test ! -d /var/www/wantedly/releases/20170512024933; then echo "Directory does not exist '/var/www/wantedly/releases/20170512024933'" 1>&2; false; fi
+ DEBUG [b76f847e] Finished in 0.059 seconds with exit status 0 (successful).
+ DEBUG [b2fa1ad4] Running $HOME/.rbenv/bin/rbenv exec bundle check --path /var/www/wantedly/shared/bundle as ec2-user@54.64.106.216
+ DEBUG [b2fa1ad4] Command: cd /var/www/wantedly/releases/20170512024933 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" NOKOGIRI_USE_SYSTEM_LIBRARIES="1" ; $HOME/.rbenv/bin/rbenv exec bundle check --path /var/www/wantedly/shared/bundle )
+ DEBUG [b2fa1ad4] 	The following gems are missing
+ DEBUG [b2fa1ad4] 	 * net-ssh (4.1.0)
+ DEBUG [b2fa1ad4] 	 * net-scp (1.2.1)
+ DEBUG [b2fa1ad4] 	 * sshkit (1.13.1)
+ DEBUG [b2fa1ad4] 	 * airbrussh (1.2.0)
+ DEBUG [b2fa1ad4] 	 * bindex (0.5.0)
+ DEBUG [b2fa1ad4] 	 * byebug (9.0.6)
+ DEBUG [b2fa1ad4] 	 * capistrano (3.8.1)
+ DEBUG [b2fa1ad4] 	 * capistrano-bundler (1.2.0)
+ DEBUG [b2fa1ad4] 	 * capistrano-rails (1.2.3)
+ DEBUG [b2fa1ad4] 	 * capistrano-rbenv (2.1.1)
+ DEBUG [b2fa1ad4] 	 * capistrano3-unicorn (0.2.1)
+ DEBUG [b2fa1ad4] 	 * ffi (1.9.18)
+ DEBUG [b2fa1ad4] 	 * rb-fsevent (0.9.8)
+ DEBUG [b2fa1ad4] 	 * rb-inotify (0.9.8)
+ DEBUG [b2fa1ad4] 	 * listen (3.0.8)
+ DEBUG [b2fa1ad4] 	 * spring (2.0.1)
+ DEBUG [b2fa1ad4] 	 * spring-watcher-listen (2.0.1)
+ DEBUG [b2fa1ad4] 	 * web-console (3.5.0)
+ DEBUG [b2fa1ad4] 	Install missing gems with `bundle install`
+ DEBUG [b2fa1ad4] Finished in 0.294 seconds with exit status 1 (failed).
+  INFO [701c0648] Running $HOME/.rbenv/bin/rbenv exec bundle install --path /var/www/wantedly/shared/bundle --without development test --deployment --quiet as ec2-user@54.64.106.216
+ DEBUG [701c0648] Command: cd /var/www/wantedly/releases/20170512024933 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" NOKOGIRI_USE_SYSTEM_LIBRARIES="1" ; $HOME/.rbenv/bin/rbenv exec bundle install --path /var/www/wantedly/shared/bundle --without development test --deployment --quiet )
+  INFO [701c0648] Finished in 1.735 seconds with exit status 0 (successful).
+ DEBUG [ff2d5fb4] Running if test ! -d /var/www/wantedly/releases/20170512024933; then echo "Directory does not exist '/var/www/wantedly/releases/20170512024933'" 1>&2; false; fi as ec2-user@54.64.106.216
+ DEBUG [ff2d5fb4] Command: if test ! -d /var/www/wantedly/releases/20170512024933; then echo "Directory does not exist '/var/www/wantedly/releases/20170512024933'" 1>&2; false; fi
+ DEBUG [ff2d5fb4] Finished in 0.066 seconds with exit status 0 (successful).
+  INFO [e13a6af2] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile as ec2-user@54.64.106.216
+ DEBUG [e13a6af2] Command: cd /var/www/wantedly/releases/20170512024933 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile )
+  INFO [e13a6af2] Finished in 1.573 seconds with exit status 0 (successful).
+ DEBUG [955f8307] Running if test ! -d /var/www/wantedly/releases/20170512024933; then echo "Directory does not exist '/var/www/wantedly/releases/20170512024933'" 1>&2; false; fi as ec2-user@54.64.106.216
+ DEBUG [955f8307] Command: if test ! -d /var/www/wantedly/releases/20170512024933; then echo "Directory does not exist '/var/www/wantedly/releases/20170512024933'" 1>&2; false; fi
+ DEBUG [955f8307] Finished in 0.061 seconds with exit status 0 (successful).
+  INFO [23b39621] Running /usr/bin/env mkdir -p /var/www/wantedly/releases/20170512024933/assets_manifest_backup as ec2-user@54.64.106.216
+ DEBUG [23b39621] Command: cd /var/www/wantedly/releases/20170512024933 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/wantedly/releases/20170512024933/assets_manifest_backup )
+  INFO [23b39621] Finished in 0.068 seconds with exit status 0 (successful).
+ DEBUG [e6cb4fbd] Running /usr/bin/env ls /var/www/wantedly/releases/20170512024933/public/assets/.sprockets-manifest* as ec2-user@54.64.106.216
+ DEBUG [e6cb4fbd] Command: cd /var/www/wantedly/releases/20170512024933 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls /var/www/wantedly/releases/20170512024933/public/assets/.sprockets-manifest* )
+ DEBUG [e6cb4fbd] 	/var/www/wantedly/releases/20170512024933/public/assets/.sprockets-manifest-2ddd3fe82732d17969fc468b9d56e5f3.json
+ DEBUG [e6cb4fbd] Finished in 0.063 seconds with exit status 0 (successful).
+ DEBUG [9acab978] Running /usr/bin/env ls /var/www/wantedly/releases/20170512024933/public/assets/.sprockets-manifest* as ec2-user@54.64.106.216
+ DEBUG [9acab978] Command: cd /var/www/wantedly/releases/20170512024933 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls /var/www/wantedly/releases/20170512024933/public/assets/.sprockets-manifest* )
+ DEBUG [9acab978] 	/var/www/wantedly/releases/20170512024933/public/assets/.sprockets-manifest-2ddd3fe82732d17969fc468b9d56e5f3.json
+ DEBUG [9acab978] Finished in 0.063 seconds with exit status 0 (successful).
+  INFO [9bcaa766] Running /usr/bin/env cp /var/www/wantedly/releases/20170512024933/public/assets/.sprockets-manifest-2ddd3fe82732d17969fc468b9d56e5f3.json /var/www/wantedly/releases/20170512024933/assets_manifest_backup as ec2-user@54.64.106.216
+ DEBUG [9bcaa766] Command: cd /var/www/wantedly/releases/20170512024933 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env cp /var/www/wantedly/releases/20170512024933/public/assets/.sprockets-manifest-2ddd3fe82732d17969fc468b9d56e5f3.json /var/www/wantedly/releases/20170512024933/assets_manifest_backup )
+  INFO [9bcaa766] Finished in 0.062 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [2c4b60b5] Running if test ! -d /var/www/wantedly/releases/20170512024933; then echo "Directory does not exist '/var/www/wantedly/releases/20170512024933'" 1>&2; false; fi as ec2-user@54.64.106.216
+ DEBUG [2c4b60b5] Command: if test ! -d /var/www/wantedly/releases/20170512024933; then echo "Directory does not exist '/var/www/wantedly/releases/20170512024933'" 1>&2; false; fi
+ DEBUG [2c4b60b5] Finished in 0.065 seconds with exit status 0 (successful).
+  INFO [5ec02fd4] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate as ec2-user@54.64.106.216
+ DEBUG [5ec02fd4] Command: cd /var/www/wantedly/releases/20170512024933 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate )
+  INFO [5ec02fd4] Finished in 1.537 seconds with exit status 0 (successful).
+  INFO [9fbf7b85] Running /usr/bin/env ln -s /var/www/wantedly/releases/20170512024933 /var/www/wantedly/releases/current as ec2-user@54.64.106.216
+ DEBUG [9fbf7b85] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/wantedly/releases/20170512024933 /var/www/wantedly/releases/current )
+  INFO [9fbf7b85] Finished in 0.061 seconds with exit status 0 (successful).
+  INFO [edf5f56e] Running /usr/bin/env mv /var/www/wantedly/releases/current /var/www/wantedly as ec2-user@54.64.106.216
+ DEBUG [edf5f56e] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mv /var/www/wantedly/releases/current /var/www/wantedly )
+  INFO [edf5f56e] Finished in 0.082 seconds with exit status 0 (successful).
+ DEBUG [e15a3058] Running if test ! -d /var/www/wantedly/current; then echo "Directory does not exist '/var/www/wantedly/current'" 1>&2; false; fi as ec2-user@54.64.106.216
+ DEBUG [e15a3058] Command: if test ! -d /var/www/wantedly/current; then echo "Directory does not exist '/var/www/wantedly/current'" 1>&2; false; fi
+ DEBUG [e15a3058] Finished in 0.064 seconds with exit status 0 (successful).
+ DEBUG [a4729c15] Running [ -e /var/www/wantedly/tmp/pids/unicorn.pid ] && kill -0 `cat /var/www/wantedly/tmp/pids/unicorn.pid` as ec2-user@54.64.106.216
+ DEBUG [a4729c15] Command: [ -e /var/www/wantedly/tmp/pids/unicorn.pid ] && kill -0 `cat /var/www/wantedly/tmp/pids/unicorn.pid`
+ DEBUG [a4729c15] Finished in 0.068 seconds with exit status 0 (successful).
+  INFO unicorn is running...
+ DEBUG [896c135a] Running if test ! -d /var/www/wantedly/current; then echo "Directory does not exist '/var/www/wantedly/current'" 1>&2; false; fi as ec2-user@54.64.106.216
+ DEBUG [896c135a] Command: if test ! -d /var/www/wantedly/current; then echo "Directory does not exist '/var/www/wantedly/current'" 1>&2; false; fi
+ DEBUG [896c135a] Finished in 0.057 seconds with exit status 0 (successful).
+  INFO unicorn restarting...
+  INFO [0a07ca16] Running /usr/bin/env kill -s USR2 `cat /var/www/wantedly/tmp/pids/unicorn.pid` as ec2-user@54.64.106.216
+ DEBUG [0a07ca16] Command: cd /var/www/wantedly/current && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env kill -s USR2 `cat /var/www/wantedly/tmp/pids/unicorn.pid` )
+  INFO [0a07ca16] Finished in 0.072 seconds with exit status 0 (successful).
+ DEBUG [d7759fa0] Running /usr/bin/env ls -x /var/www/wantedly/releases as ec2-user@54.64.106.216
+ DEBUG [d7759fa0] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls -x /var/www/wantedly/releases )
+ DEBUG [d7759fa0] 	20170512023658	20170512023735	20170512023829	20170512024107	20170512024328
+20170512024933
+ DEBUG [d7759fa0] Finished in 0.101 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on 54.64.106.216
+  INFO [89789707] Running /usr/bin/env rm -rf /var/www/wantedly/releases/20170512023658 as ec2-user@54.64.106.216
+ DEBUG [89789707] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /var/www/wantedly/releases/20170512023658 )
+  INFO [89789707] Finished in 0.061 seconds with exit status 0 (successful).
+ DEBUG [e9d912a0] Running if test ! -d /var/www/wantedly/releases; then echo "Directory does not exist '/var/www/wantedly/releases'" 1>&2; false; fi as ec2-user@54.64.106.216
+ DEBUG [e9d912a0] Command: if test ! -d /var/www/wantedly/releases; then echo "Directory does not exist '/var/www/wantedly/releases'" 1>&2; false; fi
+ DEBUG [e9d912a0] Finished in 0.058 seconds with exit status 0 (successful).
+  INFO [1b79d38b] Running /usr/bin/env echo "Branch master (at 972c785c28966e0d6bf781c010be874257cb1e8e) deployed as release 20170512024933 by tokunagayousuke" >> /var/www/wantedly/revisions.log as ec2-user@54.64.106.216
+ DEBUG [1b79d38b] Command: cd /var/www/wantedly/releases && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env echo "Branch master (at 972c785c28966e0d6bf781c010be874257cb1e8e) deployed as release 20170512024933 by tokunagayousuke" >> /var/www/wantedly/revisions.log )
+  INFO [1b79d38b] Finished in 0.060 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-05-12 12:00:12 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [9d7548b2] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as ec2-user@54.64.106.216
+ DEBUG [9d7548b2] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [9d7548b2] Finished in 0.444 seconds with exit status 0 (successful).
+  INFO [e3254778] Running /usr/bin/env mkdir -p /tmp as ec2-user@54.64.106.216
+ DEBUG [e3254778] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /tmp )
+  INFO [e3254778] Finished in 0.065 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-wantedly-production-tokunagayousuke.sh 0.0%
+  INFO Uploading /tmp/git-ssh-wantedly-production-tokunagayousuke.sh 100.0%
+  INFO [04cfba7a] Running /usr/bin/env chmod 700 /tmp/git-ssh-wantedly-production-tokunagayousuke.sh as ec2-user@54.64.106.216
+ DEBUG [04cfba7a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env chmod 700 /tmp/git-ssh-wantedly-production-tokunagayousuke.sh )
+  INFO [04cfba7a] Finished in 0.073 seconds with exit status 0 (successful).
+  INFO [a5578913] Running /usr/bin/env git ls-remote git@github.com:yosuketokunaga/wantedly.git HEAD as ec2-user@54.64.106.216
+ DEBUG [a5578913] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-wantedly-production-tokunagayousuke.sh" ; /usr/bin/env git ls-remote git@github.com:yosuketokunaga/wantedly.git HEAD )
+ DEBUG [a5578913] 	972c785c28966e0d6bf781c010be874257cb1e8e	HEAD
+  INFO [a5578913] Finished in 1.517 seconds with exit status 0 (successful).
+  INFO [d5ab1d75] Running /usr/bin/env mkdir -p /var/www/wantedly/shared /var/www/wantedly/releases as ec2-user@54.64.106.216
+ DEBUG [d5ab1d75] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/wantedly/shared /var/www/wantedly/releases )
+  INFO [d5ab1d75] Finished in 0.060 seconds with exit status 0 (successful).
+  INFO [2c1432e7] Running /usr/bin/env mkdir -p /var/www/wantedly/shared/log /var/www/wantedly/shared/tmp/pids /var/www/wantedly/shared/tmp/cache /var/www/wantedly/shared/tmp/sockets /var/www/wantedly/shared/vendor/bundle /var/www/wantedly/shared/public/system /var/www/wantedly/shared/public/uploads /var/www/wantedly/shared/public/assets as ec2-user@54.64.106.216
+ DEBUG [2c1432e7] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/wantedly/shared/log /var/www/wantedly/shared/tmp/pids /var/www/wantedly/shared/tmp/cache /var/www/wantedly/shared/tmp/sockets /var/www/wantedly/shared/vendor/bundle /var/www/wantedly/shared/public/system /var/www/wantedly/shared/public/uploads /var/www/wantedly/shared/public/assets )
+  INFO [2c1432e7] Finished in 0.060 seconds with exit status 0 (successful).
+ DEBUG [8e8bb497] Running [ -f /var/www/wantedly/current/REVISION ] as ec2-user@54.64.106.216
+ DEBUG [8e8bb497] Command: [ -f /var/www/wantedly/current/REVISION ]
+ DEBUG [8e8bb497] Finished in 0.064 seconds with exit status 0 (successful).
+ DEBUG [33245406] Running /usr/bin/env cat /var/www/wantedly/current/REVISION 2>/dev/null as ec2-user@54.64.106.216
+ DEBUG [33245406] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env cat /var/www/wantedly/current/REVISION 2>/dev/null )
+ DEBUG [33245406] 	972c785c28966e0d6bf781c010be874257cb1e8e
+ DEBUG [33245406] Finished in 0.060 seconds with exit status 0 (successful).
+ DEBUG [aefefe4f] Running [ -f /var/www/wantedly/repo/HEAD ] as ec2-user@54.64.106.216
+ DEBUG [aefefe4f] Command: [ -f /var/www/wantedly/repo/HEAD ]
+ DEBUG [aefefe4f] Finished in 0.067 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/wantedly/repo
+ DEBUG [b61e17d6] Running if test ! -d /var/www/wantedly/repo; then echo "Directory does not exist '/var/www/wantedly/repo'" 1>&2; false; fi as ec2-user@54.64.106.216
+ DEBUG [b61e17d6] Command: if test ! -d /var/www/wantedly/repo; then echo "Directory does not exist '/var/www/wantedly/repo'" 1>&2; false; fi
+ DEBUG [b61e17d6] Finished in 0.064 seconds with exit status 0 (successful).
+  INFO [9ae1202d] Running /usr/bin/env git remote set-url origin git@github.com:yosuketokunaga/wantedly.git as ec2-user@54.64.106.216
+ DEBUG [9ae1202d] Command: cd /var/www/wantedly/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-wantedly-production-tokunagayousuke.sh" ; /usr/bin/env git remote set-url origin git@github.com:yosuketokunaga/wantedly.git )
+  INFO [9ae1202d] Finished in 0.069 seconds with exit status 0 (successful).
+  INFO [1e424469] Running /usr/bin/env git remote update --prune as ec2-user@54.64.106.216
+ DEBUG [1e424469] Command: cd /var/www/wantedly/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-wantedly-production-tokunagayousuke.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [1e424469] 	Fetching origin
+  INFO [1e424469] Finished in 1.545 seconds with exit status 0 (successful).
+ DEBUG [3a5b71ac] Running if test ! -d /var/www/wantedly/repo; then echo "Directory does not exist '/var/www/wantedly/repo'" 1>&2; false; fi as ec2-user@54.64.106.216
+ DEBUG [3a5b71ac] Command: if test ! -d /var/www/wantedly/repo; then echo "Directory does not exist '/var/www/wantedly/repo'" 1>&2; false; fi
+ DEBUG [3a5b71ac] Finished in 0.060 seconds with exit status 0 (successful).
+  INFO [31cdc132] Running /usr/bin/env mkdir -p /var/www/wantedly/releases/20170512030015 as ec2-user@54.64.106.216
+ DEBUG [31cdc132] Command: cd /var/www/wantedly/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-wantedly-production-tokunagayousuke.sh" ; /usr/bin/env mkdir -p /var/www/wantedly/releases/20170512030015 )
+  INFO [31cdc132] Finished in 0.062 seconds with exit status 0 (successful).
+  INFO [90e61c47] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/wantedly/releases/20170512030015 as ec2-user@54.64.106.216
+ DEBUG [90e61c47] Command: cd /var/www/wantedly/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-wantedly-production-tokunagayousuke.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/wantedly/releases/20170512030015 )
+  INFO [90e61c47] Finished in 0.086 seconds with exit status 0 (successful).
+ DEBUG [3f002800] Running if test ! -d /var/www/wantedly/repo; then echo "Directory does not exist '/var/www/wantedly/repo'" 1>&2; false; fi as ec2-user@54.64.106.216
+ DEBUG [3f002800] Command: if test ! -d /var/www/wantedly/repo; then echo "Directory does not exist '/var/www/wantedly/repo'" 1>&2; false; fi
+ DEBUG [3f002800] Finished in 0.059 seconds with exit status 0 (successful).
+ DEBUG [7bd4b1c7] Running /usr/bin/env git rev-list --max-count=1 master as ec2-user@54.64.106.216
+ DEBUG [7bd4b1c7] Command: cd /var/www/wantedly/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-wantedly-production-tokunagayousuke.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [7bd4b1c7] 	972c785c28966e0d6bf781c010be874257cb1e8e
+ DEBUG [7bd4b1c7] Finished in 0.066 seconds with exit status 0 (successful).
+ DEBUG [8fd8fca7] Running if test ! -d /var/www/wantedly/releases/20170512030015; then echo "Directory does not exist '/var/www/wantedly/releases/20170512030015'" 1>&2; false; fi as ec2-user@54.64.106.216
+ DEBUG [8fd8fca7] Command: if test ! -d /var/www/wantedly/releases/20170512030015; then echo "Directory does not exist '/var/www/wantedly/releases/20170512030015'" 1>&2; false; fi
+ DEBUG [8fd8fca7] Finished in 0.063 seconds with exit status 0 (successful).
+  INFO [eb2c4e10] Running /usr/bin/env echo "972c785c28966e0d6bf781c010be874257cb1e8e" >> REVISION as ec2-user@54.64.106.216
+ DEBUG [eb2c4e10] Command: cd /var/www/wantedly/releases/20170512030015 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env echo "972c785c28966e0d6bf781c010be874257cb1e8e" >> REVISION )
+  INFO [eb2c4e10] Finished in 0.073 seconds with exit status 0 (successful).
+  INFO [b7785865] Running /usr/bin/env mkdir -p /var/www/wantedly/releases/20170512030015 /var/www/wantedly/releases/20170512030015/tmp /var/www/wantedly/releases/20170512030015/vendor /var/www/wantedly/releases/20170512030015/public as ec2-user@54.64.106.216
+ DEBUG [b7785865] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/wantedly/releases/20170512030015 /var/www/wantedly/releases/20170512030015/tmp /var/www/wantedly/releases/20170512030015/vendor /var/www/wantedly/releases/20170512030015/public )
+  INFO [b7785865] Finished in 0.064 seconds with exit status 0 (successful).
+ DEBUG [722a170b] Running [ -L /var/www/wantedly/releases/20170512030015/log ] as ec2-user@54.64.106.216
+ DEBUG [722a170b] Command: [ -L /var/www/wantedly/releases/20170512030015/log ]
+ DEBUG [722a170b] Finished in 0.058 seconds with exit status 1 (failed).
+ DEBUG [aa9bd3cb] Running [ -d /var/www/wantedly/releases/20170512030015/log ] as ec2-user@54.64.106.216
+ DEBUG [aa9bd3cb] Command: [ -d /var/www/wantedly/releases/20170512030015/log ]
+ DEBUG [aa9bd3cb] Finished in 0.057 seconds with exit status 0 (successful).
+  INFO [5a5bedb7] Running /usr/bin/env rm -rf /var/www/wantedly/releases/20170512030015/log as ec2-user@54.64.106.216
+ DEBUG [5a5bedb7] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /var/www/wantedly/releases/20170512030015/log )
+  INFO [5a5bedb7] Finished in 0.063 seconds with exit status 0 (successful).
+  INFO [5dd81d8c] Running /usr/bin/env ln -s /var/www/wantedly/shared/log /var/www/wantedly/releases/20170512030015/log as ec2-user@54.64.106.216
+ DEBUG [5dd81d8c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/wantedly/shared/log /var/www/wantedly/releases/20170512030015/log )
+  INFO [5dd81d8c] Finished in 0.060 seconds with exit status 0 (successful).
+ DEBUG [a5cc2040] Running [ -L /var/www/wantedly/releases/20170512030015/tmp/pids ] as ec2-user@54.64.106.216
+ DEBUG [a5cc2040] Command: [ -L /var/www/wantedly/releases/20170512030015/tmp/pids ]
+ DEBUG [a5cc2040] Finished in 0.058 seconds with exit status 1 (failed).
+ DEBUG [e8707af9] Running [ -d /var/www/wantedly/releases/20170512030015/tmp/pids ] as ec2-user@54.64.106.216
+ DEBUG [e8707af9] Command: [ -d /var/www/wantedly/releases/20170512030015/tmp/pids ]
+ DEBUG [e8707af9] Finished in 0.064 seconds with exit status 1 (failed).
+  INFO [a300fa11] Running /usr/bin/env ln -s /var/www/wantedly/shared/tmp/pids /var/www/wantedly/releases/20170512030015/tmp/pids as ec2-user@54.64.106.216
+ DEBUG [a300fa11] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/wantedly/shared/tmp/pids /var/www/wantedly/releases/20170512030015/tmp/pids )
+  INFO [a300fa11] Finished in 0.068 seconds with exit status 0 (successful).
+ DEBUG [95a76580] Running [ -L /var/www/wantedly/releases/20170512030015/tmp/cache ] as ec2-user@54.64.106.216
+ DEBUG [95a76580] Command: [ -L /var/www/wantedly/releases/20170512030015/tmp/cache ]
+ DEBUG [95a76580] Finished in 0.060 seconds with exit status 1 (failed).
+ DEBUG [cc246919] Running [ -d /var/www/wantedly/releases/20170512030015/tmp/cache ] as ec2-user@54.64.106.216
+ DEBUG [cc246919] Command: [ -d /var/www/wantedly/releases/20170512030015/tmp/cache ]
+ DEBUG [cc246919] Finished in 0.077 seconds with exit status 0 (successful).
+  INFO [60a43b27] Running /usr/bin/env rm -rf /var/www/wantedly/releases/20170512030015/tmp/cache as ec2-user@54.64.106.216
+ DEBUG [60a43b27] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /var/www/wantedly/releases/20170512030015/tmp/cache )
+  INFO [60a43b27] Finished in 0.076 seconds with exit status 0 (successful).
+  INFO [c77c66d5] Running /usr/bin/env ln -s /var/www/wantedly/shared/tmp/cache /var/www/wantedly/releases/20170512030015/tmp/cache as ec2-user@54.64.106.216
+ DEBUG [c77c66d5] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/wantedly/shared/tmp/cache /var/www/wantedly/releases/20170512030015/tmp/cache )
+  INFO [c77c66d5] Finished in 0.060 seconds with exit status 0 (successful).
+ DEBUG [c6e7f8c7] Running [ -L /var/www/wantedly/releases/20170512030015/tmp/sockets ] as ec2-user@54.64.106.216
+ DEBUG [c6e7f8c7] Command: [ -L /var/www/wantedly/releases/20170512030015/tmp/sockets ]
+ DEBUG [c6e7f8c7] Finished in 0.063 seconds with exit status 1 (failed).
+ DEBUG [3eb85beb] Running [ -d /var/www/wantedly/releases/20170512030015/tmp/sockets ] as ec2-user@54.64.106.216
+ DEBUG [3eb85beb] Command: [ -d /var/www/wantedly/releases/20170512030015/tmp/sockets ]
+ DEBUG [3eb85beb] Finished in 0.057 seconds with exit status 1 (failed).
+  INFO [e87f18dc] Running /usr/bin/env ln -s /var/www/wantedly/shared/tmp/sockets /var/www/wantedly/releases/20170512030015/tmp/sockets as ec2-user@54.64.106.216
+ DEBUG [e87f18dc] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/wantedly/shared/tmp/sockets /var/www/wantedly/releases/20170512030015/tmp/sockets )
+  INFO [e87f18dc] Finished in 0.061 seconds with exit status 0 (successful).
+ DEBUG [cb7b36d0] Running [ -L /var/www/wantedly/releases/20170512030015/vendor/bundle ] as ec2-user@54.64.106.216
+ DEBUG [cb7b36d0] Command: [ -L /var/www/wantedly/releases/20170512030015/vendor/bundle ]
+ DEBUG [cb7b36d0] Finished in 0.060 seconds with exit status 1 (failed).
+ DEBUG [c171170e] Running [ -d /var/www/wantedly/releases/20170512030015/vendor/bundle ] as ec2-user@54.64.106.216
+ DEBUG [c171170e] Command: [ -d /var/www/wantedly/releases/20170512030015/vendor/bundle ]
+ DEBUG [c171170e] Finished in 0.057 seconds with exit status 1 (failed).
+  INFO [0fd9a67c] Running /usr/bin/env ln -s /var/www/wantedly/shared/vendor/bundle /var/www/wantedly/releases/20170512030015/vendor/bundle as ec2-user@54.64.106.216
+ DEBUG [0fd9a67c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/wantedly/shared/vendor/bundle /var/www/wantedly/releases/20170512030015/vendor/bundle )
+  INFO [0fd9a67c] Finished in 0.070 seconds with exit status 0 (successful).
+ DEBUG [09dcf423] Running [ -L /var/www/wantedly/releases/20170512030015/public/system ] as ec2-user@54.64.106.216
+ DEBUG [09dcf423] Command: [ -L /var/www/wantedly/releases/20170512030015/public/system ]
+ DEBUG [09dcf423] Finished in 0.063 seconds with exit status 1 (failed).
+ DEBUG [7ecde981] Running [ -d /var/www/wantedly/releases/20170512030015/public/system ] as ec2-user@54.64.106.216
+ DEBUG [7ecde981] Command: [ -d /var/www/wantedly/releases/20170512030015/public/system ]
+ DEBUG [7ecde981] Finished in 0.070 seconds with exit status 1 (failed).
+  INFO [4f8b699a] Running /usr/bin/env ln -s /var/www/wantedly/shared/public/system /var/www/wantedly/releases/20170512030015/public/system as ec2-user@54.64.106.216
+ DEBUG [4f8b699a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/wantedly/shared/public/system /var/www/wantedly/releases/20170512030015/public/system )
+  INFO [4f8b699a] Finished in 0.063 seconds with exit status 0 (successful).
+ DEBUG [2ce9dc26] Running [ -L /var/www/wantedly/releases/20170512030015/public/uploads ] as ec2-user@54.64.106.216
+ DEBUG [2ce9dc26] Command: [ -L /var/www/wantedly/releases/20170512030015/public/uploads ]
+ DEBUG [2ce9dc26] Finished in 0.061 seconds with exit status 1 (failed).
+ DEBUG [3f3537d1] Running [ -d /var/www/wantedly/releases/20170512030015/public/uploads ] as ec2-user@54.64.106.216
+ DEBUG [3f3537d1] Command: [ -d /var/www/wantedly/releases/20170512030015/public/uploads ]
+ DEBUG [3f3537d1] Finished in 0.078 seconds with exit status 1 (failed).
+  INFO [9199b996] Running /usr/bin/env ln -s /var/www/wantedly/shared/public/uploads /var/www/wantedly/releases/20170512030015/public/uploads as ec2-user@54.64.106.216
+ DEBUG [9199b996] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/wantedly/shared/public/uploads /var/www/wantedly/releases/20170512030015/public/uploads )
+  INFO [9199b996] Finished in 0.066 seconds with exit status 0 (successful).
+ DEBUG [027dc321] Running [ -L /var/www/wantedly/releases/20170512030015/public/assets ] as ec2-user@54.64.106.216
+ DEBUG [027dc321] Command: [ -L /var/www/wantedly/releases/20170512030015/public/assets ]
+ DEBUG [027dc321] Finished in 0.059 seconds with exit status 1 (failed).
+ DEBUG [a279c4dc] Running [ -d /var/www/wantedly/releases/20170512030015/public/assets ] as ec2-user@54.64.106.216
+ DEBUG [a279c4dc] Command: [ -d /var/www/wantedly/releases/20170512030015/public/assets ]
+ DEBUG [a279c4dc] Finished in 0.060 seconds with exit status 1 (failed).
+  INFO [a4de7ef9] Running /usr/bin/env ln -s /var/www/wantedly/shared/public/assets /var/www/wantedly/releases/20170512030015/public/assets as ec2-user@54.64.106.216
+ DEBUG [a4de7ef9] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/wantedly/shared/public/assets /var/www/wantedly/releases/20170512030015/public/assets )
+  INFO [a4de7ef9] Finished in 0.060 seconds with exit status 0 (successful).
+ DEBUG [a2743c27] Running if test ! -d /var/www/wantedly/releases/20170512030015; then echo "Directory does not exist '/var/www/wantedly/releases/20170512030015'" 1>&2; false; fi as ec2-user@54.64.106.216
+ DEBUG [a2743c27] Command: if test ! -d /var/www/wantedly/releases/20170512030015; then echo "Directory does not exist '/var/www/wantedly/releases/20170512030015'" 1>&2; false; fi
+ DEBUG [a2743c27] Finished in 0.068 seconds with exit status 0 (successful).
+ DEBUG [6c3c0237] Running $HOME/.rbenv/bin/rbenv exec bundle check --path /var/www/wantedly/shared/bundle as ec2-user@54.64.106.216
+ DEBUG [6c3c0237] Command: cd /var/www/wantedly/releases/20170512030015 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" NOKOGIRI_USE_SYSTEM_LIBRARIES="1" ; $HOME/.rbenv/bin/rbenv exec bundle check --path /var/www/wantedly/shared/bundle )
+ DEBUG [6c3c0237] 	The following gems are missing
+ DEBUG [6c3c0237] 	 * net-ssh (4.1.0)
+ DEBUG [6c3c0237] 	 * net-scp (1.2.1)
+ DEBUG [6c3c0237] 	 * sshkit (1.13.1)
+ DEBUG [6c3c0237] 	 * airbrussh (1.2.0)
+ DEBUG [6c3c0237] 	 * bindex (0.5.0)
+ DEBUG [6c3c0237] 	 * byebug (9.0.6)
+ DEBUG [6c3c0237] 	 * capistrano (3.8.1)
+ DEBUG [6c3c0237] 	 * capistrano-bundler (1.2.0)
+ DEBUG [6c3c0237] 	 * capistrano-rails (1.2.3)
+ DEBUG [6c3c0237] 	 * capistrano-rbenv (2.1.1)
+ DEBUG [6c3c0237] 	 * capistrano3-unicorn (0.2.1)
+ DEBUG [6c3c0237] 	 * ffi (1.9.18)
+ DEBUG [6c3c0237] 	 * rb-fsevent (0.9.8)
+ DEBUG [6c3c0237] 	 * rb-inotify (0.9.8)
+ DEBUG [6c3c0237] 	 * listen (3.0.8)
+ DEBUG [6c3c0237] 	 * spring (2.0.1)
+ DEBUG [6c3c0237] 	 * spring-watcher-listen (2.0.1)
+ DEBUG [6c3c0237] 	 * web-console (3.5.0)
+ DEBUG [6c3c0237] 	Install missing gems with `bundle install`
+ DEBUG [6c3c0237] Finished in 0.284 seconds with exit status 1 (failed).
+  INFO [41b9e1a4] Running $HOME/.rbenv/bin/rbenv exec bundle install --path /var/www/wantedly/shared/bundle --without development test --deployment --quiet as ec2-user@54.64.106.216
+ DEBUG [41b9e1a4] Command: cd /var/www/wantedly/releases/20170512030015 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" NOKOGIRI_USE_SYSTEM_LIBRARIES="1" ; $HOME/.rbenv/bin/rbenv exec bundle install --path /var/www/wantedly/shared/bundle --without development test --deployment --quiet )
+  INFO [41b9e1a4] Finished in 1.795 seconds with exit status 0 (successful).
+ DEBUG [777148a5] Running if test ! -d /var/www/wantedly/releases/20170512030015; then echo "Directory does not exist '/var/www/wantedly/releases/20170512030015'" 1>&2; false; fi as ec2-user@54.64.106.216
+ DEBUG [777148a5] Command: if test ! -d /var/www/wantedly/releases/20170512030015; then echo "Directory does not exist '/var/www/wantedly/releases/20170512030015'" 1>&2; false; fi
+ DEBUG [777148a5] Finished in 0.063 seconds with exit status 0 (successful).
+  INFO [ee4353a9] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile as ec2-user@54.64.106.216
+ DEBUG [ee4353a9] Command: cd /var/www/wantedly/releases/20170512030015 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile )
+  INFO [ee4353a9] Finished in 1.605 seconds with exit status 0 (successful).
+ DEBUG [19ea405b] Running if test ! -d /var/www/wantedly/releases/20170512030015; then echo "Directory does not exist '/var/www/wantedly/releases/20170512030015'" 1>&2; false; fi as ec2-user@54.64.106.216
+ DEBUG [19ea405b] Command: if test ! -d /var/www/wantedly/releases/20170512030015; then echo "Directory does not exist '/var/www/wantedly/releases/20170512030015'" 1>&2; false; fi
+ DEBUG [19ea405b] Finished in 0.068 seconds with exit status 0 (successful).
+  INFO [768ea4df] Running /usr/bin/env mkdir -p /var/www/wantedly/releases/20170512030015/assets_manifest_backup as ec2-user@54.64.106.216
+ DEBUG [768ea4df] Command: cd /var/www/wantedly/releases/20170512030015 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/wantedly/releases/20170512030015/assets_manifest_backup )
+  INFO [768ea4df] Finished in 0.061 seconds with exit status 0 (successful).
+ DEBUG [9ba8c110] Running /usr/bin/env ls /var/www/wantedly/releases/20170512030015/public/assets/.sprockets-manifest* as ec2-user@54.64.106.216
+ DEBUG [9ba8c110] Command: cd /var/www/wantedly/releases/20170512030015 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls /var/www/wantedly/releases/20170512030015/public/assets/.sprockets-manifest* )
+ DEBUG [9ba8c110] 	/var/www/wantedly/releases/20170512030015/public/assets/.sprockets-manifest-2ddd3fe82732d17969fc468b9d56e5f3.json
+ DEBUG [9ba8c110] Finished in 0.063 seconds with exit status 0 (successful).
+ DEBUG [aa9ff408] Running /usr/bin/env ls /var/www/wantedly/releases/20170512030015/public/assets/.sprockets-manifest* as ec2-user@54.64.106.216
+ DEBUG [aa9ff408] Command: cd /var/www/wantedly/releases/20170512030015 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls /var/www/wantedly/releases/20170512030015/public/assets/.sprockets-manifest* )
+ DEBUG [aa9ff408] 	/var/www/wantedly/releases/20170512030015/public/assets/.sprockets-manifest-2ddd3fe82732d17969fc468b9d56e5f3.json
+ DEBUG [aa9ff408] Finished in 0.061 seconds with exit status 0 (successful).
+  INFO [200411af] Running /usr/bin/env cp /var/www/wantedly/releases/20170512030015/public/assets/.sprockets-manifest-2ddd3fe82732d17969fc468b9d56e5f3.json /var/www/wantedly/releases/20170512030015/assets_manifest_backup as ec2-user@54.64.106.216
+ DEBUG [200411af] Command: cd /var/www/wantedly/releases/20170512030015 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env cp /var/www/wantedly/releases/20170512030015/public/assets/.sprockets-manifest-2ddd3fe82732d17969fc468b9d56e5f3.json /var/www/wantedly/releases/20170512030015/assets_manifest_backup )
+  INFO [200411af] Finished in 0.062 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [d8d2bcfe] Running if test ! -d /var/www/wantedly/releases/20170512030015; then echo "Directory does not exist '/var/www/wantedly/releases/20170512030015'" 1>&2; false; fi as ec2-user@54.64.106.216
+ DEBUG [d8d2bcfe] Command: if test ! -d /var/www/wantedly/releases/20170512030015; then echo "Directory does not exist '/var/www/wantedly/releases/20170512030015'" 1>&2; false; fi
+ DEBUG [d8d2bcfe] Finished in 0.059 seconds with exit status 0 (successful).
+  INFO [37b1c94b] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate as ec2-user@54.64.106.216
+ DEBUG [37b1c94b] Command: cd /var/www/wantedly/releases/20170512030015 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate )
+  INFO [37b1c94b] Finished in 1.780 seconds with exit status 0 (successful).
+  INFO [5641a30a] Running /usr/bin/env ln -s /var/www/wantedly/releases/20170512030015 /var/www/wantedly/releases/current as ec2-user@54.64.106.216
+ DEBUG [5641a30a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/wantedly/releases/20170512030015 /var/www/wantedly/releases/current )
+  INFO [5641a30a] Finished in 0.069 seconds with exit status 0 (successful).
+  INFO [e0469cbf] Running /usr/bin/env mv /var/www/wantedly/releases/current /var/www/wantedly as ec2-user@54.64.106.216
+ DEBUG [e0469cbf] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mv /var/www/wantedly/releases/current /var/www/wantedly )
+  INFO [e0469cbf] Finished in 0.061 seconds with exit status 0 (successful).
+ DEBUG [f1fb07c0] Running if test ! -d /var/www/wantedly/current; then echo "Directory does not exist '/var/www/wantedly/current'" 1>&2; false; fi as ec2-user@54.64.106.216
+ DEBUG [f1fb07c0] Command: if test ! -d /var/www/wantedly/current; then echo "Directory does not exist '/var/www/wantedly/current'" 1>&2; false; fi
+ DEBUG [f1fb07c0] Finished in 0.061 seconds with exit status 0 (successful).
+ DEBUG [744782fd] Running [ -e /var/www/wantedly/tmp/pids/unicorn.pid ] && kill -0 `cat /var/www/wantedly/tmp/pids/unicorn.pid` as ec2-user@54.64.106.216
+ DEBUG [744782fd] Command: [ -e /var/www/wantedly/tmp/pids/unicorn.pid ] && kill -0 `cat /var/www/wantedly/tmp/pids/unicorn.pid`
+ DEBUG [744782fd] 	bash: line 0: kill: (5926) - No such process
+ DEBUG [744782fd] Finished in 0.062 seconds with exit status 1 (failed).
+  INFO [245dd7a3] Running $HOME/.rbenv/bin/rbenv exec bundle exec unicorn -c /var/www/wantedly/current/config/unicorn.rb -E deployment -D  as ec2-user@54.64.106.216
+ DEBUG [245dd7a3] Command: cd /var/www/wantedly/current && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec unicorn -c /var/www/wantedly/current/config/unicorn.rb -E deployment -D  )
+  INFO [245dd7a3] Finished in 2.101 seconds with exit status 0 (successful).
+ DEBUG [c9c40764] Running if test ! -d /var/www/wantedly/current; then echo "Directory does not exist '/var/www/wantedly/current'" 1>&2; false; fi as ec2-user@54.64.106.216
+ DEBUG [c9c40764] Command: if test ! -d /var/www/wantedly/current; then echo "Directory does not exist '/var/www/wantedly/current'" 1>&2; false; fi
+ DEBUG [c9c40764] Finished in 0.065 seconds with exit status 0 (successful).
+  INFO unicorn restarting...
+  INFO [e17cbd5f] Running /usr/bin/env kill -s USR2 `cat /var/www/wantedly/tmp/pids/unicorn.pid` as ec2-user@54.64.106.216
+ DEBUG [e17cbd5f] Command: cd /var/www/wantedly/current && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env kill -s USR2 `cat /var/www/wantedly/tmp/pids/unicorn.pid` )
+  INFO [e17cbd5f] Finished in 0.070 seconds with exit status 0 (successful).
+ DEBUG [d8469797] Running /usr/bin/env ls -x /var/www/wantedly/releases as ec2-user@54.64.106.216
+ DEBUG [d8469797] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls -x /var/www/wantedly/releases )
+ DEBUG [d8469797] 	20170512023735	20170512023829	20170512024107	20170512024328	20170512024933
+20170512030015
+ DEBUG [d8469797] Finished in 0.100 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on 54.64.106.216
+  INFO [74712d25] Running /usr/bin/env rm -rf /var/www/wantedly/releases/20170512023735 as ec2-user@54.64.106.216
+ DEBUG [74712d25] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /var/www/wantedly/releases/20170512023735 )
+  INFO [74712d25] Finished in 0.101 seconds with exit status 0 (successful).
+ DEBUG [94a71053] Running if test ! -d /var/www/wantedly/releases; then echo "Directory does not exist '/var/www/wantedly/releases'" 1>&2; false; fi as ec2-user@54.64.106.216
+ DEBUG [94a71053] Command: if test ! -d /var/www/wantedly/releases; then echo "Directory does not exist '/var/www/wantedly/releases'" 1>&2; false; fi
+ DEBUG [94a71053] Finished in 0.100 seconds with exit status 0 (successful).
+  INFO [3b4458a3] Running /usr/bin/env echo "Branch master (at 972c785c28966e0d6bf781c010be874257cb1e8e) deployed as release 20170512030015 by tokunagayousuke" >> /var/www/wantedly/revisions.log as ec2-user@54.64.106.216
+ DEBUG [3b4458a3] Command: cd /var/www/wantedly/releases && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env echo "Branch master (at 972c785c28966e0d6bf781c010be874257cb1e8e) deployed as release 20170512030015 by tokunagayousuke" >> /var/www/wantedly/revisions.log )
+  INFO [3b4458a3] Finished in 0.098 seconds with exit status 0 (successful).
