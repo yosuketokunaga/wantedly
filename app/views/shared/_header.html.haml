@@ -9,19 +9,28 @@
         %p フィードをみる
       %li.user-menu
         %p プロフィール
+        =link_to edit_user_registration_path
       %li.user-menu
         %p ツール
+      %li.user-menu
+        %p 採用担当の方はこちらから
+      %li.user-menu
+        %p ログイン
+        =link_to new_user_session_path
+      %li.user-menu
+        %p ログアウト
+        =link_to destroy_user_session_path
     = form_for @company do |f|
       .search-form__field
         = f.text_field :name, placeholder: "人や会社、募集を検索"
         %button.search-form__btn
           %i.fa.fa-search
-    .user-profile-photo
-      %img{src: "https://scontent.xx.fbcdn.net/v/t1.0-1/p200x200/1467282_992401370800509_5021393178576468324_n.jpg?oh=25a90852e3b693bf26a6ca429ef2844d&oe=597CF053"}
-    %ul.notifications
-      %li.notification
-        %i.fa.fa-globe
-      %li.notification
-        %i.fa.fa-user
-      %li.notification
-        %i.fa.fa-comments
+    -# .user-profile-photo
+    -#   %img{src: "https://scontent.xx.fbcdn.net/v/t1.0-1/p200x200/1467282_992401370800509_5021393178576468324_n.jpg?oh=25a90852e3b693bf26a6ca429ef2844d&oe=597CF053"}
+    -# %ul.notifications
+    -#   %li.notification
+    -#     %i.fa.fa-globe
+    -#   %li.notification
+    -#     %i.fa.fa-user
+    -#   %li.notification
+    -#     %i.fa.fa-comments
