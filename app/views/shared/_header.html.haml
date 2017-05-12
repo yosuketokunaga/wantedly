@@ -8,18 +8,17 @@
       %li.user-menu
         %p フィードをみる
       %li.user-menu
-        %p プロフィール
-        =link_to edit_user_registration_path
+        =link_to "プロフィール",edit_user_registration_path, method: :edit, class: 'btn'
       %li.user-menu
         %p ツール
       %li.user-menu
-        %p 採用担当の方はこちらから
+        =link_to "採用担当の方はこちらから", new_company_session_path,
+        method: :new, class: 'btn'
       %li.user-menu
-        %p ログイン
-        =link_to new_user_session_path
+        =link_to "ログイン", new_user_session_path,
+        method: :new, class: 'btn'
       %li.user-menu
-        %p ログアウト
-        =link_to destroy_user_session_path
+        =link_to "ログアウト",destroy_user_session_path, method: :delete, class: 'btn'
     = form_for @company do |f|
       .search-form__field
         = f.text_field :name, placeholder: "人や会社、募集を検索"
