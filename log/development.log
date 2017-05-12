@@ -2468,3 +2468,56 @@ puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
   Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
   Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
   Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (137.6ms)
+Started GET "/" for ::1 at 2017-05-11 19:45:45 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (7.1ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (24.1ms)
+  Rendered shared/_footer.html.haml (10.2ms)
+  Rendered companies/index.html.haml within layouts/application (56.0ms)
+Completed 200 OK in 477ms (Views: 420.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for ::1 at 2017-05-11 19:46:47 +0900
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (5.9ms)
+  Rendered shared/_footer.html.haml (7.9ms)
+  Rendered companies/index.html.haml within layouts/application (28.8ms)
+Completed 200 OK in 226ms (Views: 218.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/companies" for ::1 at 2017-05-11 19:52:56 +0900
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (6.7ms)
+  Rendered shared/_footer.html.haml (10.2ms)
+  Rendered companies/index.html.haml within layouts/application (42.9ms)
+Completed 200 OK in 91ms (Views: 86.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/companies/sign_in" for ::1 at 2017-05-11 19:57:07 +0900
+Processing by Companies::SessionsController#new as HTML
+  Rendering companies/sessions/new.html.haml within layouts/application
+  Rendered companies/shared/_links.html.haml (5.9ms)
+  Rendered companies/sessions/new.html.haml within layouts/application (62.2ms)
+Completed 200 OK in 215ms (Views: 198.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-11 21:24:11 +0900
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (92.1ms)
+  Rendered shared/_footer.html.haml (194.0ms)
+  Rendered companies/index.html.haml within layouts/application (720.3ms)
+Completed 200 OK in 1031ms (Views: 959.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-12 11:28:09 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (69.1ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.erb within layouts/application
+  Rendered companies/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 450ms (Views: 388.8ms | ActiveRecord: 23.1ms)
+
+
