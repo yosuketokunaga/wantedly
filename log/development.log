@@ -2727,3 +2727,542 @@ Processing by CompaniesController#index as HTML
 Completed 200 OK in 403ms (Views: 364.4ms | ActiveRecord: 2.2ms)
 
 
+Started GET "/" for ::1 at 2017-05-12 12:37:31 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (6.9ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (21.4ms)
+  Rendered shared/_footer.html.haml (8.4ms)
+  Rendered companies/index.html.haml within layouts/application (62.2ms)
+Completed 200 OK in 400ms (Views: 359.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2017-05-12 13:02:05 +0900
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (6.2ms)
+  Rendered devise/registrations/new.html.haml within layouts/application (54.5ms)
+Completed 200 OK in 189ms (Views: 112.5ms | ActiveRecord: 39.3ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2017-05-12 13:05:34 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (6.7ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (8.3ms)
+  Rendered devise/registrations/new.html.haml within layouts/application (54.9ms)
+Completed 200 OK in 443ms (Views: 406.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-05-12 13:05:47 +0900
+Processing by Users::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (1.6ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (16.1ms)
+Completed 200 OK in 64ms (Views: 61.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2017-05-12 13:05:53 +0900
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (1.7ms)
+  Rendered devise/registrations/new.html.haml within layouts/application (14.8ms)
+Completed 200 OK in 79ms (Views: 77.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-05-12 13:05:56 +0900
+Processing by Users::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (1.6ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (14.9ms)
+Completed 200 OK in 119ms (Views: 117.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2017-05-12 13:06:02 +0900
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (2.6ms)
+  Rendered devise/registrations/new.html.haml within layouts/application (14.5ms)
+Completed 200 OK in 142ms (Views: 141.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-12 13:19:07 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (7.0ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (21.8ms)
+  Rendered shared/_footer.html.haml (7.7ms)
+  Rendered companies/index.html.haml within layouts/application (67.1ms)
+Completed 200 OK in 440ms (Views: 394.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for ::1 at 2017-05-12 13:19:14 +0900
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (3.2ms)
+  Rendered shared/_footer.html.haml (8.4ms)
+  Rendered companies/index.html.haml within layouts/application (28.3ms)
+Completed 200 OK in 61ms (Views: 57.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-12 13:20:12 +0900
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (3.8ms)
+  Rendered shared/_footer.html.haml (8.2ms)
+  Rendered companies/index.html.haml within layouts/application (29.7ms)
+Completed 200 OK in 71ms (Views: 67.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-12 13:20:43 +0900
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (9.6ms)
+  Rendered shared/_footer.html.haml (13.4ms)
+  Rendered companies/index.html.haml within layouts/application (45.3ms)
+Completed 200 OK in 87ms (Views: 83.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-12 13:20:51 +0900
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (5.7ms)
+  Rendered shared/_footer.html.haml (16.6ms)
+  Rendered companies/index.html.haml within layouts/application (41.3ms)
+Completed 200 OK in 94ms (Views: 91.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-12 13:26:16 +0900
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (651.7ms)
+  Rendered companies/index.html.haml within layouts/application (731.1ms)
+Completed 500 Internal Server Error in 761ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `destroy_user_registration_path' for #<#<Class:0x007f988389cd30>:0x007f9886103698>
+Did you mean?  destroy_user_session_path
+               destroy_session_path
+               destroy_user_session_url
+               destroy_session_url
+               destroy_company_session_path
+               edit_user_registration_path):
+    18:         %p ログイン
+    19:       %li.user-menu
+    20:         %p ログアウト
+    21:         =link_to destroy_user_registration_path
+    22:     = form_for @company do |f|
+    23:       .search-form__field
+    24:         = f.text_field :name, placeholder: "人や会社、募集を検索"
+  
+app/views/shared/_header.html.haml:21:in `_app_views_shared__header_html_haml___4610042010475104015_70146531936860'
+app/views/companies/index.html.haml:2:in `_app_views_companies_index_html_haml__1532437267382153277_70146530563000'
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.7ms)
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (136.3ms)
+Started GET "/" for ::1 at 2017-05-12 13:26:59 +0900
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (4.4ms)
+  Rendered shared/_footer.html.haml (9.2ms)
+  Rendered companies/index.html.haml within layouts/application (30.5ms)
+Completed 200 OK in 64ms (Views: 60.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/companies" for ::1 at 2017-05-12 13:28:13 +0900
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (5.4ms)
+  Rendered companies/index.html.haml within layouts/application (28.2ms)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/tokunagayousuke/projects/wantedly/app/views/shared/_header.html.haml:13: syntax error, unexpected ')'
+));}\n      </li>\n      <li c...
+ ^
+/Users/tokunagayousuke/projects/wantedly/app/views/shared/_header.html.haml:13: unknown regexp option - p
+/Users/tokunagayousuke/projects/wantedly/app/views/shared/_header.html.haml:13: syntax error, unexpected $undefined
+...nu'>\n        <p>ツール</p>\n      </li>\n      <li class...
+...                               ^
+/Users/tokunagayousuke/projects/wantedly/app/views/shared/_header.html.haml:13: unknown regexp option - p
+/Users/tokunagayousuke/projects/wantedly/app/views/shared/_header.html.haml:13: syntax error, unexpected $undefined
+...当の方はこちらから</p>\n      </li>\n      <li class...
+...                                ^
+/Users/tokunagayousuke/projects/wantedly/app/views/shared/_header.html.haml:13: unknown regexp option - p
+/Users/tokunagayousuke/projects/wantedly/app/views/shared/_header.html.haml:13: syntax error, unexpected $undefined
+...>\n        <p>ログイン</p>\n        #{
+...                               ^
+/Users/tokunagayousuke/projects/wantedly/app/views/shared/_header.html.haml:20: syntax error, unexpected ')'
+));}\n      </li>\n      <li c...
+ ^
+/Users/tokunagayousuke/projects/wantedly/app/views/shared/_header.html.haml:20: unknown regexp option - p
+/Users/tokunagayousuke/projects/wantedly/app/views/shared/_header.html.haml:20: syntax error, unexpected $undefined
+...        <p>ログアウト</p>\n        #{
+...                               ^
+/Users/tokunagayousuke/projects/wantedly/app/views/shared/_header.html.haml:23: syntax error, unexpected ')'
+));}\n      </li>\n    </ul>\n...
+ ^
+/Users/tokunagayousuke/projects/wantedly/app/views/shared/_header.html.haml:23: unknown regexp option - l
+/Users/tokunagayousuke/projects/wantedly/app/views/shared/_header.html.haml:23: syntax error, unexpected $undefined
+));}\n      </li>\n    </ul>\n    ", -2, false);haml_temp ...
+                             ^
+/Users/tokunagayousuke/projects/wantedly/app/views/shared/_header.html.haml:24: syntax error, unexpected keyword_class, expecting keyword_do or '{' or '('
+...mlout.push_text("    <div class='search-form__field'>\n     ...
+...                               ^
+/Users/tokunagayousuke/projects/wantedly/app/views/shared/_header.html.haml:24: syntax error, unexpected $undefined
+...iv class='search-form__field'>\n      #{_hamlout.adjust_tabs...
+...                               ^
+/Users/tokunagayousuke/projects/wantedly/app/views/shared/_header.html.haml:26: syntax error, unexpected '}', expecting keyword_end
+));}\n      <button class='search...
+    ^
+/Users/tokunagayousuke/projects/wantedly/app/views/shared/_header.html.haml:26: syntax error, unexpected keyword_class, expecting keyword_do or '{' or '('
+));}\n      <button class='search-form__btn'>\n       ...
+                         ^
+/Users/tokunagayousuke/projects/wantedly/app/views/shared/_header.html.haml:26: syntax error, unexpected $undefined
+...tton class='search-form__btn'>\n        <i class='fa fa-sear...
+...                               ^
+/Users/tokunagayousuke/projects/wantedly/app/views/shared/_header.html.haml:26: syntax error, unexpected keyword_class, expecting keyword_do or '{' or '('
+...h-form__btn'>\n        <i class='fa fa-search'></i>\n      <...
+...                               ^
+/Users/tokunagayousuke/projects/wantedly/app/views/shared/_header.html.haml:26: syntax error, unexpected '<'
+...      <i class='fa fa-search'></i>\n      </button>\n    </d...
+...                               ^
+/Users/tokunagayousuke/projects/wantedly/app/views/shared/_header.html.haml:26: unknown regexp options - btt
+/Users/tokunagayousuke/projects/wantedly/app/views/shared/_header.html.haml:26: syntax error, unexpected $undefined
+...-search'></i>\n      </button>\n    </div>\n", -1, false);en...
+...                               ^
+/Users/tokunagayousuke/projects/wantedly/app/views/shared/_header.html.haml:26: unknown regexp options - dv
+unmatched close parenthesis: /div>\n", -1, false);end;_hamlout.buffer << _hamlout.format_script_false_false_false_true_false_false_false(haml_temp);_hamlout.push_text("\n  </i
+/Users/tokunagayousuke/projects/wantedly/app/views/shared/_header.html.haml:26: syntax error, unexpected $undefined
+..._hamlout.push_text("\n  </div>\n</div>\n", -2, false);::Haml...
+...                               ^
+/Users/tokunagayousuke/projects/wantedly/app/views/shared/_header.html.haml:26: unterminated regexp meets end of file
+/Users/tokunagayousuke/projects/wantedly/app/views/shared/_header.html.haml:26: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/shared/_header.html.haml:13: syntax error, unexpected ')'
+app/views/shared/_header.html.haml:13: unknown regexp option - p
+app/views/shared/_header.html.haml:13: syntax error, unexpected $undefined
+app/views/shared/_header.html.haml:13: unknown regexp option - p
+app/views/shared/_header.html.haml:13: syntax error, unexpected $undefined
+app/views/shared/_header.html.haml:13: unknown regexp option - p
+app/views/shared/_header.html.haml:13: syntax error, unexpected $undefined
+app/views/shared/_header.html.haml:20: syntax error, unexpected ')'
+app/views/shared/_header.html.haml:20: unknown regexp option - p
+app/views/shared/_header.html.haml:20: syntax error, unexpected $undefined
+app/views/shared/_header.html.haml:23: syntax error, unexpected ')'
+app/views/shared/_header.html.haml:23: unknown regexp option - l
+app/views/shared/_header.html.haml:23: syntax error, unexpected $undefined
+app/views/shared/_header.html.haml:24: syntax error, unexpected keyword_class, expecting keyword_do or '{' or '('
+app/views/shared/_header.html.haml:24: syntax error, unexpected $undefined
+app/views/shared/_header.html.haml:26: syntax error, unexpected '}', expecting keyword_end
+app/views/shared/_header.html.haml:26: syntax error, unexpected keyword_class, expecting keyword_do or '{' or '('
+app/views/shared/_header.html.haml:26: syntax error, unexpected $undefined
+app/views/shared/_header.html.haml:26: syntax error, unexpected keyword_class, expecting keyword_do or '{' or '('
+app/views/shared/_header.html.haml:26: syntax error, unexpected '<'
+app/views/shared/_header.html.haml:26: unknown regexp options - btt
+app/views/shared/_header.html.haml:26: syntax error, unexpected $undefined
+app/views/shared/_header.html.haml:26: unknown regexp options - dv
+app/views/shared/_header.html.haml:26: syntax error, unexpected $undefined
+app/views/shared/_header.html.haml:26: unterminated regexp meets end of file
+app/views/shared/_header.html.haml:26: syntax error, unexpected end-of-input, expecting keyword_end
+app/views/companies/index.html.haml:2:in `_app_views_companies_index_html_haml__1532437267382153277_70146550979680'
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.4ms)
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (148.2ms)
+Started GET "/" for ::1 at 2017-05-12 13:28:29 +0900
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (5.0ms)
+  Rendered shared/_footer.html.haml (6.5ms)
+  Rendered companies/index.html.haml within layouts/application (29.6ms)
+Completed 200 OK in 81ms (Views: 76.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/companies" for ::1 at 2017-05-12 13:28:33 +0900
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (5.5ms)
+  Rendered shared/_footer.html.haml (8.7ms)
+  Rendered companies/index.html.haml within layouts/application (49.3ms)
+Completed 200 OK in 86ms (Views: 83.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/companies" for ::1 at 2017-05-12 13:28:45 +0900
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (8.6ms)
+  Rendered shared/_footer.html.haml (10.0ms)
+  Rendered companies/index.html.haml within layouts/application (38.9ms)
+Completed 200 OK in 70ms (Views: 67.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/companies" for ::1 at 2017-05-12 13:28:46 +0900
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (9.2ms)
+  Rendered shared/_footer.html.haml (9.0ms)
+  Rendered companies/index.html.haml within layouts/application (44.3ms)
+Completed 200 OK in 90ms (Views: 85.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/companies" for ::1 at 2017-05-12 13:28:47 +0900
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (7.6ms)
+  Rendered shared/_footer.html.haml (7.8ms)
+  Rendered companies/index.html.haml within layouts/application (50.1ms)
+Completed 200 OK in 99ms (Views: 94.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-05-12 13:39:01 +0900
+Processing by Users::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (1.8ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (38.7ms)
+Completed 200 OK in 141ms (Views: 93.3ms | ActiveRecord: 21.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-05-12 13:39:07 +0900
+Processing by Users::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (2.3ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (17.3ms)
+Completed 200 OK in 103ms (Views: 100.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2017-05-12 13:40:13 +0900
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (3.9ms)
+  Rendered devise/registrations/new.html.haml within layouts/application (23.5ms)
+Completed 200 OK in 99ms (Views: 97.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-05-12 13:40:18 +0900
+Processing by Users::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (4.4ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (19.9ms)
+Completed 200 OK in 84ms (Views: 82.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2017-05-12 13:40:31 +0900
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v+mZlB6oF7hnh8u2CIi26MRMxnKb26HRTkVwQWL5hbHf4prJQSvfFDAFbczH2DAX1vSOx9f1ob0UnBx9Za4F1g==", "user"=>{"email"=>"yama@yama", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (29.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'yama@yama' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (10.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (24.8ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2017-05-12 04:40:31', `sign_in_count` = 2, `updated_at` = '2017-05-12 04:40:31' WHERE `users`.`id` = 1[0m
+  [1m[35m (7.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 329ms (ActiveRecord: 72.9ms)
+
+
+Started GET "/" for ::1 at 2017-05-12 13:40:31 +0900
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (7.5ms)
+  Rendered shared/_footer.html.haml (10.8ms)
+  Rendered companies/index.html.haml within layouts/application (38.7ms)
+Completed 200 OK in 73ms (Views: 68.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/companies" for ::1 at 2017-05-12 13:52:55 +0900
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (11.1ms)
+  Rendered shared/_footer.html.haml (13.2ms)
+  Rendered companies/index.html.haml within layouts/application (144.4ms)
+Completed 200 OK in 204ms (Views: 189.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-12 13:53:22 +0900
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (9.2ms)
+  Rendered shared/_footer.html.haml (10.0ms)
+  Rendered companies/index.html.haml within layouts/application (43.7ms)
+Completed 200 OK in 78ms (Views: 75.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-12 13:54:11 +0900
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (6.6ms)
+  Rendered shared/_footer.html.haml (10.4ms)
+  Rendered companies/index.html.haml within layouts/application (38.6ms)
+Completed 200 OK in 256ms (Views: 252.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/companies" for ::1 at 2017-05-12 13:54:39 +0900
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (4.9ms)
+  Rendered shared/_footer.html.haml (7.9ms)
+  Rendered companies/index.html.haml within layouts/application (30.7ms)
+Completed 200 OK in 62ms (Views: 58.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/companies" for ::1 at 2017-05-12 13:54:49 +0900
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (5.0ms)
+  Rendered shared/_footer.html.haml (8.1ms)
+  Rendered companies/index.html.haml within layouts/application (31.4ms)
+Completed 200 OK in 226ms (Views: 223.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/companies" for ::1 at 2017-05-12 13:55:17 +0900
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (1.5ms)
+  Rendered companies/index.html.haml within layouts/application (16.2ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Illegal nesting: content can't be both given on the same line as %p and nested within it.):
+     9:         %p フィードをみる
+    10:       %li.user-menu
+    11:         %p プロフィール
+    12:           =link_to edit_user_registration_path
+    13:       %li.user-menu
+    14:         %p ツール
+    15:       %li.user-menu
+  
+app/views/shared/_header.html.haml:12
+app/views/companies/index.html.haml:2:in `_app_views_companies_index_html_haml__1532437267382153277_70146551975800'
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.7ms)
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.1ms)
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (149.8ms)
+Started GET "/companies" for ::1 at 2017-05-12 13:55:34 +0900
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (4.8ms)
+  Rendered companies/index.html.haml within layouts/application (20.7ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/tokunagayousuke/projects/wantedly/app/views/shared/_header.html.haml:13: syntax error, unexpected ')'
+));}\n      </li>\n      <li c...
+ ^
+/Users/tokunagayousuke/projects/wantedly/app/views/shared/_header.html.haml:13: unknown regexp option - p
+/Users/tokunagayousuke/projects/wantedly/app/views/shared/_header.html.haml:13: syntax error, unexpected $undefined
+...nu'>\n        <p>ツール</p>\n      </li>\n      <li class...
+...                               ^
+/Users/tokunagayousuke/projects/wantedly/app/views/shared/_header.html.haml:13: unknown regexp option - p
+/Users/tokunagayousuke/projects/wantedly/app/views/shared/_header.html.haml:13: syntax error, unexpected $undefined
+...当の方はこちらから</p>\n      </li>\n      <li class...
+...                                ^
+/Users/tokunagayousuke/projects/wantedly/app/views/shared/_header.html.haml:13: unknown regexp option - p
+/Users/tokunagayousuke/projects/wantedly/app/views/shared/_header.html.haml:13: syntax error, unexpected $undefined
+...>\n        <p>ログイン</p>\n        #{
+...                               ^
+/Users/tokunagayousuke/projects/wantedly/app/views/shared/_header.html.haml:20: syntax error, unexpected ')'
+));}\n      </li>\n      <li c...
+ ^
+/Users/tokunagayousuke/projects/wantedly/app/views/shared/_header.html.haml:20: unknown regexp option - p
+/Users/tokunagayousuke/projects/wantedly/app/views/shared/_header.html.haml:20: syntax error, unexpected $undefined
+...        <p>ログアウト</p>\n        #{
+...                               ^
+/Users/tokunagayousuke/projects/wantedly/app/views/shared/_header.html.haml:23: syntax error, unexpected ')'
+));}\n      </li>\n    </ul>\n...
+ ^
+/Users/tokunagayousuke/projects/wantedly/app/views/shared/_header.html.haml:23: unknown regexp option - l
+/Users/tokunagayousuke/projects/wantedly/app/views/shared/_header.html.haml:23: syntax error, unexpected $undefined
+));}\n      </li>\n    </ul>\n    ", -2, false);haml_temp ...
+                             ^
+/Users/tokunagayousuke/projects/wantedly/app/views/shared/_header.html.haml:24: syntax error, unexpected keyword_class, expecting keyword_do or '{' or '('
+...mlout.push_text("    <div class='search-form__field'>\n     ...
+...                               ^
+/Users/tokunagayousuke/projects/wantedly/app/views/shared/_header.html.haml:24: syntax error, unexpected $undefined
+...iv class='search-form__field'>\n      #{_hamlout.adjust_tabs...
+...                               ^
+/Users/tokunagayousuke/projects/wantedly/app/views/shared/_header.html.haml:26: syntax error, unexpected '}', expecting keyword_end
+));}\n      <button class='search...
+    ^
+/Users/tokunagayousuke/projects/wantedly/app/views/shared/_header.html.haml:26: syntax error, unexpected keyword_class, expecting keyword_do or '{' or '('
+));}\n      <button class='search-form__btn'>\n       ...
+                         ^
+/Users/tokunagayousuke/projects/wantedly/app/views/shared/_header.html.haml:26: syntax error, unexpected $undefined
+...tton class='search-form__btn'>\n        <i class='fa fa-sear...
+...                               ^
+/Users/tokunagayousuke/projects/wantedly/app/views/shared/_header.html.haml:26: syntax error, unexpected keyword_class, expecting keyword_do or '{' or '('
+...h-form__btn'>\n        <i class='fa fa-search'></i>\n      <...
+...                               ^
+/Users/tokunagayousuke/projects/wantedly/app/views/shared/_header.html.haml:26: syntax error, unexpected '<'
+...      <i class='fa fa-search'></i>\n      </button>\n    </d...
+...                               ^
+/Users/tokunagayousuke/projects/wantedly/app/views/shared/_header.html.haml:26: unknown regexp options - btt
+/Users/tokunagayousuke/projects/wantedly/app/views/shared/_header.html.haml:26: syntax error, unexpected $undefined
+...-search'></i>\n      </button>\n    </div>\n", -1, false);en...
+...                               ^
+/Users/tokunagayousuke/projects/wantedly/app/views/shared/_header.html.haml:26: unknown regexp options - dv
+unmatched close parenthesis: /div>\n", -1, false);end;_hamlout.buffer << _hamlout.format_script_false_false_false_true_false_false_false(haml_temp);_hamlout.push_text("\n  </i
+/Users/tokunagayousuke/projects/wantedly/app/views/shared/_header.html.haml:26: syntax error, unexpected $undefined
+..._hamlout.push_text("\n  </div>\n</div>\n", -2, false);::Haml...
+...                               ^
+/Users/tokunagayousuke/projects/wantedly/app/views/shared/_header.html.haml:26: unterminated regexp meets end of file
+/Users/tokunagayousuke/projects/wantedly/app/views/shared/_header.html.haml:26: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/shared/_header.html.haml:13: syntax error, unexpected ')'
+app/views/shared/_header.html.haml:13: unknown regexp option - p
+app/views/shared/_header.html.haml:13: syntax error, unexpected $undefined
+app/views/shared/_header.html.haml:13: unknown regexp option - p
+app/views/shared/_header.html.haml:13: syntax error, unexpected $undefined
+app/views/shared/_header.html.haml:13: unknown regexp option - p
+app/views/shared/_header.html.haml:13: syntax error, unexpected $undefined
+app/views/shared/_header.html.haml:20: syntax error, unexpected ')'
+app/views/shared/_header.html.haml:20: unknown regexp option - p
+app/views/shared/_header.html.haml:20: syntax error, unexpected $undefined
+app/views/shared/_header.html.haml:23: syntax error, unexpected ')'
+app/views/shared/_header.html.haml:23: unknown regexp option - l
+app/views/shared/_header.html.haml:23: syntax error, unexpected $undefined
+app/views/shared/_header.html.haml:24: syntax error, unexpected keyword_class, expecting keyword_do or '{' or '('
+app/views/shared/_header.html.haml:24: syntax error, unexpected $undefined
+app/views/shared/_header.html.haml:26: syntax error, unexpected '}', expecting keyword_end
+app/views/shared/_header.html.haml:26: syntax error, unexpected keyword_class, expecting keyword_do or '{' or '('
+app/views/shared/_header.html.haml:26: syntax error, unexpected $undefined
+app/views/shared/_header.html.haml:26: syntax error, unexpected keyword_class, expecting keyword_do or '{' or '('
+app/views/shared/_header.html.haml:26: syntax error, unexpected '<'
+app/views/shared/_header.html.haml:26: unknown regexp options - btt
+app/views/shared/_header.html.haml:26: syntax error, unexpected $undefined
+app/views/shared/_header.html.haml:26: unknown regexp options - dv
+app/views/shared/_header.html.haml:26: syntax error, unexpected $undefined
+app/views/shared/_header.html.haml:26: unterminated regexp meets end of file
+app/views/shared/_header.html.haml:26: syntax error, unexpected end-of-input, expecting keyword_end
+app/views/companies/index.html.haml:2:in `_app_views_companies_index_html_haml__1532437267382153277_70146502783840'
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.5ms)
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (123.8ms)
+Started GET "/companies" for ::1 at 2017-05-12 13:55:48 +0900
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (5.8ms)
+  Rendered shared/_footer.html.haml (8.0ms)
+  Rendered companies/index.html.haml within layouts/application (32.0ms)
+Completed 200 OK in 65ms (Views: 62.5ms | ActiveRecord: 0.0ms)
+
+
