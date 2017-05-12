@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170509062625) do
+ActiveRecord::Schema.define(version: 20170512080434) do
 
   create_table "companies", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name",                                 default: "", null: false
@@ -35,6 +35,18 @@ ActiveRecord::Schema.define(version: 20170509062625) do
     t.index ["reset_password_token"], name: "index_companies_on_reset_password_token", unique: true, using: :btree
   end
 
+  create_table "offers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "company_id"
+    t.string   "title",                    null: false
+    t.string   "image"
+    t.text     "what",       limit: 65535
+    t.text     "why",        limit: 65535
+    t.text     "how",        limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.index ["company_id"], name: "index_offers_on_company_id", using: :btree
+  end
+
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name",                   default: "", null: false
     t.string   "email",                  default: "", null: false
@@ -53,4 +65,5 @@ ActiveRecord::Schema.define(version: 20170509062625) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "offers", "companies"
 end
