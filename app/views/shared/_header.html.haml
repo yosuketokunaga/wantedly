@@ -4,21 +4,20 @@
   .menu
     %ul.user-menus
       %li.user-menu
-        %p 募集をみる
+        =link_to edit_user_registration_path do
+          %p プロフィール
       %li.user-menu
-        %p フィードをみる
+        = link_to new_offer_path do
+          %p 求人を投稿する
       %li.user-menu
-        =link_to "プロフィール", edit_user_registration_path, method: :edit, class: 'btn'
+        =link_to new_company_session_path do
+          %p 採用担当の方はこちらから
       %li.user-menu
-        %p ツール
+        =link_to new_user_session_path do
+          %p ログイン
       %li.user-menu
-        =link_to "採用担当の方はこちらから", new_company_session_path,
-        method: :new, class: 'btn'
-      %li.user-menu
-        =link_to "ログイン", new_user_session_path,
-        method: :new, class: 'btn'
-      %li.user-menu
-        =link_to "ログアウト",destroy_user_session_path, method: :delete, class: 'btn'
+        =link_to destroy_user_session_path do
+          %p ログアウト
     = form_for @company do |f|
       .search-form__field
         = f.text_field :name, placeholder: "人や会社、募集を検索"

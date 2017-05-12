@@ -73,18 +73,18 @@
       -#         %p ライター
       -#       %li.category.job-type
       -#         %p その他
-      -# .project-index-filter-category
-      -#   .project-index-filter-category-title
-      -#     %h5 採用形態
-      -#     %ul
-      -#       %li.category
-      -#         %p 新卒採用
-      -#       %li.category
-      -#         %p インターン・学生バイト
-      -#       %li.category
-      -#         %p 中途採用
-      -#       %li.category
-      -#         %p 社会人バイト・契約・委託
+      .project-index-filter-category
+        .project-index-filter-category-title
+          %h5 採用形態
+          %ul
+            %li.category
+              %p 新卒採用
+            %li.category
+              %p インターン・学生バイト
+            %li.category
+              %p 中途採用
+            %li.category
+              %p 社会人バイト・契約・委託
       .project-index-filter-category
         .project-index-filter-category-title
           %h5 地域
@@ -130,20 +130,6 @@
             %h4 並び替え
       .projects-index-list
         .project-index-single
-          .project-image
-            %img{src: "https://d2v9k5u4v94ulw.cloudfront.net/small_light(dw=560,dh=228,da=s,ds=s,cw=560,ch=228,cc=FFFFFF)/assets/images/1614158/original/cf335789-dcb2-4d0d-a029-a378e2fed7ee.png?1493710764"}
-          .project-detail
-            .project-label
-              %span 新卒採用
-            %h1.project-title
-              %span GWから戻りたくないという方へ！この機会に自分のキャリアを考えませんか？
-            .project-bottom
-              %table{role: "presentation"}
-                %tbody
-                  %tr
-                    %td.company-thumbnail
-                      %img{src: "https://d2v9k5u4v94ulw.cloudfront.net/small_light(dw=50,dh=50,da=l,ds=s,cw=50,ch=50,cc=FFFFFF)/assets/images/25110/original/d43528c5-2e3d-470b-8203-ec8b0000848f.jpeg?1452248723"}
-                    %td.company-name
-                      %h3 シェルフィー株式会社
-                      %span 東京都
+          - @offers.each do |offer|
+            = render partial: "offer", locals: {offer: offer }
   = render partial: "shared/footer"

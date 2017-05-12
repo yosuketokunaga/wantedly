@@ -1,0 +1,113 @@
+.container
+  = render partial: "shared/header"
+  .registrations-body
+    .main-body
+      %h1.title 投稿する
+      .company-form
+        = form_for @offer do |f|
+          .company-form__field
+            .company-form__field--left
+              = f.label :title, "タイトル", class: "form-label"
+            .company-form__field--right
+              = f.text_field :title, placeholder: "新しい技術でどんどん開発したいモバイルエンジニアWanted!", autocomplete: "off", class: "form-input"
+          .company-form__field
+            .company-form__field--left
+              = f.label :image, "メイン画像", class: "form-label"
+            .company-form__field--right
+              = f.file_field :image, class: "form-logo"
+          .company-form__field
+            .company-form__field--left
+              = f.label :job_type, "募集職種", class: "form-label"
+            .company-form__field--right
+              = f.text_field :job_type, autocomplete: "off", class: "form-input"
+          .company-form__field
+            .company-form__field--left
+              = f.label :application_form, "採用形態", class: "form-label"
+            .company-form__field--right
+              = f.text_field :application_form, autocomplete: "off", class: "form-input"
+          .company-form__field
+            .company-form__field--left
+              = f.label :region, "地域", class: "form-label"
+            .company-form__field--right
+              = f.text_field :region, autocomplete: "off", class: "form-input"
+          = f.fields_for :what_products do |df|
+            .company-form__field
+              .company-form__field--left
+                = df.label :what1, "なにをやっているのか①", class: "form-label"
+              .company-form__field--right
+                = df.text_field :what1, autocomplete: "off", class: "form-input"
+            .company-form__field
+              .company-form__field--left
+                = df.label :what2, "なにをやっているのか②", class: "form-label"
+              .company-form__field--right
+                = df.text_field :what2, autocomplete: "off", class: "form-input"
+            .company-form__field
+              .company-form__field--left
+                = df.label :what3, "なにをやっているのか③", class: "form-label"
+              .company-form__field--right
+                = df.text_field :what3, autocomplete: "off", class: "form-input"
+            .company-form__field
+              .company-form__field--left
+                = df.label :image1, "イメージ画像①", class: "form-label"
+              .company-form__field--right
+                = df.file_field :image1, class: "form-logo"
+            .company-form__field
+              .company-form__field--left
+                = df.label :image2, "イメージ画像②", class: "form-label"
+              .company-form__field--right
+                = df.file_field :image2, class: "form-logo"
+          = f.fields_for :why_products do |df|
+            .company-form__field
+              .company-form__field--left
+                = df.label :why1, "なぜやるのか①", class: "form-label"
+              .company-form__field--right
+                = df.text_field :why1, autocomplete: "off", class: "form-input"
+            .company-form__field
+              .company-form__field--left
+                = df.label :why2, "なぜやるのか②", class: "form-label"
+              .company-form__field--right
+                = df.text_field :why2, autocomplete: "off", class: "form-input"
+            .company-form__field
+              .company-form__field--left
+                = df.label :why3, "なぜやるのか③", class: "form-label"
+              .company-form__field--right
+                = df.text_field :why3, autocomplete: "off", class: "form-input"
+            .company-form__field
+              .company-form__field--left
+                = df.label :image1, "イメージ画像①", class: "form-label"
+              .company-form__field--right
+                = df.file_field :image2, class: "form-logo"
+            .company-form__field
+              .company-form__field--left
+                = df.label :image, "イメージ画像②", class: "form-label"
+              .company-form__field--right
+                = df.file_field :image, class: "form-logo"
+          = f.fields_for :how_products do |df|
+            .company-form__field
+              .company-form__field--left
+                = df.label :how1, "どうやっているのか①", class: "form-label"
+              .company-form__field--right
+                = df.text_field :how1, autocomplete: "off", class: "form-input"
+            .company-form__field
+              .company-form__field--left
+                = df.label :how2, "どうやっているのか②", class: "form-label"
+              .company-form__field--right
+                = df.text_field :how2, autocomplete: "off", class: "form-input"
+            .company-form__field
+              .company-form__field--left
+                = df.label :how3, "どうやっているのか③", class: "form-label"
+              .company-form__field--right
+                = df.text_field :how3, autocomplete: "off", class: "form-input"
+            .company-form__field
+              .company-form__field--left
+                = df.label :image1, "イメージ画像①", class: "form-label"
+              .company-form__field--right
+                = df.file_field :image1, class: "form-logo"
+            .company-form__field
+              .company-form__field--left
+                = df.label :image2, "イメージ画像②", class: "form-label"
+              .company-form__field--right
+                = df.file_field :image2, class: "form-logo"
+            .company-form__field
+              .submit-action
+                = f.submit "投稿する", class: "btn"
