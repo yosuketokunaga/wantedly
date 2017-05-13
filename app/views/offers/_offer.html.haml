@@ -1,0 +1,20 @@
+.project-image
+  = image_tag product.image
+.project-detail
+  .project-label
+    -# %span
+    -#   = product.job_type
+  %h1.project-title
+    %span
+      = product.title
+  .project-bottom
+    %table{role: "presentation"}
+      %tbody
+        %tr
+          %td.company-thumbnail
+            = image_tag product.company.logo
+          %td.company-name
+            %h3
+              = product.company.name
+            -# %span
+            -#   = product.region
