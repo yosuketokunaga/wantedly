@@ -4674,3 +4674,1255 @@ app/views/offers/new.html.haml:7:in `_app_views_offers_new_html_haml___231580276
   Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
   Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
   Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (121.5ms)
+Started GET "/offers/new" for ::1 at 2017-05-12 19:25:59 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (17.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by OffersController#new as HTML
+  Rendering offers/new.html.haml within layouts/application
+  Rendered shared/_header.html.haml (20.6ms)
+  Rendered offers/new.html.haml within layouts/application (47.5ms)
+Completed 500 Internal Server Error in 146ms (ActiveRecord: 14.2ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    4:     .main-body
+    5:       %h1.title 投稿する
+    6:       .company-form
+    7:         = form_for @offer do |f|
+    8:           .company-form__field
+    9:             .company-form__field--left
+   10:               = f.label :title, "タイトル", class: "form-label"
+  
+app/views/offers/new.html.haml:7:in `_app_views_offers_new_html_haml__852120042253507152_70352282718200'
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.4ms)
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (140.1ms)
+Started GET "/" for ::1 at 2017-05-12 19:26:05 +0900
+Processing by OffersController#index as HTML
+  Rendering offers/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (8.3ms)
+  [1m[36mOffer Load (0.4ms)[0m  [1m[34mSELECT `offers`.* FROM `offers`[0m
+  Rendered shared/_footer.html.haml (10.7ms)
+  Rendered offers/index.html.haml within layouts/application (42.8ms)
+Completed 200 OK in 452ms (Views: 448.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/companies/sign_in" for ::1 at 2017-05-12 19:26:11 +0900
+Processing by Companies::SessionsController#new as HTML
+  Rendering companies/sessions/new.html.haml within layouts/application
+  Rendered companies/shared/_links.html.haml (3.7ms)
+  Rendered companies/sessions/new.html.haml within layouts/application (38.2ms)
+Completed 200 OK in 96ms (Views: 85.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-05-12 19:26:13 +0900
+Processing by Users::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (2.1ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (13.7ms)
+Completed 200 OK in 91ms (Views: 66.5ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/users/sign_out" for ::1 at 2017-05-12 19:26:15 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered collection of /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [35 times] (23.8ms)
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.3ms)
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (222.8ms)
+Started GET "/offers/new" for ::1 at 2017-05-12 19:27:14 +0900
+Processing by OffersController#new as HTML
+  Rendering offers/new.html.haml within layouts/application
+  Rendered shared/_header.html.haml (8.2ms)
+  Rendered offers/new.html.haml within layouts/application (23.6ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    4:     .main-body
+    5:       %h1.title 投稿する
+    6:       .company-form
+    7:         = form_for @offer do |f|
+    8:           .company-form__field
+    9:             .company-form__field--left
+   10:               = f.label :title, "タイトル", class: "form-label"
+  
+app/views/offers/new.html.haml:7:in `_app_views_offers_new_html_haml__852120042253507152_70352321364620'
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.4ms)
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (132.5ms)
+Started GET "/" for ::1 at 2017-05-13 11:50:09 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (57.9ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by OffersController#index as HTML
+  Rendering offers/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (23.0ms)
+  [1m[36mOffer Load (28.4ms)[0m  [1m[34mSELECT `offers`.* FROM `offers`[0m
+  Rendered shared/_footer.html.haml (8.9ms)
+  Rendered offers/index.html.haml within layouts/application (92.6ms)
+Completed 200 OK in 543ms (Views: 411.3ms | ActiveRecord: 60.6ms)
+
+
+Started GET "/" for ::1 at 2017-05-13 11:50:52 +0900
+Processing by OffersController#index as HTML
+  Rendering offers/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (6.3ms)
+  [1m[36mOffer Load (0.4ms)[0m  [1m[34mSELECT `offers`.* FROM `offers`[0m
+  Rendered shared/_footer.html.haml (7.4ms)
+  Rendered offers/index.html.haml within layouts/application (36.2ms)
+Completed 200 OK in 72ms (Views: 67.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/companies/sign_in" for ::1 at 2017-05-13 11:53:26 +0900
+Processing by Companies::SessionsController#new as HTML
+  Rendering companies/sessions/new.html.haml within layouts/application
+  Rendered companies/shared/_links.html.haml (3.6ms)
+  Rendered companies/sessions/new.html.haml within layouts/application (42.3ms)
+Completed 200 OK in 91ms (Views: 79.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/companies/sign_up" for ::1 at 2017-05-13 11:53:34 +0900
+Processing by Companies::RegistrationsController#new as HTML
+  Rendering companies/registrations/new.html.haml within layouts/application
+  Rendered companies/shared/_links.html.haml (3.8ms)
+  Rendered companies/registrations/new.html.haml within layouts/application (14.4ms)
+Completed 200 OK in 61ms (Views: 59.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/companies/sign_up" for ::1 at 2017-05-13 12:01:56 +0900
+Processing by Companies::RegistrationsController#new as HTML
+  Rendering companies/registrations/new.html.haml within layouts/application
+  Rendered companies/shared/_links.html.haml (5.2ms)
+  Rendered companies/registrations/new.html.haml within layouts/application (18.0ms)
+Completed 200 OK in 288ms (Views: 242.8ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/companies/sign_in" for ::1 at 2017-05-13 12:02:02 +0900
+Processing by Companies::SessionsController#new as HTML
+  Rendering companies/sessions/new.html.haml within layouts/application
+  Rendered companies/shared/_links.html.haml (3.3ms)
+  Rendered companies/sessions/new.html.haml within layouts/application (12.9ms)
+Completed 200 OK in 53ms (Views: 51.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-05-13 12:02:11 +0900
+Processing by Users::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (3.5ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (19.0ms)
+Completed 200 OK in 81ms (Views: 65.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2017-05-13 12:02:18 +0900
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (3.0ms)
+  Rendered devise/registrations/new.html.haml within layouts/application (18.8ms)
+Completed 200 OK in 68ms (Views: 67.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-05-13 12:03:41 +0900
+Processing by Users::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (12.1ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (20.8ms)
+Completed 200 OK in 82ms (Views: 80.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2017-05-13 12:03:41 +0900
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (2.3ms)
+  Rendered devise/registrations/new.html.haml within layouts/application (16.4ms)
+Completed 200 OK in 115ms (Views: 113.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-05-13 12:03:48 +0900
+Processing by Users::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (2.4ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (15.7ms)
+Completed 200 OK in 112ms (Views: 110.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2017-05-13 12:03:53 +0900
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jYBDB/eEcsOsdkKLVAzk16I8eDJjTPyTXEnUJ4/41vETEfPstOu32nF5N6Shf5nHxcnWkOuD1Un92enjwQfulQ==", "user"=>{"email"=>"yama@yama", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (24.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'yama@yama' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (2.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (14.4ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2017-05-13 03:03:53', `last_sign_in_at` = '2017-05-12 05:28:42', `sign_in_count` = 6, `updated_at` = '2017-05-13 03:03:53' WHERE `users`.`id` = 1[0m
+  [1m[35m (4.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 292ms (ActiveRecord: 46.3ms)
+
+
+Started GET "/" for ::1 at 2017-05-13 12:03:53 +0900
+Processing by OffersController#index as HTML
+  Rendering offers/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (7.9ms)
+  [1m[36mOffer Load (0.5ms)[0m  [1m[34mSELECT `offers`.* FROM `offers`[0m
+  Rendered shared/_footer.html.haml (9.1ms)
+  Rendered offers/index.html.haml within layouts/application (39.8ms)
+Completed 200 OK in 80ms (Views: 71.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/companies/sign_in" for ::1 at 2017-05-13 12:03:55 +0900
+Processing by Companies::SessionsController#new as HTML
+  Rendering companies/sessions/new.html.haml within layouts/application
+  Rendered companies/shared/_links.html.haml (5.3ms)
+  Rendered companies/sessions/new.html.haml within layouts/application (23.5ms)
+Completed 200 OK in 83ms (Views: 81.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/edit" for ::1 at 2017-05-13 12:04:27 +0900
+Processing by Users::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering devise/registrations/edit.html.haml within layouts/application
+  Rendered devise/registrations/edit.html.haml within layouts/application (200.7ms)
+Completed 500 Internal Server Error in 227ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<#<Class:0x007fa727a18cd8>:0x007fa72a87b508>):
+     6:       = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'
+     7:       = link_to "トップページに戻る", :back, class: 'btn'
+     8:     .account-page__inner--right.user-form
+     9:       = form_for(current_user) do |f|
+    10:         .field
+    11:           .field-label
+    12:             = f.label :name
+  
+app/views/devise/registrations/edit.html.haml:9:in `_app_views_devise_registrations_edit_html_haml__524682073300613592_70177968412260'
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.3ms)
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (145.3ms)
+Started GET "/" for ::1 at 2017-05-13 12:04:45 +0900
+Processing by OffersController#index as HTML
+  Rendering offers/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (9.3ms)
+  [1m[36mOffer Load (0.3ms)[0m  [1m[34mSELECT `offers`.* FROM `offers`[0m
+  Rendered shared/_footer.html.haml (15.4ms)
+  Rendered offers/index.html.haml within layouts/application (50.6ms)
+Completed 200 OK in 91ms (Views: 87.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/companies/sign_in" for ::1 at 2017-05-13 12:08:04 +0900
+Processing by Companies::SessionsController#new as HTML
+  Rendering companies/sessions/new.html.haml within layouts/application
+  Rendered companies/shared/_links.html.haml (6.8ms)
+  Rendered companies/sessions/new.html.haml within layouts/application (22.4ms)
+Completed 200 OK in 89ms (Views: 86.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-13 12:09:32 +0900
+Processing by OffersController#index as HTML
+  Rendering offers/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (11.0ms)
+  [1m[36mOffer Load (1.2ms)[0m  [1m[34mSELECT `offers`.* FROM `offers`[0m
+  Rendered shared/_footer.html.haml (15.0ms)
+  Rendered offers/index.html.haml within layouts/application (58.7ms)
+Completed 200 OK in 112ms (Views: 106.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-05-13 12:10:47 +0900
+Processing by Users::SessionsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 8ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-13 12:10:47 +0900
+Processing by OffersController#index as HTML
+  Rendering offers/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (10.6ms)
+  [1m[36mOffer Load (0.3ms)[0m  [1m[34mSELECT `offers`.* FROM `offers`[0m
+  Rendered shared/_footer.html.haml (21.0ms)
+  Rendered offers/index.html.haml within layouts/application (62.2ms)
+Completed 200 OK in 359ms (Views: 353.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/companies/sign_in" for ::1 at 2017-05-13 12:10:49 +0900
+Processing by Companies::SessionsController#new as HTML
+  Rendering companies/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (2.3ms)
+  Rendered companies/sessions/new.html.haml within layouts/application (13.0ms)
+Completed 200 OK in 75ms (Views: 72.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/companies/sign_up" for ::1 at 2017-05-13 12:10:55 +0900
+Processing by Companies::RegistrationsController#new as HTML
+  Rendering companies/registrations/new.html.haml within layouts/application
+  Rendered companies/shared/_links.html.haml (3.8ms)
+  Rendered companies/registrations/new.html.haml within layouts/application (14.3ms)
+Completed 200 OK in 73ms (Views: 70.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/companies/sign_up" for ::1 at 2017-05-13 12:11:18 +0900
+Processing by Companies::RegistrationsController#new as HTML
+  Rendering companies/registrations/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (2.1ms)
+  Rendered companies/registrations/new.html.haml within layouts/application (12.0ms)
+Completed 200 OK in 60ms (Views: 58.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/companies/sign_in" for ::1 at 2017-05-13 12:14:04 +0900
+Processing by Companies::SessionsController#new as HTML
+  Rendering companies/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (2.9ms)
+  Rendered companies/sessions/new.html.haml within layouts/application (14.4ms)
+Completed 200 OK in 82ms (Views: 79.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-13 12:17:07 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (11.9ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by OffersController#index as HTML
+  Rendering offers/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (20.9ms)
+  [1m[36mOffer Load (0.5ms)[0m  [1m[34mSELECT `offers`.* FROM `offers`[0m
+  Rendered shared/_footer.html.haml (9.1ms)
+  Rendered offers/index.html.haml within layouts/application (56.9ms)
+Completed 200 OK in 521ms (Views: 450.1ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for ::1 at 2017-05-13 12:17:47 +0900
+Processing by OffersController#index as HTML
+  Rendering offers/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (9.4ms)
+  [1m[36mOffer Load (0.4ms)[0m  [1m[34mSELECT `offers`.* FROM `offers`[0m
+  Rendered shared/_footer.html.haml (11.1ms)
+  Rendered offers/index.html.haml within layouts/application (91.5ms)
+Completed 200 OK in 133ms (Views: 129.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2017-05-13 12:18:33 +0900
+Processing by OffersController#index as HTML
+  Rendering offers/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (17.3ms)
+  [1m[36mOffer Load (0.4ms)[0m  [1m[34mSELECT `offers`.* FROM `offers`[0m
+  Rendered shared/_footer.html.haml (18.6ms)
+  Rendered offers/index.html.haml within layouts/application (61.7ms)
+Completed 200 OK in 118ms (Views: 114.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-05-13 12:18:35 +0900
+Processing by Users::SessionsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 49ms (ActiveRecord: 7.3ms)
+
+
+Started GET "/" for ::1 at 2017-05-13 12:18:35 +0900
+Processing by OffersController#index as HTML
+  Rendering offers/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (6.1ms)
+  [1m[36mOffer Load (0.3ms)[0m  [1m[34mSELECT `offers`.* FROM `offers`[0m
+  Rendered shared/_footer.html.haml (10.8ms)
+  Rendered offers/index.html.haml within layouts/application (39.3ms)
+Completed 200 OK in 69ms (Views: 65.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-05-13 12:18:36 +0900
+Processing by Users::SessionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2017-05-13 12:18:36 +0900
+Processing by OffersController#index as HTML
+  Rendering offers/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (6.6ms)
+  [1m[36mOffer Load (0.4ms)[0m  [1m[34mSELECT `offers`.* FROM `offers`[0m
+  Rendered shared/_footer.html.haml (7.3ms)
+  Rendered offers/index.html.haml within layouts/application (49.7ms)
+Completed 200 OK in 88ms (Views: 82.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/companies/sign_in" for ::1 at 2017-05-13 12:18:45 +0900
+Processing by Companies::SessionsController#new as HTML
+  Rendering companies/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (3.4ms)
+  Rendered companies/sessions/new.html.haml within layouts/application (21.7ms)
+Completed 200 OK in 82ms (Views: 67.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/offers/new" for ::1 at 2017-05-13 12:18:49 +0900
+Processing by OffersController#new as HTML
+  Rendering offers/new.html.haml within layouts/application
+  Rendered shared/_header.html.haml (11.2ms)
+  Rendered offers/new.html.haml within layouts/application (29.6ms)
+Completed 200 OK in 86ms (Views: 69.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/edit" for ::1 at 2017-05-13 12:18:52 +0900
+Processing by Users::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering devise/registrations/edit.html.haml within layouts/application
+  Rendered devise/registrations/edit.html.haml within layouts/application (202.3ms)
+Completed 500 Internal Server Error in 248ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<#<Class:0x007ff6c0321d10>:0x007ff6c031ac40>):
+     6:       = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'
+     7:       = link_to "トップページに戻る", :back, class: 'btn'
+     8:     .account-page__inner--right.user-form
+     9:       = form_for(current_user) do |f|
+    10:         .field
+    11:           .field-label
+    12:             = f.label :name
+  
+app/views/devise/registrations/edit.html.haml:9:in `_app_views_devise_registrations_edit_html_haml__1467516347914897731_70348881534240'
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.8ms)
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (173.6ms)
+Started GET "/" for ::1 at 2017-05-13 12:19:02 +0900
+Processing by OffersController#index as HTML
+  Rendering offers/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (14.7ms)
+  [1m[36mOffer Load (0.3ms)[0m  [1m[34mSELECT `offers`.* FROM `offers`[0m
+  Rendered shared/_footer.html.haml (9.8ms)
+  Rendered offers/index.html.haml within layouts/application (42.9ms)
+Completed 200 OK in 81ms (Views: 77.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-05-13 12:19:07 +0900
+Processing by Users::SessionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2017-05-13 12:19:07 +0900
+Processing by OffersController#index as HTML
+  Rendering offers/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (6.5ms)
+  [1m[36mOffer Load (0.4ms)[0m  [1m[34mSELECT `offers`.* FROM `offers`[0m
+  Rendered shared/_footer.html.haml (8.3ms)
+  Rendered offers/index.html.haml within layouts/application (42.7ms)
+Completed 200 OK in 84ms (Views: 77.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-05-13 12:19:24 +0900
+Processing by Users::SessionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2017-05-13 12:19:24 +0900
+Processing by OffersController#index as HTML
+  Rendering offers/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (7.0ms)
+  [1m[36mOffer Load (0.3ms)[0m  [1m[34mSELECT `offers`.* FROM `offers`[0m
+  Rendered shared/_footer.html.haml (8.9ms)
+  Rendered offers/index.html.haml within layouts/application (36.3ms)
+Completed 200 OK in 72ms (Views: 68.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2017-05-13 12:19:33 +0900
+Processing by Users::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2017-05-13 12:19:33 +0900
+Processing by OffersController#index as HTML
+  Rendering offers/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (5.9ms)
+  [1m[36mOffer Load (0.3ms)[0m  [1m[34mSELECT `offers`.* FROM `offers`[0m
+  Rendered shared/_footer.html.haml (8.3ms)
+  Rendered offers/index.html.haml within layouts/application (33.9ms)
+Completed 200 OK in 79ms (Views: 76.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2017-05-13 12:22:45 +0900
+Processing by OffersController#index as HTML
+  Rendering offers/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (14.8ms)
+  [1m[36mOffer Load (1.7ms)[0m  [1m[34mSELECT `offers`.* FROM `offers`[0m
+  Rendered shared/_footer.html.haml (17.9ms)
+  Rendered offers/index.html.haml within layouts/application (90.3ms)
+Completed 200 OK in 152ms (Views: 137.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/companies/sign_in" for ::1 at 2017-05-13 12:22:58 +0900
+Processing by Companies::SessionsController#new as HTML
+  Rendering companies/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (3.4ms)
+  Rendered companies/sessions/new.html.haml within layouts/application (21.4ms)
+Completed 200 OK in 79ms (Views: 74.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/companies/sign_up" for ::1 at 2017-05-13 12:24:03 +0900
+Processing by Companies::RegistrationsController#new as HTML
+  Rendering companies/registrations/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (2.9ms)
+  Rendered companies/registrations/new.html.haml within layouts/application (21.0ms)
+Completed 200 OK in 100ms (Views: 97.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-13 12:29:31 +0900
+Processing by OffersController#index as HTML
+  Rendering offers/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (21.5ms)
+  [1m[36mOffer Load (1.9ms)[0m  [1m[34mSELECT `offers`.* FROM `offers`[0m
+  Rendered shared/_footer.html.haml (25.6ms)
+  Rendered offers/index.html.haml within layouts/application (106.4ms)
+Completed 200 OK in 193ms (Views: 175.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/companies/edit" for ::1 at 2017-05-13 12:29:33 +0900
+Processing by Companies::RegistrationsController#edit as HTML
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/companies/sign_in" for ::1 at 2017-05-13 12:29:33 +0900
+Processing by Companies::SessionsController#new as HTML
+  Rendering companies/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (2.3ms)
+  Rendered companies/sessions/new.html.haml within layouts/application (20.0ms)
+Completed 200 OK in 114ms (Views: 109.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/companies/edit" for ::1 at 2017-05-13 12:29:42 +0900
+Processing by Companies::RegistrationsController#edit as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/companies/sign_in" for ::1 at 2017-05-13 12:29:42 +0900
+Processing by Companies::SessionsController#new as HTML
+  Rendering companies/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (2.8ms)
+  Rendered companies/sessions/new.html.haml within layouts/application (18.5ms)
+Completed 200 OK in 97ms (Views: 95.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-13 12:31:09 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (5.9ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by OffersController#index as HTML
+  Rendering offers/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (21.3ms)
+  [1m[36mOffer Load (0.5ms)[0m  [1m[34mSELECT `offers`.* FROM `offers`[0m
+  Rendered shared/_footer.html.haml (8.5ms)
+  Rendered offers/index.html.haml within layouts/application (59.0ms)
+Completed 200 OK in 409ms (Views: 332.3ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/companies/edit" for ::1 at 2017-05-13 12:32:50 +0900
+Processing by Companies::RegistrationsController#edit as HTML
+Completed 401 Unauthorized in 7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/companies/sign_in" for ::1 at 2017-05-13 12:32:50 +0900
+Processing by Companies::SessionsController#new as HTML
+  Rendering companies/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (2.0ms)
+  Rendered companies/sessions/new.html.haml within layouts/application (26.1ms)
+Completed 200 OK in 85ms (Views: 79.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-13 12:33:38 +0900
+Processing by OffersController#index as HTML
+  Rendering offers/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (9.3ms)
+  [1m[36mOffer Load (0.7ms)[0m  [1m[34mSELECT `offers`.* FROM `offers`[0m
+  Rendered shared/_footer.html.haml (11.8ms)
+  Rendered offers/index.html.haml within layouts/application (43.1ms)
+Completed 200 OK in 159ms (Views: 151.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-05-13 12:36:18 +0900
+Processing by Users::SessionsController#new as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 69ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/" for ::1 at 2017-05-13 12:36:19 +0900
+Processing by OffersController#index as HTML
+  Rendering offers/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (12.2ms)
+  [1m[36mOffer Load (0.6ms)[0m  [1m[34mSELECT `offers`.* FROM `offers`[0m
+  Rendered shared/_footer.html.haml (17.5ms)
+  Rendered offers/index.html.haml within layouts/application (143.7ms)
+Completed 200 OK in 204ms (Views: 198.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/companies/sign_in" for ::1 at 2017-05-13 12:36:22 +0900
+Processing by Companies::SessionsController#new as HTML
+  Rendering companies/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (3.5ms)
+  Rendered companies/sessions/new.html.haml within layouts/application (23.5ms)
+Completed 200 OK in 87ms (Views: 84.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/edit" for ::1 at 2017-05-13 12:36:33 +0900
+Processing by Users::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering devise/registrations/edit.html.haml within layouts/application
+  Rendered devise/registrations/edit.html.haml within layouts/application (262.6ms)
+Completed 500 Internal Server Error in 314ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<#<Class:0x007fac894eec00>:0x007fac894ed8a0>):
+     6:       = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'
+     7:       = link_to "トップページに戻る", :back, class: 'btn'
+     8:     .account-page__inner--right.user-form
+     9:       = form_for(current_user) do |f|
+    10:         .field
+    11:           .field-label
+    12:             = f.label :name
+  
+app/views/devise/registrations/edit.html.haml:9:in `_app_views_devise_registrations_edit_html_haml___674747516334262988_70189507323880'
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.2ms)
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (148.5ms)
+Started GET "/users/edit" for ::1 at 2017-05-13 12:37:16 +0900
+Processing by Users::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering devise/registrations/edit.html.haml within layouts/application
+  Rendered devise/registrations/edit.html.haml within layouts/application (189.4ms)
+Completed 500 Internal Server Error in 219ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<#<Class:0x007fac894eec00>:0x007fac8691a4d0>):
+     6:       = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'
+     7:       = link_to "トップページに戻る", :back, class: 'btn'
+     8:     .account-page__inner--right.user-form
+     9:       = form_for @user do |f|
+    10:         .field
+    11:           .field-label
+    12:             = f.label :name
+  
+app/views/devise/registrations/edit.html.haml:9:in `_app_views_devise_registrations_edit_html_haml___674747516334262988_70189484133940'
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.5ms)
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (137.1ms)
+Started GET "/users/edit" for ::1 at 2017-05-13 12:38:36 +0900
+Processing by Users::RegistrationsController#edit as HTML
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering devise/registrations/edit.html.haml within layouts/application
+  Rendered devise/registrations/edit.html.haml within layouts/application (28.5ms)
+Completed 200 OK in 222ms (Views: 180.5ms | ActiveRecord: 4.0ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2017-05-13 12:38:41 +0900
+Processing by Users::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8p56vQ8mZaa4GsDfrL42/ChLINLsvIRGPEH92QnLdAG/3Dhv6AhbxHNeEJWNGWJ6WfOjZBudb93JoAfHECnEeA=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 21ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2017-05-13 12:38:41 +0900
+Processing by OffersController#index as HTML
+  Rendering offers/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (13.1ms)
+  [1m[36mOffer Load (0.9ms)[0m  [1m[34mSELECT `offers`.* FROM `offers`[0m
+  Rendered shared/_footer.html.haml (18.1ms)
+  Rendered offers/index.html.haml within layouts/application (65.1ms)
+Completed 200 OK in 103ms (Views: 98.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/edit" for ::1 at 2017-05-13 12:38:43 +0900
+Processing by Users::RegistrationsController#edit as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-05-13 12:38:43 +0900
+Processing by Users::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (2.9ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (15.1ms)
+Completed 200 OK in 79ms (Views: 77.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-05-13 12:38:48 +0900
+Processing by Users::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (3.0ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (14.1ms)
+Completed 200 OK in 81ms (Views: 79.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-05-13 12:38:53 +0900
+Processing by Users::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (3.8ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (19.9ms)
+Completed 200 OK in 139ms (Views: 137.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2017-05-13 12:38:59 +0900
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d0qHH54htX15kS+BnV8eCSa3QRzO32Trcil0dkaoRopLxBh8hbZ8ZcXP4YST18GosRnu0kqHn3EIerQP+DT0Xg==", "user"=>{"email"=>"yama@yama", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'yama@yama' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.5ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2017-05-13 03:38:59', `last_sign_in_at` = '2017-05-13 03:03:53', `sign_in_count` = 7, `updated_at` = '2017-05-13 03:38:59' WHERE `users`.`id` = 1[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/edit
+Completed 302 Found in 268ms (ActiveRecord: 5.9ms)
+
+
+Started GET "/users/edit" for ::1 at 2017-05-13 12:38:59 +0900
+Processing by Users::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering devise/registrations/edit.html.haml within layouts/application
+  Rendered devise/registrations/edit.html.haml within layouts/application (9.2ms)
+Completed 200 OK in 63ms (Views: 60.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2017-05-13 12:39:01 +0900
+Processing by OffersController#index as HTML
+  Rendering offers/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (8.8ms)
+  [1m[36mOffer Load (0.5ms)[0m  [1m[34mSELECT `offers`.* FROM `offers`[0m
+  Rendered shared/_footer.html.haml (11.3ms)
+  Rendered offers/index.html.haml within layouts/application (50.6ms)
+Completed 200 OK in 86ms (Views: 82.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/edit" for ::1 at 2017-05-13 12:39:02 +0900
+Processing by Users::RegistrationsController#edit as HTML
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering devise/registrations/edit.html.haml within layouts/application
+  Rendered devise/registrations/edit.html.haml within layouts/application (8.8ms)
+Completed 200 OK in 106ms (Views: 95.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-05-13 12:39:05 +0900
+Processing by Users::SessionsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2017-05-13 12:39:05 +0900
+Processing by OffersController#index as HTML
+  Rendering offers/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (9.6ms)
+  [1m[36mOffer Load (0.5ms)[0m  [1m[34mSELECT `offers`.* FROM `offers`[0m
+  Rendered shared/_footer.html.haml (8.2ms)
+  Rendered offers/index.html.haml within layouts/application (45.7ms)
+Completed 200 OK in 85ms (Views: 79.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/edit" for ::1 at 2017-05-13 12:39:07 +0900
+Processing by Users::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering devise/registrations/edit.html.haml within layouts/application
+  Rendered devise/registrations/edit.html.haml within layouts/application (14.9ms)
+Completed 200 OK in 114ms (Views: 110.7ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2017-05-13 12:39:08 +0900
+Processing by Users::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Jr3S3ZoAJC//JNmfazqs3EYd5sRbWLLb7Ln/DgapMepfSCP/phbQUTzbG2dj6a/3o0KiN1jW8Sw4mh8mTyGrPQ=="}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-13 12:39:08 +0900
+Processing by OffersController#index as HTML
+  Rendering offers/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (5.7ms)
+  [1m[36mOffer Load (0.3ms)[0m  [1m[34mSELECT `offers`.* FROM `offers`[0m
+  Rendered shared/_footer.html.haml (7.6ms)
+  Rendered offers/index.html.haml within layouts/application (40.3ms)
+Completed 200 OK in 70ms (Views: 67.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/companies/sign_in" for ::1 at 2017-05-13 12:39:09 +0900
+Processing by Companies::SessionsController#new as HTML
+  Rendering companies/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (2.9ms)
+  Rendered companies/sessions/new.html.haml within layouts/application (14.6ms)
+Completed 200 OK in 68ms (Views: 66.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/companies/sign_up" for ::1 at 2017-05-13 12:39:12 +0900
+Processing by Companies::RegistrationsController#new as HTML
+  Rendering companies/registrations/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (2.2ms)
+  Rendered companies/registrations/new.html.haml within layouts/application (14.7ms)
+Completed 200 OK in 71ms (Views: 69.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/companies/sign_up" for ::1 at 2017-05-13 12:39:31 +0900
+Processing by Companies::RegistrationsController#new as HTML
+  Rendering companies/registrations/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (2.1ms)
+  Rendered companies/registrations/new.html.haml within layouts/application (12.2ms)
+Completed 200 OK in 57ms (Views: 55.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/companies" for ::1 at 2017-05-13 12:40:04 +0900
+Processing by Companies::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GEzqN7C3SGYjRCKddUaKInnZxYA1OSJXliNVY6JPsAT696kdUAkQntLPaYISt/bnzRM7EGgTDkxqEUiz6QHc7g==", "company"=>{"name"=>"株式会社Yaesu", "email"=>"yaesu@yaesu", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create Account"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCompany Exists (21.4ms)[0m  [1m[34mSELECT  1 AS one FROM `companies` WHERE `companies`.`email` = BINARY 'yaesu@yaesu' LIMIT 1[0m
+  [1m[35mSQL (4.8ms)[0m  [1m[32mINSERT INTO `companies` (`name`, `email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('株式会社Yaesu', 'yaesu@yaesu', '$2a$11$OHa4vzeSxzmsDX/SdeRbOeg.R0gNsSpipD//9FyXttzNMWukR1qbC', '2017-05-13 03:40:04', '2017-05-13 03:40:04')[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 281ms (ActiveRecord: 26.8ms)
+
+
+  
+ActiveRecord::StatementInvalid (Mysql2::Error: Field 'address' doesn't have a default value: INSERT INTO `companies` (`name`, `email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('株式会社Yaesu', 'yaesu@yaesu', '$2a$11$OHa4vzeSxzmsDX/SdeRbOeg.R0gNsSpipD//9FyXttzNMWukR1qbC', '2017-05-13 03:40:04', '2017-05-13 03:40:04')):
+  
+mysql2 (0.4.6) lib/mysql2/client.rb:120:in `_query'
+mysql2 (0.4.6) lib/mysql2/client.rb:120:in `block in query'
+mysql2 (0.4.6) lib/mysql2/client.rb:119:in `handle_interrupt'
+mysql2 (0.4.6) lib/mysql2/client.rb:119:in `query'
+activerecord (5.0.2) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:218:in `block in execute'
+activerecord (5.0.2) lib/active_record/connection_adapters/abstract_adapter.rb:589:in `block in log'
+activesupport (5.0.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activerecord (5.0.2) lib/active_record/connection_adapters/abstract_adapter.rb:583:in `log'
+activerecord (5.0.2) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:218:in `execute'
+activerecord (5.0.2) lib/active_record/connection_adapters/mysql/database_statements.rb:31:in `execute'
+activerecord (5.0.2) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:225:in `execute_and_free'
+activerecord (5.0.2) lib/active_record/connection_adapters/mysql/database_statements.rb:36:in `exec_query'
+activerecord (5.0.2) lib/active_record/connection_adapters/abstract/database_statements.rb:92:in `exec_insert'
+activerecord (5.0.2) lib/active_record/connection_adapters/abstract/database_statements.rb:124:in `insert'
+activerecord (5.0.2) lib/active_record/connection_adapters/abstract/query_cache.rb:17:in `insert'
+activerecord (5.0.2) lib/active_record/relation.rb:65:in `insert'
+activerecord (5.0.2) lib/active_record/persistence.rb:560:in `_create_record'
+activerecord (5.0.2) lib/active_record/counter_cache.rb:128:in `_create_record'
+activerecord (5.0.2) lib/active_record/locking/optimistic.rb:75:in `_create_record'
+activerecord (5.0.2) lib/active_record/attribute_methods/dirty.rb:123:in `_create_record'
+activerecord (5.0.2) lib/active_record/callbacks.rb:302:in `block in _create_record'
+activesupport (5.0.2) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.2) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_create_callbacks'
+activerecord (5.0.2) lib/active_record/callbacks.rb:302:in `_create_record'
+activerecord (5.0.2) lib/active_record/timestamp.rb:68:in `_create_record'
+activerecord (5.0.2) lib/active_record/persistence.rb:540:in `create_or_update'
+activerecord (5.0.2) lib/active_record/callbacks.rb:298:in `block in create_or_update'
+activesupport (5.0.2) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.2) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_save_callbacks'
+activerecord (5.0.2) lib/active_record/callbacks.rb:298:in `create_or_update'
+activerecord (5.0.2) lib/active_record/persistence.rb:125:in `save'
+activerecord (5.0.2) lib/active_record/validations.rb:44:in `save'
+activerecord (5.0.2) lib/active_record/attribute_methods/dirty.rb:22:in `save'
+activerecord (5.0.2) lib/active_record/transactions.rb:319:in `block (2 levels) in save'
+activerecord (5.0.2) lib/active_record/transactions.rb:395:in `block in with_transaction_returning_status'
+activerecord (5.0.2) lib/active_record/connection_adapters/abstract/database_statements.rb:232:in `block in transaction'
+activerecord (5.0.2) lib/active_record/connection_adapters/abstract/transaction.rb:189:in `within_new_transaction'
+activerecord (5.0.2) lib/active_record/connection_adapters/abstract/database_statements.rb:232:in `transaction'
+activerecord (5.0.2) lib/active_record/transactions.rb:211:in `transaction'
+activerecord (5.0.2) lib/active_record/transactions.rb:392:in `with_transaction_returning_status'
+activerecord (5.0.2) lib/active_record/transactions.rb:319:in `block in save'
+activerecord (5.0.2) lib/active_record/transactions.rb:334:in `rollback_active_record_state!'
+activerecord (5.0.2) lib/active_record/transactions.rb:318:in `save'
+activerecord (5.0.2) lib/active_record/suppressor.rb:41:in `save'
+devise (4.2.1) app/controllers/devise/registrations_controller.rb:17:in `create'
+actionpack (5.0.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.2) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.2) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.2) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.2) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.2) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/mapper.rb:16:in `block in <class:Constraints>'
+actionpack (5.0.2) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.2ms)
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (143.2ms)
+Started GET "/companies/sign_up" for ::1 at 2017-05-13 12:42:18 +0900
+Processing by Companies::RegistrationsController#new as HTML
+  Rendering companies/registrations/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (5.0ms)
+  Rendered companies/registrations/new.html.haml within layouts/application (63.0ms)
+Completed 500 Internal Server Error in 106ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `adress' for #<Company:0x007fac86cf6a68>
+Did you mean?  address
+               address?
+               address=):
+    16:           .field-label
+    17:             = f.label :address
+    18:           .field-input
+    19:             = f.text_field :adress
+    20:         .field
+    21:           .field-label
+    22:             = f.label :email
+  
+app/views/companies/registrations/new.html.haml:19:in `block in _app_views_companies_registrations_new_html_haml__3213239001027885468_70189486400900'
+app/views/companies/registrations/new.html.haml:8:in `_app_views_companies_registrations_new_html_haml__3213239001027885468_70189486400900'
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.4ms)
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (137.4ms)
+Started GET "/companies/sign_up" for ::1 at 2017-05-13 12:42:37 +0900
+Processing by Companies::RegistrationsController#new as HTML
+  Rendering companies/registrations/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (1.6ms)
+  Rendered companies/registrations/new.html.haml within layouts/application (13.1ms)
+Completed 200 OK in 64ms (Views: 62.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/companies" for ::1 at 2017-05-13 12:43:15 +0900
+Processing by Companies::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qF79yyr+UKMiXfLIk3xMC3AsS1YX2tiYce6Oc6Xb+yRK5b7hykAIW9PWudf0jTDOxOa1xkrw9ION3JOj7pWXzg==", "company"=>{"name"=>"株式会社YAESU", "address"=>"東京都新宿区歌舞伎町", "email"=>"yaesu@yaesu", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create Account"}
+Unpermitted parameter: address
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCompany Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM `companies` WHERE `companies`.`email` = BINARY 'yaesu@yaesu' LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO `companies` (`name`, `email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('株式会社YAESU', 'yaesu@yaesu', '$2a$11$qrzltks3aP2FYuRbGnsgpOI6IUsvbhfsaGx96DMR.YDeHfZDjGOtu', '2017-05-13 03:43:15', '2017-05-13 03:43:15')[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 191ms (ActiveRecord: 2.7ms)
+
+
+  
+ActiveRecord::StatementInvalid (Mysql2::Error: Field 'address' doesn't have a default value: INSERT INTO `companies` (`name`, `email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('株式会社YAESU', 'yaesu@yaesu', '$2a$11$qrzltks3aP2FYuRbGnsgpOI6IUsvbhfsaGx96DMR.YDeHfZDjGOtu', '2017-05-13 03:43:15', '2017-05-13 03:43:15')):
+  
+mysql2 (0.4.6) lib/mysql2/client.rb:120:in `_query'
+mysql2 (0.4.6) lib/mysql2/client.rb:120:in `block in query'
+mysql2 (0.4.6) lib/mysql2/client.rb:119:in `handle_interrupt'
+mysql2 (0.4.6) lib/mysql2/client.rb:119:in `query'
+activerecord (5.0.2) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:218:in `block in execute'
+activerecord (5.0.2) lib/active_record/connection_adapters/abstract_adapter.rb:589:in `block in log'
+activesupport (5.0.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activerecord (5.0.2) lib/active_record/connection_adapters/abstract_adapter.rb:583:in `log'
+activerecord (5.0.2) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:218:in `execute'
+activerecord (5.0.2) lib/active_record/connection_adapters/mysql/database_statements.rb:31:in `execute'
+activerecord (5.0.2) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:225:in `execute_and_free'
+activerecord (5.0.2) lib/active_record/connection_adapters/mysql/database_statements.rb:36:in `exec_query'
+activerecord (5.0.2) lib/active_record/connection_adapters/abstract/database_statements.rb:92:in `exec_insert'
+activerecord (5.0.2) lib/active_record/connection_adapters/abstract/database_statements.rb:124:in `insert'
+activerecord (5.0.2) lib/active_record/connection_adapters/abstract/query_cache.rb:17:in `insert'
+activerecord (5.0.2) lib/active_record/relation.rb:65:in `insert'
+activerecord (5.0.2) lib/active_record/persistence.rb:560:in `_create_record'
+activerecord (5.0.2) lib/active_record/counter_cache.rb:128:in `_create_record'
+activerecord (5.0.2) lib/active_record/locking/optimistic.rb:75:in `_create_record'
+activerecord (5.0.2) lib/active_record/attribute_methods/dirty.rb:123:in `_create_record'
+activerecord (5.0.2) lib/active_record/callbacks.rb:302:in `block in _create_record'
+activesupport (5.0.2) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.2) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_create_callbacks'
+activerecord (5.0.2) lib/active_record/callbacks.rb:302:in `_create_record'
+activerecord (5.0.2) lib/active_record/timestamp.rb:68:in `_create_record'
+activerecord (5.0.2) lib/active_record/persistence.rb:540:in `create_or_update'
+activerecord (5.0.2) lib/active_record/callbacks.rb:298:in `block in create_or_update'
+activesupport (5.0.2) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.2) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_save_callbacks'
+activerecord (5.0.2) lib/active_record/callbacks.rb:298:in `create_or_update'
+activerecord (5.0.2) lib/active_record/persistence.rb:125:in `save'
+activerecord (5.0.2) lib/active_record/validations.rb:44:in `save'
+activerecord (5.0.2) lib/active_record/attribute_methods/dirty.rb:22:in `save'
+activerecord (5.0.2) lib/active_record/transactions.rb:319:in `block (2 levels) in save'
+activerecord (5.0.2) lib/active_record/transactions.rb:395:in `block in with_transaction_returning_status'
+activerecord (5.0.2) lib/active_record/connection_adapters/abstract/database_statements.rb:232:in `block in transaction'
+activerecord (5.0.2) lib/active_record/connection_adapters/abstract/transaction.rb:189:in `within_new_transaction'
+activerecord (5.0.2) lib/active_record/connection_adapters/abstract/database_statements.rb:232:in `transaction'
+activerecord (5.0.2) lib/active_record/transactions.rb:211:in `transaction'
+activerecord (5.0.2) lib/active_record/transactions.rb:392:in `with_transaction_returning_status'
+activerecord (5.0.2) lib/active_record/transactions.rb:319:in `block in save'
+activerecord (5.0.2) lib/active_record/transactions.rb:334:in `rollback_active_record_state!'
+activerecord (5.0.2) lib/active_record/transactions.rb:318:in `save'
+activerecord (5.0.2) lib/active_record/suppressor.rb:41:in `save'
+devise (4.2.1) app/controllers/devise/registrations_controller.rb:17:in `create'
+actionpack (5.0.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.2) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.2) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.2) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.2) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.2) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/mapper.rb:16:in `block in <class:Constraints>'
+actionpack (5.0.2) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.4ms)
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (144.7ms)
+Started POST "/companies" for ::1 at 2017-05-13 12:44:06 +0900
+Processing by Companies::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qF79yyr+UKMiXfLIk3xMC3AsS1YX2tiYce6Oc6Xb+yRK5b7hykAIW9PWudf0jTDOxOa1xkrw9ION3JOj7pWXzg==", "company"=>{"name"=>"株式会社YAESU", "address"=>"東京都新宿区歌舞伎町", "email"=>"yaesu@yaesu", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create Account"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCompany Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM `companies` WHERE `companies`.`email` = BINARY 'yaesu@yaesu' LIMIT 1[0m
+  [1m[35mSQL (10.2ms)[0m  [1m[32mINSERT INTO `companies` (`name`, `email`, `encrypted_password`, `address`, `created_at`, `updated_at`) VALUES ('株式会社YAESU', 'yaesu@yaesu', '$2a$11$1h5qO7raVMeuKx1RsZl6BekSooYSfoebNpmE7TN9M1nJ6D7fiMMCO', '東京都新宿区歌舞伎町', '2017-05-13 03:44:07', '2017-05-13 03:44:07')[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[33mUPDATE `companies` SET `sign_in_count` = 1, `current_sign_in_at` = '2017-05-13 03:44:07', `last_sign_in_at` = '2017-05-13 03:44:07', `current_sign_in_ip` = '::1', `last_sign_in_ip` = '::1' WHERE `companies`.`id` = 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 287ms (ActiveRecord: 26.7ms)
+
+
+Started GET "/" for ::1 at 2017-05-13 12:44:07 +0900
+Processing by OffersController#index as HTML
+  Rendering offers/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (10.2ms)
+  [1m[36mOffer Load (0.6ms)[0m  [1m[34mSELECT `offers`.* FROM `offers`[0m
+  Rendered shared/_footer.html.haml (11.4ms)
+  Rendered offers/index.html.haml within layouts/application (44.7ms)
+Completed 200 OK in 90ms (Views: 83.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/companies/edit" for ::1 at 2017-05-13 12:44:17 +0900
+Processing by Companies::RegistrationsController#edit as HTML
+  [1m[36mCompany Load (0.4ms)[0m  [1m[34mSELECT  `companies`.* FROM `companies` WHERE `companies`.`id` = 1 ORDER BY `companies`.`id` ASC LIMIT 1[0m
+  Rendering companies/registrations/edit.html.haml within layouts/application
+  Rendered companies/registrations/edit.html.haml within layouts/application (16.8ms)
+Completed 200 OK in 75ms (Views: 71.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/companies/edit" for ::1 at 2017-05-13 12:44:39 +0900
+Processing by Companies::RegistrationsController#edit as HTML
+  [1m[36mCompany Load (0.5ms)[0m  [1m[34mSELECT  `companies`.* FROM `companies` WHERE `companies`.`id` = 1 ORDER BY `companies`.`id` ASC LIMIT 1[0m
+  Rendering companies/registrations/edit.html.haml within layouts/application
+  Rendered companies/registrations/edit.html.haml within layouts/application (10.8ms)
+Completed 200 OK in 61ms (Views: 58.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2017-05-13 12:45:23 +0900
+Processing by OffersController#index as HTML
+  Rendering offers/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (10.2ms)
+  [1m[36mOffer Load (0.3ms)[0m  [1m[34mSELECT `offers`.* FROM `offers`[0m
+  Rendered shared/_footer.html.haml (11.2ms)
+  Rendered offers/index.html.haml within layouts/application (58.5ms)
+Completed 200 OK in 114ms (Views: 109.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2017-05-13 12:50:07 +0900
+Processing by OffersController#index as HTML
+  Rendering offers/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (23.9ms)
+  [1m[36mOffer Load (0.8ms)[0m  [1m[34mSELECT `offers`.* FROM `offers`[0m
+  Rendered shared/_footer.html.haml (44.2ms)
+  Rendered offers/index.html.haml within layouts/application (159.0ms)
+Completed 200 OK in 286ms (Views: 272.0ms | ActiveRecord: 0.8ms)
+
+

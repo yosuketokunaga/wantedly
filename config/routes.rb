@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   }
 
   resources :companies, only: [:index]
-  resources :offers, only: [:new,:index,:show]
+  resources :offers
   root "offers#index"
-  
+
 end

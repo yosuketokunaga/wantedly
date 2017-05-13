@@ -4,20 +4,20 @@
   .menu
     %ul.user-menus
       %li.user-menu
+        =link_to new_user_session_path do
+          %p 応募したい方はこちらから
+      %li.user-menu
         =link_to edit_user_registration_path do
           %p プロフィール
-      %li.user-menu
-        = link_to new_offer_path do
-          %p 求人を投稿する
       %li.user-menu
         =link_to new_company_session_path do
           %p 採用担当の方はこちらから
       %li.user-menu
-        =link_to new_user_session_path do
-          %p ログイン
+        =link_to edit_company_registration_path do
+          %p 企業プロフィール
       %li.user-menu
-        =link_to destroy_user_session_path do
-          %p ログアウト
+        =link_to new_offer_path do
+          %p 求人を投稿する
     = form_for @company do |f|
       .search-form__field
         = f.text_field :name, placeholder: "人や会社、募集を検索"
