@@ -1,32 +1,32 @@
 .container
   = render partial: "shared/header"
-  .featured-projects
-    .featured-projects__details
+  .top-projects
+    .top-projects__details
       .projects-cover
         %image{src: "https://d2v9k5u4v94ulw.cloudfront.net/small_light(dw=640,dh=262,da=s,ds=s,cw=640,ch=262,cc=FFFFFF)/assets/images/366004/original/307d3ec0-7a75-4fe9-aa99-bd61e950c252.jpeg?1461328266"}
       .job-type
         %p ライター
-      .projects-title
+      .title
         %h2 くらしの経済メディアMONEY PLUS」の編集者・ディレクター募集
       .company-name
         %img{src: "https://d2v9k5u4v94ulw.cloudfront.net/small_light(dw=62,dh=62,da=s,ds=s,cw=62,ch=62,cc=FFFFFF)/assets/images/3893/original/49ef9acc-c4d9-4b98-8a36-0856b8e0e586.png?1411809805"}
         %p 株式会社マネーフォワード
-    .featured-projects__details
+    .top-projects__details
       .projects-cover
         %image{src: "https://d2v9k5u4v94ulw.cloudfront.net/small_light(dw=640,dh=262,da=s,ds=s,cw=640,ch=262,cc=FFFFFF)/assets/images/1187311/original/caf99920-1d87-4564-a167-e604d92c0bc1.jpeg?1485940572"}
       .job-type
         %p モバイルエンジニア
-      .projects-title
+      .title
         %h2 2018年新卒 書籍買い放題、セミナー受け放題。勉強好きSEを募集
       .company-name
         %img{src: "https://d2v9k5u4v94ulw.cloudfront.net/small_light(dw=50,dh=50,da=l,ds=s,cc=FFFFFF)/assets/images/20002/original/34a7a20c-8b78-4f6c-af84-3885841b6e49.jpeg?1400660438"}
         %p 株式会社キャパ
-    .featured-projects__details
+    .top-projects__details
       .projects-cover
         %image{src: "https://d2v9k5u4v94ulw.cloudfront.net/small_light(dw=640,dh=262,da=s,ds=s,cw=640,ch=262,cc=FFFFFF)/assets/images/81663/original/00a137bf-a8cb-4349-b599-60cbecb5a3d5.jpeg?1490516448"}
       .job-type
         %p インフラエンジニア
-      .projects-title
+      .title
         %h2 企業向け先端ソフトウェアのエンジニアと営業(東京と大阪)
       .company-name
         %img{src: "https://d2v9k5u4v94ulw.cloudfront.net/small_light(dw=50,dh=50,da=l,ds=s,cc=FFFFFF)/assets/images/112075/original/35e1630c-fbb6-4786-a91e-0219096c9c6f.png?1434273615"}
@@ -132,4 +132,4 @@
         .project-index-single
           - @offers.each do |offer|
             = render partial: "offer", locals: {offer: offer }
-  = render partial: "shared/footer"
+          = paginate @offers
