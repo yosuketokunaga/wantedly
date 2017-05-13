@@ -1,0 +1,79 @@
+.container
+  = render partial: "shared/header"
+  .projects-show
+    .projects-show--header
+      .projects-show--header__job-type
+        %span.icon-job-type
+          -# = @offer.job_type
+      .projects-show--header__title
+        %h1
+          = @offer.title
+      %h2.projects-show--header__company-name
+        %span.company-logo
+          -# = image_tag @product.company.logo
+        %p.company-name
+          = @offer.company.name
+      .projects-show--header__image
+        = image_tag @offer.image
+    .projects-show--body
+      .projects-show--body--main
+        -# .projects-show--body--main__members
+        -#   .section-title
+        -#     %h3
+        -#       = @offer.company.name + 'のメンバー'
+        -#     %span.members-btn 全員みる
+        -#   %ul.members
+        -#     %li
+        -#       .member-photo
+        -#         %img{src: "https://graph.facebook.com/500739233/picture?height=130&width=130"}
+        -#       %h4 山田 進太郎
+        -#       %span 代表取締役
+        -#     %li
+        -#       .member-photo
+        -#         %img{src: "https://graph.facebook.com/699310257/picture?height=130&width=130"}
+        -#       %h4 小泉 文明
+        -#       %span 取締役
+        -#     %li
+        -#       .member-photo
+        -#         %img{src: "https://graph.facebook.com/662186481/picture?height=130&width=130"}
+        -#       %h4 富島 寛
+        -#       %span 取締役
+        -#     %li
+        -#       .member-photo
+        -#         %img{src: "https://graph.facebook.com/578780166/picture?height=130&width=130"}
+        -#       %h4 石塚 亮
+        -#       %span 取締役
+        .descriptions
+          %section.projects-show-main-section
+            %header
+              %h3 なにをやっているのか
+              = @offer.what
+            .section-body
+              %ul.section-images
+        .descriptions
+          %section.projects-show-main-section
+            %header
+              %h3 なぜやるのか
+              = @offer.why
+            .section-body
+              %ul.section-images
+        .descriptions
+          %section.projects-show-main-section
+            %header
+              %h3 どうやっているのか
+              = @offer.how
+      .projects-show--body--side
+        .projects-show--body--side__action-btn
+          .entry-btn
+            %span 話を聞きに行きたい
+          .entry-count
+            %p 現在64人がエントリー済み
+            %p エントリー状況は他のユーザーに公開されません
+          .help-btn
+            %span クリックすると何がおきるの？
+          .bookmark-btn
+            %span あとで見る
+        .projects-show--body--side__map
+          %h4 地図
+          %p.address
+            = @offer.company.address

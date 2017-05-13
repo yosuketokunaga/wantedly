@@ -5,8 +5,9 @@
     -# %span
     -#   = offer.job_type
   %h1.project-title
-    %span
-      = offer.title
+    = link_to "/offers/#{offer.id}", method: :get do
+      %span
+        = offer.title
   .project-bottom
     %table{role: "presentation"}
       %tbody

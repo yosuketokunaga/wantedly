@@ -6,7 +6,6 @@
 * 企業管理
 * 求人詳細管理
 * 応募管理 (中間テーブル(ユーザー&企業))
-* 企業メンバー管理
 * 雇用形態管理
 * 職種管理
 * 地域管理
@@ -52,16 +51,6 @@
 |:--:|:--:|:--:|
 |user_id|references :user, foreign_key: true||
 |company_id|references :company, foreign_key: true||
-
-###company_members
-
-|column|type|option|
-|:--:|:--:|:--:|
-|company_id|references :company, foreign_key: true||
-|name|string|null: false, unique: true|
-|image|string||
-|position|string||
-|career|text||
 
 ###job_types
 
