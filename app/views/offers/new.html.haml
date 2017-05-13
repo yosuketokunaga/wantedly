@@ -9,13 +9,13 @@
             .company-form__field--left
               = f.label :title, "タイトル", class: "form-label"
             .company-form__field--right
-              = f.text_field :title, placeholder: "新しい技術でどんどん開発したいモバイルエンジニアWanted!", autocomplete: "off", class: "form-input"
+              = f.text_field :title, placeholder: "タイトルを入力してください", autocomplete: "off", class: "form-input"
           .company-form__field
             .company-form__field--left
               = f.label :image, "メイン画像", class: "form-label"
             .company-form__field--right
               = f.file_field :image, class: "form-logo"
 
-            .company-form__field
-              .submit-action
-                = f.submit "投稿する", class: "btn"
+          .company-form__field
+            .submit-action
+              = f.submit "投稿する", class: "btn"

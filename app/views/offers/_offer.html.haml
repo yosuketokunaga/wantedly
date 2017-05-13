@@ -1,20 +1,20 @@
-.project-image
-  = image_tag product.image
+-# .project-image
+-#   = image_tag offer.image
 .project-detail
   .project-label
     -# %span
-    -#   = product.job_type
+    -#   = offer.job_type
   %h1.project-title
     %span
-      = product.title
+      = offer.title
   .project-bottom
     %table{role: "presentation"}
       %tbody
         %tr
           %td.company-thumbnail
-            = image_tag product.company.logo
+            -# = image_tag offer.company.logo
           %td.company-name
             %h3
-              = product.company.name
+              = offer.company.name
             -# %span
-            -#   = product.region
+            -#   = offer.region
