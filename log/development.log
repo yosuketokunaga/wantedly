@@ -5926,3 +5926,103 @@ Processing by OffersController#index as HTML
 Completed 200 OK in 286ms (Views: 272.0ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/" for ::1 at 2017-05-13 13:45:56 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (11.8ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by OffersController#index as HTML
+  Rendering offers/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (20.8ms)
+  [1m[36mOffer Load (0.7ms)[0m  [1m[34mSELECT `offers`.* FROM `offers`[0m
+  Rendered shared/_footer.html.haml (12.1ms)
+  Rendered offers/index.html.haml within layouts/application (56.2ms)
+Completed 200 OK in 469ms (Views: 386.0ms | ActiveRecord: 16.1ms)
+
+
+Started GET "/" for ::1 at 2017-05-13 13:58:12 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (6.7ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by OffersController#index as HTML
+  Rendering offers/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (24.2ms)
+  [1m[36mOffer Load (0.5ms)[0m  [1m[34mSELECT `offers`.* FROM `offers`[0m
+  Rendered shared/_footer.html.haml (10.5ms)
+  Rendered offers/index.html.haml within layouts/application (60.9ms)
+Completed 500 Internal Server Error in 439ms (ActiveRecord: 3.1ms)
+
+
+  
+ActionView::Template::Error (Undefined variable: "$font-color-blue".):
+    4:     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    5:     %title Wantedly
+    6:     = csrf_meta_tags
+    7:     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'true'
+    8:     = javascript_include_tag 'application', 'data-turbolinks-track': 'true'
+    9:   %body
+   10:     = render "layouts/flashmessage"
+  
+app/assets/stylesheets/_flash.scss:6
+app/assets/stylesheets/application.scss:8
+app/views/layouts/application.html.haml:7:in `_app_views_layouts_application_html_haml__2384881265879795781_70294724843640'
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.8ms)
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/tokunagayousuke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (141.5ms)
+Started GET "/" for ::1 at 2017-05-13 13:58:52 +0900
+Processing by OffersController#index as HTML
+  Rendering offers/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (5.2ms)
+  [1m[36mOffer Load (0.4ms)[0m  [1m[34mSELECT `offers`.* FROM `offers`[0m
+  Rendered shared/_footer.html.haml (11.7ms)
+  Rendered offers/index.html.haml within layouts/application (36.7ms)
+  Rendered layouts/_flashmessage.html.haml (1.3ms)
+Completed 200 OK in 430ms (Views: 427.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/companies/edit" for ::1 at 2017-05-13 13:59:03 +0900
+Processing by Companies::RegistrationsController#edit as HTML
+  [1m[36mCompany Load (3.4ms)[0m  [1m[34mSELECT  `companies`.* FROM `companies` WHERE `companies`.`id` = 1 ORDER BY `companies`.`id` ASC LIMIT 1[0m
+  Rendering companies/registrations/edit.html.haml within layouts/application
+  Rendered companies/registrations/edit.html.haml within layouts/application (190.9ms)
+  Rendered layouts/_flashmessage.html.haml (0.9ms)
+Completed 200 OK in 250ms (Views: 239.3ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/companies/sign_in" for ::1 at 2017-05-13 13:59:07 +0900
+Processing by Companies::SessionsController#new as HTML
+  [1m[36mCompany Load (0.4ms)[0m  [1m[34mSELECT  `companies`.* FROM `companies` WHERE `companies`.`id` = 1 ORDER BY `companies`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2017-05-13 13:59:08 +0900
+Processing by OffersController#index as HTML
+  Rendering offers/index.html.haml within layouts/application
+  Rendered shared/_header.html.haml (6.6ms)
+  [1m[36mOffer Load (0.3ms)[0m  [1m[34mSELECT `offers`.* FROM `offers`[0m
+  Rendered shared/_footer.html.haml (8.1ms)
+  Rendered offers/index.html.haml within layouts/application (33.1ms)
+  Rendered layouts/_flashmessage.html.haml (1.0ms)
+Completed 200 OK in 69ms (Views: 65.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/offers/new" for ::1 at 2017-05-13 13:59:10 +0900
+Processing by OffersController#new as HTML
+  Rendering offers/new.html.haml within layouts/application
+  Rendered shared/_header.html.haml (6.9ms)
+  Rendered offers/new.html.haml within layouts/application (26.8ms)
+  Rendered layouts/_flashmessage.html.haml (1.1ms)
+Completed 200 OK in 82ms (Views: 67.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/companies/edit" for ::1 at 2017-05-13 13:59:14 +0900
+Processing by Companies::RegistrationsController#edit as HTML
+  [1m[36mCompany Load (0.6ms)[0m  [1m[34mSELECT  `companies`.* FROM `companies` WHERE `companies`.`id` = 1 ORDER BY `companies`.`id` ASC LIMIT 1[0m
+  Rendering companies/registrations/edit.html.haml within layouts/application
+  Rendered companies/registrations/edit.html.haml within layouts/application (16.1ms)
+  Rendered layouts/_flashmessage.html.haml (2.2ms)
+Completed 200 OK in 112ms (Views: 107.7ms | ActiveRecord: 0.6ms)
+
+
