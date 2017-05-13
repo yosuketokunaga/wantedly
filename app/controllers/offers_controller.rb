@@ -1,9 +1,10 @@
 class OffersController < ApplicationController
 
   before_action :set_offers
+  before_action :authenticate_company!, only: [:new]
 
   def index
-    @offers = Offer.all
+    @offers = Offer.order("created_at DESC").page(params[:page]).per(5)
   end
 
   def new
@@ -11,7 +12,7 @@ class OffersController < ApplicationController
   end
 
   def create
-    @offer = Offer.new(offer_params)
+    @offer = current_company.offers.new(offer_params)
     if @offer.save
       redirect_to offers_path
     end
@@ -23,7 +24,7 @@ class OffersController < ApplicationController
   private
 
   def offer_params
-    params.require(:offer).permit(:title, :image, :job_type, :region)
+    params.require(:offer).permit(:title, :image)
   end
 
   def set_offers
