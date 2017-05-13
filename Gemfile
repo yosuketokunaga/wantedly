@@ -45,6 +45,11 @@ gem 'erb2haml'
 # font-awesomeの導入
 gem 'font-awesome-sass'
 gem 'font-awesome-rails'
+# 画像アップロード用
+gem 'carrierwave'
+
+#ページネーション用
+gem 'kaminari'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
