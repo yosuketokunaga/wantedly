@@ -38,6 +38,7 @@ gem 'jbuilder', '~> 2.5'
 
 # ログイン機能
 gem 'devise'
+gem 'devise-i18n'
 # Hamlの導入
 gem 'haml-rails'
 gem 'erb2haml'

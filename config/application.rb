@@ -13,5 +13,7 @@ module Wantedly
       g.helper false
       g.test_framework false
     end
+
+    config.i18n.default_locale = :ja
   end
 end
