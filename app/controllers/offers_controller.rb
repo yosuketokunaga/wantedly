@@ -19,12 +19,13 @@ class OffersController < ApplicationController
   end
 
   def show
+    @offer = Offer.find(params[:id])
   end
 
   private
 
   def offer_params
-    params.require(:offer).permit(:title, :image)
+    params.require(:offer).permit(:title, :image,:what, :why, :how)
   end
 
   def set_offers
