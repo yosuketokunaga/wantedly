@@ -20,6 +20,8 @@ class OffersController < ApplicationController
 
   def show
     @offer = Offer.find(params[:id])
+    @offer_id = Offer.find(params[:id]).id
+    @apply = Apply.new
   end
 
   private

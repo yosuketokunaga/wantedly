@@ -1,0 +1,18 @@
+.container
+  .registrations-body
+    .main-body
+      %h1.title あなたが興味を持っていることを、企業の担当者に伝えます
+      .company-form
+        = form_for [@offer, @apply] do |f|
+          .company-form__field
+            .company-form__field--left
+              = f.label :title, "この企業の求人に応募します", class: "form-label"
+            .company-form__field--right
+          .company-form__field
+            .company-form__field--left
+              = @offer.company.name
+            .company-form__field--right
+
+          .company-form__field
+            .submit-action
+              = f.submit "今すぐエントリー", class: "btn"
