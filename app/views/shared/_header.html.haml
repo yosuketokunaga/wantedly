@@ -9,10 +9,10 @@
       %li.user-menu
         =link_to edit_user_registration_path do
           %p プロフィール
-      -# - if user_signed_in?
-      -#   %li.user-menu
-      -#     =link_to "/users/#{user.id}", method: :get do
-      -#       %p マイページ
+      - if user_signed_in?
+        %li.user-menu
+          =link_to user_path(current_user.id) do
+            %p マイページ
       %li.user-menu
         =link_to new_company_session_path do
           %p 採用担当の方はこちらから
@@ -22,6 +22,10 @@
       %li.user-menu
         =link_to new_offer_path do
           %p 求人を投稿する
+      - if company_signed_in?
+        %li.user-menu
+          =link_to company_path(current_company.id) do
+            %p 求人を管理する
     = form_for @company do |f|
       .search-form__field
         = f.text_field :name, placeholder: "人や会社、募集を検索"
