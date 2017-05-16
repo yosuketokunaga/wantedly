@@ -9,6 +9,10 @@
       %li.user-menu
         =link_to edit_user_registration_path do
           %p プロフィール
+      -# - if user_signed_in?
+      -#   %li.user-menu
+      -#     =link_to "/users/#{user.id}", method: :get do
+      -#       %p マイページ
       %li.user-menu
         =link_to new_company_session_path do
           %p 採用担当の方はこちらから
