@@ -1,23 +1,6 @@
-%body
-  .user_page
-    %header.user_page-header
-      .yjContainer
-        %a{:href => ""}
-          -# .user_image= image_tag  current_user.avatar.url(:thumb)
-          %h2
-            = current_user.name
-            %span さんのマイページ
-    #contents.pt1em.pb1em
-      #main_cnt_wrapper
-        #yjContentsBody
-          .yjContainer
-            %ul.user_page-contents
-              -# - current_user.reviews.each do |review|
-                %li{:style => "background-image: url(#{review.product.image_url})"}
-                  .meta
-                    %header
-                      .title= review.product.title
-                      %span.star
-                        %span.rating-star
-                          %i{:class => "star-actived rate-#{review.rate}0"}
-                    .user_review= review.review
+.contents.row
+  %p
+    = current_company.name
+    さんへの応募者一覧
+  - @offers.each do |offer|
+    -# = render partial: "tweets/tweet", locals: { tweet: tweet }
