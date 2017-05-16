@@ -1,6 +1,6 @@
 class AppliesController < ApplicationController
 
-  before_action :authenticate_company!
+  before_action :authenticate_user!
 
   def new
     @offer = Offer.find(params[:offer_id])
