@@ -38,16 +38,12 @@
               = @offer.how
       .projects-show--body--side
         .projects-show--body--side__action-btn
-          .entry-btn
-            %span 話を聞きに行きたい
+          = link_to "話を聞きに行きたい", new_offer_apply_path(params[:id]), {class: "entry-btn"} 
           .entry-count
-            %p 現在64人がエントリー済み
-            %p エントリー状況は他のユーザーに公開されません
           .help-btn
-            %span クリックすると何がおきるの？
           .bookmark-btn
             %span あとで見る
         .projects-show--body--side__map
-          %h4 地図
+          %h4 住所
           %p.address
             = @offer.company.address
