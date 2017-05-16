@@ -6,4 +6,5 @@ class User < ApplicationRecord
 
   has_many :applies
   has_many :offers, through: :applies
+  accepts_nested_attributes_for :applies
 end

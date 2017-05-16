@@ -10,7 +10,8 @@ Rails.application.routes.draw do
   registrations: 'users/registrations'
   }
 
-  resources :companies, only: [:index]
+  resources :users, only: :show 
+  resources :companies, only: [:index, :show]
   resources :offers do
     resources :applies, only: [:new, :create]
   end
