@@ -1,0 +1,36 @@
+.container
+  = render partial: "shared/header"
+  .registrations-body
+    .main-body
+      %h1.title 投稿する
+      .company-form
+        = form_for @offer do |f|
+          .company-form__field
+            .company-form__field--left
+              = f.label :title, "タイトル", class: "form-label"
+            .company-form__field--right
+              = f.text_field :title, placeholder: "タイトルを入力してください", autocomplete: "off", class: "form-input"
+          .company-form__field
+            .company-form__field--left
+              = f.label :image, "メイン画像", class: "form-label"
+            .company-form__field--right
+              = f.file_field :image, class: "form-logo"
+          .company-form__field
+            .company-form__field--left
+              = f.label :what, "何をやっているのか", class: "form-label"
+            .company-form__field--right
+              = f.text_field :what, placeholder: "東京都新宿区歌舞伎町で不動産業を営んでおります。", autocomplete: "off", class: "form-input"
+          .company-form__field
+            .company-form__field--left
+              = f.label :why, "なぜやるのか", class: "form-label"
+            .company-form__field--right
+              = f.text_field :why, placeholder: "それは本当不思議ですよね。自分でもわからないんですから", autocomplete: "off", class: "form-input"
+          .company-form__field
+            .company-form__field--left
+              = f.label :how, "こんなことやります", class: "form-label"
+            .company-form__field--right
+              = f.text_field :how, placeholder: "歌舞伎町で朝からけん玉大会", autocomplete: "off", class: "form-input"
+
+          .company-form__field
+            .submit-action
+              = f.submit "投稿する", class: "btn"

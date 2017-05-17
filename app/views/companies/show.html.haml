@@ -6,5 +6,7 @@
         = current_company.name
         さんの投稿一覧
       - @offers.each do |offer|
-        = render partial: "offers/offer", locals: { offer: offer }
-      
+        - if company_signed_in? && current_company.id == offer.company_id
+          = render partial: "offers/offer", locals: { offer: offer }
+          = link_to '削除', "/offers/#{offer.id}", method: :delete
+          = link_to '編集', "/offers/#{offer.id}/edit", method: :get

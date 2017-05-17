@@ -18,6 +18,22 @@ class OffersController < ApplicationController
     end
   end
 
+  def destroy
+    offer = Offer.find(params[:id])
+    offer.destroy if offer.company_id == current_company.id
+  end
+
+  def edit
+    @offer = Offer.find(params[:id])
+  end
+
+  def update
+    offer = Offer.find(params[:id])
+    if offer.company_id == current_company.id
+      offer.update(offer_params)
+    end
+  end
+
   def show
     @offer = Offer.find(params[:id])
     @offer_id = Offer.find(params[:id]).id
