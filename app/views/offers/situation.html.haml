@@ -1,0 +1,14 @@
+.container
+  = render partial: "shared/header_show"
+  #account-page.account-page
+    .account-page__header
+      %h2
+        = @offer.title
+        への応募一覧
+    .account-page__inner
+      %ul.more_list
+      - @applies.each do |apply|
+        %li
+          = apply.user.name
+        %p
+          = apply.user.email
