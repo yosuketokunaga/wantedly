@@ -40,6 +40,11 @@ class OffersController < ApplicationController
     @apply = Apply.new
   end
 
+  def situation
+    @offer = Offer.find(params[:id])
+    @applies = Apply.where(offer_id: @offer.id)
+  end
+
   private
 
   def offer_params

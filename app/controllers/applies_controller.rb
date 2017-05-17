@@ -18,6 +18,11 @@ class AppliesController < ApplicationController
     end
   end
 
+  def show
+    @offer = Offer.find(params[:offer_id])
+    @apply = Apply.find(params[:id])
+  end
+
   private
   def apply_params
     params.permit(:user_id, :offer_id)

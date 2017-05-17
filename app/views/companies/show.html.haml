@@ -10,3 +10,4 @@
           = render partial: "offers/offer", locals: { offer: offer }
           = link_to '削除', "/offers/#{offer.id}", method: :delete
           = link_to '編集', "/offers/#{offer.id}/edit", method: :get
+          = link_to '応募状況を見る', "/offers/#{offer.id}/situation", method: :get
