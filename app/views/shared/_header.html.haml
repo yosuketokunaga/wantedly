@@ -22,10 +22,10 @@
       %li.user-menu
         =link_to new_offer_path do
           %p 求人を投稿する
-      -# - if company_signed_in?
-      -#   %li.user-menu
-      -#     =link_to company_path(current_company.id) do
-      -#       %p 求人を管理する
+      - if company_signed_in?
+        %li.user-menu
+          =link_to company_path(current_company.id) do
+            %p 求人を管理する
     = form_for @company do |f|
       .search-form__field
         = f.text_field :name, placeholder: "人や会社、募集を検索"

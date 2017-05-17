@@ -1,6 +1,10 @@
-.contents.row
-  %p
-    = current_company.name
-    さんへの応募者一覧
-  - @offers.each do |offer|
-    -# = render partial: "tweets/tweet", locals: { tweet: tweet }
+.container
+  = render partial: "shared/header_show"
+  #account-page.account-page
+    .account-page__header
+      %h2
+        = current_company.name
+        さんの投稿一覧
+      - @offers.each do |offer|
+        = render partial: "offers/offer", locals: { offer: offer }
+      
