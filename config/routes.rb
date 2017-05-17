@@ -4,14 +4,14 @@ Rails.application.routes.draw do
   passwords:     'companies/passwords',
   registrations: 'companies/registrations'
   }
-  
+
   devise_for :users, controllers: {
   sessions:      'users/sessions',
   passwords:     'users/passwords',
   registrations: 'users/registrations'
   }
 
-  resources :companies, only: [:index, :show]
+  resources :companies, only: [:index, :show, :destroy]
   resources :offers do
     resources :applies, only: [:new, :create]
   end
