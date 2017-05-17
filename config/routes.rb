@@ -13,6 +13,9 @@ Rails.application.routes.draw do
 
   resources :companies, only: [:index, :show]
   resources :offers do
+    member do
+      get :situation
+    end
     resources :applies, only: [:new, :create]
   end
   resources :users, only: [:index, :show]
