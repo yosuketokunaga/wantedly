@@ -5,6 +5,6 @@ class CompaniesController < ApplicationController
 
   def show
     @company = Company.find(params[:id])
-    # @applies = Applies.where(user_id: @user.id)
+    @offers = Offer.where(offer_ids: @offer.ids)
   end
 end

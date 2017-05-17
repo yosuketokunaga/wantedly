@@ -1,23 +1,48 @@
-%body
-  .user_page
-    %header.user_page-header
-      .yjContainer
-        %a{:href => ""}
-          -# .user_image= image_tag  current_user.avatar.url(:thumb)
-          %h2
-            = current_user.name
-            %span さんのマイページ
-    #contents.pt1em.pb1em
-      #main_cnt_wrapper
-        #yjContentsBody
-          .yjContainer
-            %ul.user_page-contents
-              -# - current_user.reviews.each do |review|
-                %li{:style => "background-image: url(#{review.product.image_url})"}
-                  .meta
-                    %header
-                      .title= review.product.title
-                      %span.star
-                        %span.rating-star
-                          %i{:class => "star-actived rate-#{review.rate}0"}
-                    .user_review= review.review
+#account-page.account-page
+  .account-page__header
+    %h2
+      = current_user.name
+      さんの応募企業一覧
+  .account-page__inner
+    %ul.more_list
+    - current_user.applies.each do |apply|
+      %li
+        = apply.offer.company.name
+      %p
+        = apply.offer.title
+      %p
+        = apply.offer.what
+
+
+
+    -# = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
+    -#   = devise_error_messages!
+    -#   .field
+    -#     .field-label
+    -#       = f.label :name
+    -#     .field-input
+    -#       = f.text_field :name, autofocus: true
+    -#   .field
+    -#     .field-label
+    -#       = f.label :email
+    -#     .field-input
+    -#       = f.email_field :email
+    -#   .field
+    -#     .field-label
+    -#       = f.label :password
+    -#       %i (変更したくない場合は、空白のままにしておいてください)
+    -#     .field-input
+    -#       = f.password_field :password, autocomplete: "off"
+    -#   .field
+    -#     .field-label
+    -#       = f.label :password_confirmation
+    -#     .field-input
+    -#       = f.password_field :password_confirmation, autocomplete: "off"
+    -#   .field
+    -#     .field-label
+    -#       = f.label :current_password
+    -#       %i (変更には現在のパスワードの入力が必要です)
+    -#     .field-input
+    -#       = f.password_field :current_password, autocomplete: "off"
+    -#   .actions
+    -#     = f.submit "Update", class: 'btn'
