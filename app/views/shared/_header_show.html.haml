@@ -1,0 +1,28 @@
+.header
+  %p.header-logo
+    = link_to image_tag("https://de7iszmjjjuya.cloudfront.net/assets/wantedly-logo-5906d9a368d0bcdd2919553127357d4d.svg"), offers_path
+  .menu
+    %ul.user-menus
+      %li.user-menu
+        =link_to new_user_session_path do
+          %p ログイン
+      %li.user-menu
+        =link_to edit_user_registration_path do
+          %p プロフィール
+      - if user_signed_in?
+        %li.user-menu
+          =link_to user_path(current_user.id) do
+            %p マイページ
+      %li.user-menu
+        =link_to new_company_session_path do
+          %p 採用担当の方はこちらから
+      %li.user-menu
+        =link_to edit_company_registration_path do
+          %p 企業プロフィール
+      %li.user-menu
+        =link_to new_offer_path do
+          %p 求人を投稿する
+      -# - if company_signed_in?
+      -#   %li.user-menu
+      -#     =link_to company_path(current_company.id) do
+      -#       %p 求人を管理する
