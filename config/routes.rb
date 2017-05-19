@@ -16,6 +16,7 @@ Rails.application.routes.draw do
     member do
       get :situation
     end
+    resources :comments, only: [:create]
     resources :applies, only: [:new, :create]
   end
   resources :users, only: [:index, :show]
