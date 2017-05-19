@@ -32569,3 +32569,263 @@ Processing by OffersController#index as HTML
 Completed 200 OK in 722ms (Views: 655.3ms | ActiveRecord: 12.1ms)
 
 
+Started GET "/offers/new" for ::1 at 2017-05-19 19:54:04 +0900
+Processing by OffersController#new as HTML
+Completed 401 Unauthorized in 15ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/companies/sign_in" for ::1 at 2017-05-19 19:54:05 +0900
+Processing by Companies::SessionsController#new as HTML
+  Rendering companies/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (2.9ms)
+  Rendered companies/sessions/new.html.haml within layouts/application (28.2ms)
+  Rendered layouts/_flashmessage.html.haml (1.6ms)
+Completed 200 OK in 110ms (Views: 103.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/companies/sign_in" for ::1 at 2017-05-19 19:54:15 +0900
+Processing by Companies::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ASg0aKMfu6yh4Tw23ftEb2d5T3xQjnIUskdRCvUU1UAc7Hr1wgorqdhtbZDbG+SKl520zQM45vLH0ATobShhSA==", "company"=>{"email"=>"tanaka@tanaka", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mCompany Load (1.6ms)[0m  [1m[34mSELECT  `companies`.* FROM `companies` WHERE `companies`.`email` = 'tanaka@tanaka' ORDER BY `companies`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.9ms)[0m  [1m[33mUPDATE `companies` SET `current_sign_in_at` = '2017-05-19 10:54:15', `sign_in_count` = 2, `updated_at` = '2017-05-19 10:54:15' WHERE `companies`.`id` = 2[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/offers/new
+Completed 302 Found in 279ms (ActiveRecord: 7.1ms)
+
+
+Started GET "/offers/new" for ::1 at 2017-05-19 19:54:15 +0900
+Processing by OffersController#new as HTML
+  [1m[36mCompany Load (0.6ms)[0m  [1m[34mSELECT  `companies`.* FROM `companies` WHERE `companies`.`id` = 2 ORDER BY `companies`.`id` ASC LIMIT 1[0m
+  Rendering offers/new.html.haml within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered shared/_header.html.haml (15.9ms)
+  Rendered offers/new.html.haml within layouts/application (37.2ms)
+  Rendered layouts/_flashmessage.html.haml (1.9ms)
+Completed 200 OK in 112ms (Views: 105.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/companies/2" for ::1 at 2017-05-19 19:54:18 +0900
+Processing by CompaniesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCompany Load (0.6ms)[0m  [1m[34mSELECT  `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1[0m
+  Rendering companies/show.html.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCompany Load (0.4ms)[0m  [1m[34mSELECT  `companies`.* FROM `companies` WHERE `companies`.`id` = 2 ORDER BY `companies`.`id` ASC LIMIT 1[0m
+  Rendered shared/_header_show.html.haml (21.0ms)
+  [1m[36mOffer Load (6.1ms)[0m  [1m[34mSELECT `offers`.* FROM `offers` WHERE `offers`.`company_id` = 2[0m
+  [1m[36mCompany Load (0.5ms)[0m  [1m[34mSELECT  `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1[0m
+  Rendered offers/_offer.html.haml (13.7ms)
+  Rendered companies/show.html.haml within layouts/application (56.8ms)
+  Rendered layouts/_flashmessage.html.haml (2.3ms)
+Completed 200 OK in 151ms (Views: 128.5ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/offers/18/situation" for ::1 at 2017-05-19 19:54:22 +0900
+Processing by OffersController#situation as HTML
+  Parameters: {"authenticity_token"=>"QmTRA1bCsiPyn4wtYQ1CF5EVneH6E/Ba/x3UqnaoMvWIar7Fe+6FzLK5g3HGFz9usq86iXOqo1HkRv/9VngXBQ==", "id"=>"18"}
+  [1m[36mOffer Load (0.7ms)[0m  [1m[34mSELECT  `offers`.* FROM `offers` WHERE `offers`.`id` = 18 LIMIT 1[0m
+  Rendering offers/situation.html.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCompany Load (0.4ms)[0m  [1m[34mSELECT  `companies`.* FROM `companies` WHERE `companies`.`id` = 2 ORDER BY `companies`.`id` ASC LIMIT 1[0m
+  Rendered shared/_header_show.html.haml (10.2ms)
+  [1m[36mApply Load (1.3ms)[0m  [1m[34mSELECT `applies`.* FROM `applies` WHERE `applies`.`offer_id` = 18[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered offers/situation.html.haml within layouts/application (31.4ms)
+  Rendered layouts/_flashmessage.html.haml (1.4ms)
+Completed 200 OK in 92ms (Views: 72.2ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/offers/18/situation" for ::1 at 2017-05-19 19:54:43 +0900
+Processing by OffersController#situation as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mOffer Load (0.4ms)[0m  [1m[34mSELECT  `offers`.* FROM `offers` WHERE `offers`.`id` = 18 LIMIT 1[0m
+  Rendering offers/situation.html.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCompany Load (0.7ms)[0m  [1m[34mSELECT  `companies`.* FROM `companies` WHERE `companies`.`id` = 2 ORDER BY `companies`.`id` ASC LIMIT 1[0m
+  Rendered shared/_header_show.html.haml (10.1ms)
+  [1m[36mApply Load (0.7ms)[0m  [1m[34mSELECT `applies`.* FROM `applies` WHERE `applies`.`offer_id` = 18[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered offers/situation.html.haml within layouts/application (18.7ms)
+  Rendered layouts/_flashmessage.html.haml (1.9ms)
+Completed 200 OK in 74ms (Views: 67.6ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/companies/edit" for ::1 at 2017-05-19 19:55:11 +0900
+Processing by Companies::RegistrationsController#edit as HTML
+  [1m[36mCompany Load (0.5ms)[0m  [1m[34mSELECT  `companies`.* FROM `companies` WHERE `companies`.`id` = 2 ORDER BY `companies`.`id` ASC LIMIT 1[0m
+  Rendering companies/registrations/edit.html.haml within layouts/application
+  Rendered companies/registrations/edit.html.haml within layouts/application (8.1ms)
+  Rendered layouts/_flashmessage.html.haml (1.0ms)
+Completed 200 OK in 78ms (Views: 73.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/companies/sign_in" for ::1 at 2017-05-19 19:55:16 +0900
+Processing by Companies::SessionsController#new as HTML
+  [1m[36mCompany Load (0.4ms)[0m  [1m[34mSELECT  `companies`.* FROM `companies` WHERE `companies`.`id` = 2 ORDER BY `companies`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2017-05-19 19:55:16 +0900
+Processing by OffersController#index as HTML
+  Rendering offers/index.html.haml within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCompany Load (0.4ms)[0m  [1m[34mSELECT  `companies`.* FROM `companies` WHERE `companies`.`id` = 2 ORDER BY `companies`.`id` ASC LIMIT 1[0m
+  Rendered shared/_header.html.haml (11.5ms)
+  [1m[36mOffer Load (0.5ms)[0m  [1m[34mSELECT  `offers`.* FROM `offers` ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [1m[36mCompany Load (0.4ms)[0m  [1m[34mSELECT  `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1[0m
+  Rendered offers/_offer.html.haml (5.2ms)
+  [1m[36mCompany Load (0.4ms)[0m  [1m[34mSELECT  `companies`.* FROM `companies` WHERE `companies`.`id` = 1 LIMIT 1[0m
+  Rendered offers/_offer.html.haml (2.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `companies`.* FROM `companies` WHERE `companies`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered offers/_offer.html.haml (3.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `companies`.* FROM `companies` WHERE `companies`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered offers/_offer.html.haml (2.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `companies`.* FROM `companies` WHERE `companies`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered offers/_offer.html.haml (1.7ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `offers`[0m
+  Rendered offers/index.html.haml within layouts/application (100.4ms)
+  Rendered layouts/_flashmessage.html.haml (1.3ms)
+Completed 200 OK in 155ms (Views: 144.9ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/offers" for ::1 at 2017-05-19 20:01:53 +0900
+Processing by OffersController#index as HTML
+  Rendering offers/index.html.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCompany Load (0.4ms)[0m  [1m[34mSELECT  `companies`.* FROM `companies` WHERE `companies`.`id` = 2 ORDER BY `companies`.`id` ASC LIMIT 1[0m
+  Rendered shared/_header.html.haml (12.5ms)
+  [1m[36mOffer Load (0.5ms)[0m  [1m[34mSELECT  `offers`.* FROM `offers` ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [1m[36mCompany Load (0.5ms)[0m  [1m[34mSELECT  `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1[0m
+  Rendered offers/_offer.html.haml (5.4ms)
+  [1m[36mCompany Load (0.4ms)[0m  [1m[34mSELECT  `companies`.* FROM `companies` WHERE `companies`.`id` = 1 LIMIT 1[0m
+  Rendered offers/_offer.html.haml (2.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `companies`.* FROM `companies` WHERE `companies`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered offers/_offer.html.haml (2.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `companies`.* FROM `companies` WHERE `companies`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered offers/_offer.html.haml (1.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `companies`.* FROM `companies` WHERE `companies`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered offers/_offer.html.haml (1.3ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `offers`[0m
+  Rendered offers/index.html.haml within layouts/application (82.5ms)
+  Rendered layouts/_flashmessage.html.haml (1.1ms)
+Completed 200 OK in 129ms (Views: 122.8ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/offers/new" for ::1 at 2017-05-19 20:02:03 +0900
+Processing by OffersController#new as HTML
+  [1m[36mCompany Load (0.4ms)[0m  [1m[34mSELECT  `companies`.* FROM `companies` WHERE `companies`.`id` = 2 ORDER BY `companies`.`id` ASC LIMIT 1[0m
+  Rendering offers/new.html.haml within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered shared/_header.html.haml (16.1ms)
+  Rendered offers/new.html.haml within layouts/application (30.8ms)
+  Rendered layouts/_flashmessage.html.haml (2.0ms)
+Completed 200 OK in 81ms (Views: 74.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/companies/2" for ::1 at 2017-05-19 20:02:14 +0900
+Processing by CompaniesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCompany Load (0.5ms)[0m  [1m[34mSELECT  `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1[0m
+  Rendering companies/show.html.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCompany Load (1.3ms)[0m  [1m[34mSELECT  `companies`.* FROM `companies` WHERE `companies`.`id` = 2 ORDER BY `companies`.`id` ASC LIMIT 1[0m
+  Rendered shared/_header_show.html.haml (19.9ms)
+  [1m[36mOffer Load (0.5ms)[0m  [1m[34mSELECT `offers`.* FROM `offers` WHERE `offers`.`company_id` = 2[0m
+  [1m[36mCompany Load (0.6ms)[0m  [1m[34mSELECT  `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1[0m
+  Rendered offers/_offer.html.haml (6.3ms)
+  Rendered companies/show.html.haml within layouts/application (39.3ms)
+  Rendered layouts/_flashmessage.html.haml (1.3ms)
+Completed 200 OK in 95ms (Views: 85.6ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/offers" for ::1 at 2017-05-19 20:02:18 +0900
+Processing by OffersController#index as HTML
+  Rendering offers/index.html.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCompany Load (0.4ms)[0m  [1m[34mSELECT  `companies`.* FROM `companies` WHERE `companies`.`id` = 2 ORDER BY `companies`.`id` ASC LIMIT 1[0m
+  Rendered shared/_header.html.haml (14.5ms)
+  [1m[36mOffer Load (0.4ms)[0m  [1m[34mSELECT  `offers`.* FROM `offers` ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [1m[36mCompany Load (0.4ms)[0m  [1m[34mSELECT  `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1[0m
+  Rendered offers/_offer.html.haml (4.9ms)
+  [1m[36mCompany Load (0.4ms)[0m  [1m[34mSELECT  `companies`.* FROM `companies` WHERE `companies`.`id` = 1 LIMIT 1[0m
+  Rendered offers/_offer.html.haml (2.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `companies`.* FROM `companies` WHERE `companies`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered offers/_offer.html.haml (2.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `companies`.* FROM `companies` WHERE `companies`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered offers/_offer.html.haml (3.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `companies`.* FROM `companies` WHERE `companies`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered offers/_offer.html.haml (1.5ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `offers`[0m
+  Rendered offers/index.html.haml within layouts/application (105.2ms)
+  Rendered layouts/_flashmessage.html.haml (1.4ms)
+Completed 200 OK in 178ms (Views: 169.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/offers" for ::1 at 2017-05-19 20:02:53 +0900
+Processing by OffersController#index as HTML
+  Rendering offers/index.html.haml within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCompany Load (0.9ms)[0m  [1m[34mSELECT  `companies`.* FROM `companies` WHERE `companies`.`id` = 2 ORDER BY `companies`.`id` ASC LIMIT 1[0m
+  Rendered shared/_header.html.haml (15.7ms)
+  [1m[36mOffer Load (0.4ms)[0m  [1m[34mSELECT  `offers`.* FROM `offers` ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [1m[36mCompany Load (0.4ms)[0m  [1m[34mSELECT  `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1[0m
+  Rendered offers/_offer.html.haml (5.5ms)
+  [1m[36mCompany Load (0.4ms)[0m  [1m[34mSELECT  `companies`.* FROM `companies` WHERE `companies`.`id` = 1 LIMIT 1[0m
+  Rendered offers/_offer.html.haml (2.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `companies`.* FROM `companies` WHERE `companies`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered offers/_offer.html.haml (1.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `companies`.* FROM `companies` WHERE `companies`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered offers/_offer.html.haml (1.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `companies`.* FROM `companies` WHERE `companies`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered offers/_offer.html.haml (1.7ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `offers`[0m
+  Rendered offers/index.html.haml within layouts/application (96.6ms)
+  Rendered layouts/_flashmessage.html.haml (1.2ms)
+Completed 200 OK in 146ms (Views: 138.4ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/offers/new" for ::1 at 2017-05-19 20:02:58 +0900
+Processing by OffersController#new as HTML
+  [1m[36mCompany Load (0.6ms)[0m  [1m[34mSELECT  `companies`.* FROM `companies` WHERE `companies`.`id` = 2 ORDER BY `companies`.`id` ASC LIMIT 1[0m
+  Rendering offers/new.html.haml within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered shared/_header.html.haml (12.4ms)
+  Rendered offers/new.html.haml within layouts/application (26.6ms)
+  Rendered layouts/_flashmessage.html.haml (1.1ms)
+Completed 200 OK in 81ms (Views: 73.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/companies/2" for ::1 at 2017-05-19 20:03:01 +0900
+Processing by CompaniesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCompany Load (0.4ms)[0m  [1m[34mSELECT  `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1[0m
+  Rendering companies/show.html.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCompany Load (0.4ms)[0m  [1m[34mSELECT  `companies`.* FROM `companies` WHERE `companies`.`id` = 2 ORDER BY `companies`.`id` ASC LIMIT 1[0m
+  Rendered shared/_header_show.html.haml (11.3ms)
+  [1m[36mOffer Load (2.2ms)[0m  [1m[34mSELECT `offers`.* FROM `offers` WHERE `offers`.`company_id` = 2[0m
+  [1m[36mCompany Load (0.4ms)[0m  [1m[34mSELECT  `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1[0m
+  Rendered offers/_offer.html.haml (7.0ms)
+  Rendered companies/show.html.haml within layouts/application (34.2ms)
+  Rendered layouts/_flashmessage.html.haml (1.3ms)
+Completed 200 OK in 87ms (Views: 75.6ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/offers/18/situation" for ::1 at 2017-05-19 20:03:05 +0900
+Processing by OffersController#situation as HTML
+  Parameters: {"authenticity_token"=>"kQu1685yGxo5KOh9mKRf61lXpqMVWuhQ2hIKG5F7FYtbBdot414s9XkO5yE/viKSeu0By5zju1vBSSFMsaswew==", "id"=>"18"}
+  [1m[36mOffer Load (0.4ms)[0m  [1m[34mSELECT  `offers`.* FROM `offers` WHERE `offers`.`id` = 18 LIMIT 1[0m
+  Rendering offers/situation.html.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCompany Load (0.5ms)[0m  [1m[34mSELECT  `companies`.* FROM `companies` WHERE `companies`.`id` = 2 ORDER BY `companies`.`id` ASC LIMIT 1[0m
+  Rendered shared/_header_show.html.haml (10.4ms)
+  [1m[36mApply Load (0.5ms)[0m  [1m[34mSELECT `applies`.* FROM `applies` WHERE `applies`.`offer_id` = 18[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered offers/situation.html.haml within layouts/application (19.3ms)
+  Rendered layouts/_flashmessage.html.haml (1.0ms)
+Completed 200 OK in 67ms (Views: 59.0ms | ActiveRecord: 2.3ms)
+
+

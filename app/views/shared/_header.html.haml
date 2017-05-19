@@ -21,7 +21,7 @@
           %p 企業プロフィール
       %li.user-menu
         =link_to new_offer_path do
-          %p 求人を投稿する
+          %p 記事を投稿する
       - if company_signed_in?
         %li.user-menu
           =link_to company_path(current_company.id) do
