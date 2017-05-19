@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170514091713) do
+ActiveRecord::Schema.define(version: 20170518084659) do
 
   create_table "applies", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "offer_id"
@@ -19,6 +19,14 @@ ActiveRecord::Schema.define(version: 20170514091713) do
     t.datetime "updated_at", null: false
     t.index ["offer_id"], name: "index_applies_on_offer_id", using: :btree
     t.index ["user_id"], name: "index_applies_on_user_id", using: :btree
+  end
+
+  create_table "comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "user_id"
+    t.integer  "offer_id"
+    t.text     "text",       limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   create_table "companies", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -46,13 +54,14 @@ ActiveRecord::Schema.define(version: 20170514091713) do
 
   create_table "offers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "company_id"
-    t.string   "title",                    null: false
+    t.string   "title",                       null: false
     t.string   "image"
-    t.text     "what",       limit: 65535
-    t.text     "why",        limit: 65535
-    t.text     "how",        limit: 65535
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.text     "what",          limit: 65535
+    t.text     "why",           limit: 65535
+    t.text     "how",           limit: 65535
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.integer  "applies_count"
     t.index ["company_id"], name: "index_offers_on_company_id", using: :btree
   end
 
