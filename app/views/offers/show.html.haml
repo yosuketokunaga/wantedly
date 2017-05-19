@@ -48,19 +48,20 @@
           %p.address
             = @offer.company.address
     .container2
+    .comments
+      %h4 ＜コメント一覧＞
+      - if @comments
+        - @comments.each do |comment|
+          %p
+            %strong
+              - if current_user
+                = link_to comment.user.name, "/users/#{comment.user_id}"
+              = comment.text
       - if current_user
         = form_tag("/offers/#{@offer_id}/comments", method: :post) do
           %textarea{:cols => "30", :name => "text", :placeholder => "コメントする", :rows => "2"}
           %input{:type => "submit", :value => "SENT"}/
-        .comments
-          %h4 ＜コメント一覧＞
-          - if @comments
-            - @comments.each do |comment|
-              %p
-                %strong
-                  - if current_user
-                    = link_to comment.user.name, "/users/#{comment.user_id}"
-                  = comment.text
+
       -# - if current_company
       -#   = form_tag("/offers/#{@offer_id}/comments", method: :post) do
       -#     %textarea{:cols => "30", :name => "text", :placeholder => "コメントする", :rows => "2"}
