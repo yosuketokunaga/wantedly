@@ -54,7 +54,7 @@
         - @comments.each do |comment|
           %p
             %strong
-              = link_to comment.user.name, "/users/#{comment.user_id}"
+              = comment.user.name
             = comment.text
       - if current_user
         = form_tag("/offers/#{@offer_id}/comments", method: :post) do
