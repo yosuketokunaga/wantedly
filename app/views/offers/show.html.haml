@@ -55,21 +55,18 @@
             %strong
               = link_to comment.user.name, "/users/#{comment.user_id}"
             = comment.text
-      - if current_user 
+      - if current_user
         = form_tag("/offers/#{@offer_id}/comments", method: :post) do
           %textarea{:cols => "30", :name => "text", :placeholder => "コメントする", :rows => "2"}
           %input{:type => "submit", :value => "SENT"}/
 
-      -# - if current_company
-      -#   = form_tag("/offers/#{@offer_id}/comments", method: :post) do
-      -#     %textarea{:cols => "30", :name => "text", :placeholder => "コメントする", :rows => "2"}
-      -#     %input{:type => "submit", :value => "SENT"}/
-      -#   .comments
-      -#     %h4 ＜コメント一覧＞
-      -#     - if @comments
-      -#       - @comments.each do |comment|
-      -#         %p
-      -#           %strong
-      -#             - if current_company
-      -#               = link_to comment.company.name, "/companies/#{comment.company_id}"
-      -#             = comment.text
+      - if @replies
+        - @replies.each do |reply|
+          %p
+            %strong
+              = link_to reply.company.name, "/companies/#{reply.company_id}"
+            = reply.text
+      - if current_company
+        = form_tag("/offers/#{@offer_id}/replies", method: :post) do
+          %textarea{:cols => "30", :name => "text", :placeholder => "コメントする", :rows => "2"}
+          %input{:type => "submit", :value => "SENT"}/
