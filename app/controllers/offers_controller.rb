@@ -39,6 +39,7 @@ class OffersController < ApplicationController
     @offer_id = Offer.find(params[:id]).id
     @apply = Apply.new
     @comments = @offer.comments.includes(:user)
+    @replies = @offer.replies.includes(:company)
   end
 
   def situation
