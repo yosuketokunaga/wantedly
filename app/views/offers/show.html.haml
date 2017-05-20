@@ -38,10 +38,8 @@
               = @offer.how
       .projects-show--body--side
         .projects-show--body--side__action-btn
-          %span
-          = link_to "話を聞きに行きたい", new_offer_apply_path(params[:id]), class: "entry-btn"
-          .entry-count
-          .help-btn
+          .entry-btn
+            %span= link_to '話を聞きに行きたい', new_offer_apply_path(params[:id])
           .bookmark-btn
             %span あとで見る
         .projects-show--body--side__map
