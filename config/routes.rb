@@ -17,6 +17,7 @@ Rails.application.routes.draw do
       get :situation
     end
     resources :comments, only: [:create]
+    resources :replies, only: [:create]
     resources :applies, only: [:new, :create]
   end
   resources :users, only: [:index, :show]
