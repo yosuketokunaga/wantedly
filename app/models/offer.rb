@@ -7,6 +7,7 @@ class Offer < ApplicationRecord
   has_many :applies
   has_many :users, through: :applies
   has_many :comments
+  has_many :replies
 
   accepts_nested_attributes_for :applies
 end

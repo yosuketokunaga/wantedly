@@ -5,5 +5,5 @@ class Company < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :offers
-
+  has_many :replies
 end
