@@ -74,14 +74,6 @@
           line-height: 20px;
         }
       }
-      .project-total-count {
-        margin-top: 12px;
-        padding-bottom: 16px;
-        font-size: 26px;
-        font-weight: 500;
-        color: #444;
-        border-bottom: 1px solid #f0f0f0;
-      }
       .project-index-filter-category {
         margin-bottom: 10px;
         border-radius: 3px;
@@ -100,8 +92,9 @@
             font-size: 13px;
             color: #24282A;
             font-weight: 300;
-            padding: 4px 0 4px 25px;
+            padding: 4px 0 4px 0;
             line-height: 1;
+            font-weight: bold;
           }
           .job-type__main {
             font-weight: bold;
