@@ -2,7 +2,7 @@
   = render partial: "shared/header"
   .projects-show
     .projects-show--header
-      .projects-show--header__job-type
+      -# .projects-show--header__job-type
         %span.icon-job-type
           -# = @offer.job_type
       .projects-show--header__title
@@ -55,17 +55,16 @@
             %strong
               = link_to comment.user.name, "/users/#{comment.user_id}"
             = comment.text
-      - if current_user
-        = form_tag("/offers/#{@offer_id}/comments", method: :post) do
-          %textarea{:cols => "30", :name => "text", :placeholder => "コメントする", :rows => "2"}
-          %input{:type => "submit", :value => "SENT"}/
-
       - if @replies
         - @replies.each do |reply|
           %p
             %strong
-              = link_to reply.company.name, "/companies/#{reply.company_id}"
+              = reply.company.name
             = reply.text
+      - if current_user
+        = form_tag("/offers/#{@offer_id}/comments", method: :post) do
+          %textarea{:cols => "30", :name => "text", :placeholder => "コメントする", :rows => "2"}
+          %input{:type => "submit", :value => "SENT"}/
       - if current_company
         = form_tag("/offers/#{@offer_id}/replies", method: :post) do
           %textarea{:cols => "30", :name => "text", :placeholder => "コメントする", :rows => "2"}
