@@ -75,6 +75,7 @@
         }
       }
       .project-index-filter-category {
+        margin-top: 15px;
         margin-bottom: 10px;
         border-radius: 3px;
         .project-index-filter-category-title {
@@ -86,13 +87,12 @@
             line-height: 1;
             font-weight: 600;
             padding-bottom: 11px;
-            border-bottom: 1px solid #e3e3e3;
           }
           .category {
             font-size: 13px;
             color: #24282A;
             font-weight: 300;
-            padding: 4px 0 4px 0;
+            padding: 10px 0 10px 0;
             line-height: 1;
             font-weight: bold;
           }
